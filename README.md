@@ -77,6 +77,15 @@ configurations** (8 answer models × 7 knowledge-access conditions).
   30-step agentic retrieval scores **0.088 — below the no-corpus closed-book floor (0.077)**.
 - **The gap concentrates in hierarchy attribution.** Department attribution: lexical retrieval
   **0.02** vs. the induced graph **0.53**, on items the oracle answers 84% of the time.
+- **Open-weight models match or surpass the proprietary frontier where it counts.** On
+  corpus-induced GraphRAG — the strongest deployable condition — the top four scores on the
+  hardest, latent-reasoning tier (L3) are all open-weight: **GLM-5.2 (0.431), DeepSeek-V4-Flash
+  (0.398), Qwen3.5-397B (0.396), DeepSeek-V4-Pro (0.386)** — ahead of the best proprietary model
+  (Claude-Sonnet-4.6, 0.383) and well ahead of GPT-5.4 (0.341). Kimi-K2.6 is the only model that
+  leads with BM25 at all three levels. The proprietary edge appears only at the Oracle *ceiling*
+  (Claude, 0.763 on L3) — raw synthesis given perfect evidence, not the retrieval-grounded settings
+  a deployed system actually runs. **Organizing the knowledge well closes the open-vs-closed gap
+  more than scaling the answer model does.**
 
 ## Main results
 
@@ -128,6 +137,22 @@ The truth graph behind construction holds **1,153 entities and 3,784 typed relat
 | Oracle Ω | `oracle_rag` / `oracle_agentic_rag` / `oracle_okf` | perfect-evidence ceilings (gold packet fed directly) |
 
 ---
+
+## Requirements
+
+- **Python 3.10+**, then `pip install -r requirements.txt`. Core dependencies: `openai`,
+  `anthropic`, `httpx`, `tenacity`, `numpy`, `PyYAML`. `networkx` and `graspologic` are needed
+  **only** to build the GraphRAG index.
+- **API access, not local GPUs.** All generation and embedding calls go through remote endpoints:
+  an OpenAI-compatible endpoint (`API_BASE`) for chat + embeddings, and optionally an Anthropic
+  endpoint (`ANTHROPIC_BASE_URL`) for Claude models and the default judge. No model weights run
+  locally.
+- **Disk.** The dataset is ~15 MB. Retrieval indexes are *not* shipped and are rebuilt locally
+  (`scripts/build_indexes.py`): bm25/rag are a few hundred MB; the OKF/GraphRAG substrates can
+  reach ~1–4 GB.
+- **Memory.** bm25 / rag / closed-book run in a few GB of RAM; loading the GraphRAG index for
+  evaluation is heavier — plan for ~16 GB if you use the `graphrag` condition.
+- **OS.** Developed and tested on Linux (x86-64); macOS works. No CUDA required.
 
 ## Getting started
 
