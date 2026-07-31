@@ -191,6 +191,16 @@ Answer accuracy (**%**) across all 8 answer models and 7 knowledge-access condit
 
 *No single condition owns a level — structural access (GraphRAG / LLM Wiki) leads L2/L3, lexical BM25 is strongest on some L1 — and open-weight models take most of the bold cells.*
 
+<p align="center">
+  <img src="figures/radar_open_vs_closed.png" width="60%" alt="Open-weight vs proprietary capability radar across six access conditions">
+</p>
+<p align="center">
+  <sub>Overall (tier-weighted) accuracy of a representative <b>open-weight</b> model (GLM-5.2) vs a
+  <b>proprietary</b> flagship (GPT-5.4) across the six access conditions. The open model leads on the
+  structured substrates (GraphRAG, OKF) and ties at the Oracle ceiling; the proprietary model edges ahead
+  only on flat retrieval (BM25 / RAG / agentic).</sub>
+</p>
+
 ## What's in this repository
 
 | Path | Contents |
