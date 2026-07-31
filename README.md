@@ -1,32 +1,32 @@
-<p align="center">
+<div align="center">
   <img src="figures/teaser.png" width="80%" alt="Query-shaped construction versus EntLORE">
-</p>
+</div>
 
 <h1 align="center">🏛️ EntLORE</h1>
 <h3 align="center">A Graph-Grounded Benchmark for Latent Organizational Reasoning<br>in Enterprise Question Answering</h3>
 
-<p align="center">
+<div align="center">
   <img alt="License: MIT" src="https://img.shields.io/badge/Code-MIT-blue.svg">
   <img alt="Python 3.10+" src="https://img.shields.io/badge/Python-3.10%2B-3776AB.svg">
   <img alt="Documents" src="https://img.shields.io/badge/Corpus-2%2C341%20docs-success.svg">
   <img alt="Questions" src="https://img.shields.io/badge/Questions-907-success.svg">
   <img alt="Models × Conditions" src="https://img.shields.io/badge/Matrix-8%20models%20%C3%97%207%20conditions-8A2BE2.svg">
   <a href="https://arxiv.org/abs/XXXX.XXXXX"><img alt="arXiv" src="https://img.shields.io/badge/arXiv-XXXX.XXXXX-b31b1b.svg"></a>
-</p>
+</div>
 
-<p align="center">
+<div align="center">
   <b>🏢 Official code &amp; data repository</b> for the paper<br>
   <i>EntLORE: A Graph-Grounded Benchmark for Latent Organizational Reasoning in Enterprise Question Answering</i>
-</p>
+</div>
 
-<p align="center">
+<div align="center">
   Akrin Zheng<sup>*</sup> &nbsp; Alexander Wu<sup>*</sup> &nbsp; Alaia Liu<sup>*†</sup> &nbsp;—&nbsp; <b>ScitiX.ai</b><br>
   <sub><sup>*</sup> Equal contribution &nbsp;·&nbsp; <sup>†</sup> Corresponding author: <a href="mailto:alaia.liu@scitix.ai">alaia.liu@scitix.ai</a></sub>
-</p>
+</div>
 
-<p align="center">
+<div align="center">
   📄 <b>Paper:</b> <a href="https://arxiv.org/abs/XXXX.XXXXX">arXiv:XXXX.XXXXX</a> &nbsp;·&nbsp; 📊 <b>Data &amp; code:</b> this repository
-</p>
+</div>
 
 > **TL;DR** — Enterprise answers often depend on *organizational relations* that no single document
 > states. EntLORE reconstructs an **audited enterprise truth graph** from routine documents,
@@ -66,9 +66,9 @@ configurations** (8 answer models × 7 knowledge-access conditions).
 
 ## 🏗️ How EntLORE is built
 
-<p align="center">
+<div align="center">
   <img src="figures/pipeline.png" width="80%" alt="The EntLORE construction pipeline">
-</p>
+</div>
 
 Construction runs as a **deterministic pipeline**, not manual labelling:
 
@@ -121,21 +121,21 @@ views: **Overall** (tier-weighted over L1 469 / L2 204 / L3 234) and per level. 
 Columns: **CB** closed-book · **Ag** agentic retrieval · **Wiki** LLM Wiki · **GRAG** GraphRAG ·
 **Ω** Oracle ceiling (*n*=216 on L3).
 
-<p align="center">
+<div align="center">
   <img src="figures/results_tables.png" width="90%" alt="Per-model accuracy across access conditions, split by Overall / L1 / L2 / L3">
-</p>
+</div>
 
 *No single condition owns a level — structural access (GraphRAG / LLM Wiki) leads L2/L3, lexical BM25 is strongest on some L1 — and open-weight models take most of the bold cells.*
 
-<p align="center">
+<div align="center">
   <img src="figures/radar_open_vs_closed.png" width="55%" alt="Open-weight vs proprietary capability radar across six access conditions">
-</p>
-<p align="center">
+</div>
+<div align="center">
   <sub>Overall (tier-weighted) accuracy of a representative <b>open-weight</b> model (GLM-5.2) vs a
   <b>proprietary</b> flagship (GPT-5.4) across the six access conditions. The open model leads on the
   structured substrates (GraphRAG, OKF) and ties at the Oracle ceiling; the proprietary model edges ahead
   only on flat retrieval (BM25 / RAG / agentic).</sub>
-</p>
+</div>
 
 ## 📦 What's in this repository
 
@@ -278,4 +278,4 @@ fictional organization, with persons, projects, aliases, and dates mapped throug
 map and private metadata never verbalized into the documents. See [`NOTICE`](NOTICE) for the full
 data statement and the licenses of vendored components (`third_party/`).
 
-<p align="center"><sub>Made with 🧠 &amp; 📈 by <b>ScitiX.ai</b></sub></p>
+<div align="center"><sub>Made with 🧠 &amp; 📈 by <b>ScitiX.ai</b></sub></div>
