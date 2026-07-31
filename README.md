@@ -2,18 +2,20 @@
   <img src="figures/teaser.png" width="92%" alt="Query-shaped construction versus EntLORE">
 </p>
 
-# EntLORE: A Graph-Grounded Benchmark for Latent Organizational Reasoning in Enterprise Question Answering
+<h1 align="center">🏛️ EntLORE</h1>
+<h3 align="center">A Graph-Grounded Benchmark for Latent Organizational Reasoning<br>in Enterprise Question Answering</h3>
 
 <p align="center">
   <img alt="License: MIT" src="https://img.shields.io/badge/Code-MIT-blue.svg">
   <img alt="Python 3.10+" src="https://img.shields.io/badge/Python-3.10%2B-3776AB.svg">
   <img alt="Documents" src="https://img.shields.io/badge/Corpus-2%2C341%20docs-success.svg">
   <img alt="Questions" src="https://img.shields.io/badge/Questions-907-success.svg">
+  <img alt="Models × Conditions" src="https://img.shields.io/badge/Matrix-8%20models%20%C3%97%207%20conditions-8A2BE2.svg">
   <a href="https://arxiv.org/abs/XXXX.XXXXX"><img alt="arXiv" src="https://img.shields.io/badge/arXiv-XXXX.XXXXX-b31b1b.svg"></a>
 </p>
 
 <p align="center">
-  <b>Official code &amp; data repository</b> for the paper<br>
+  <b>🏢 Official code &amp; data repository</b> for the paper<br>
   <i>EntLORE: A Graph-Grounded Benchmark for Latent Organizational Reasoning in Enterprise Question Answering</i>
 </p>
 
@@ -22,20 +24,21 @@
   <sub><sup>*</sup> Equal contribution &nbsp;·&nbsp; <sup>†</sup> Corresponding author: <a href="mailto:alaia.liu@scitix.ai">alaia.liu@scitix.ai</a></sub>
 </p>
 
-> **TL;DR.** Enterprise answers often depend on *organizational relations* that no single
-> document states. EntLORE reconstructs an **audited enterprise truth graph** from routine
-> documents, authoritative tables, and operational records, then releases an anonymized
-> document world whose gold answers and proofs are computed from the graph — while the target
-> derived relations are **withheld from evaluated systems**. Across 8 models × 7 knowledge-access
-> conditions, **how the released world is organized matters more than how much retrieval
-> machinery is applied to it** — and even perfect evidence leaves latent-relation questions
-> unanswered.
+<p align="center">
+  📄 <b>Paper:</b> <a href="https://arxiv.org/abs/XXXX.XXXXX">arXiv:XXXX.XXXXX</a> &nbsp;·&nbsp; 📊 <b>Data &amp; code:</b> this repository
+</p>
 
-📄 **Paper:** [arXiv:XXXX.XXXXX](https://arxiv.org/abs/XXXX.XXXXX) &nbsp;·&nbsp; 📊 **Data & code:** this repository
+> **TL;DR** — Enterprise answers often depend on *organizational relations* that no single document
+> states. EntLORE reconstructs an **audited enterprise truth graph** from routine documents,
+> authoritative tables, and operational records, then releases an anonymized document world whose
+> gold answers and proofs are computed from the graph — while the target derived relations are
+> **withheld from evaluated systems**. Across 8 models × 7 knowledge-access conditions, **how the
+> released world is *organized* matters more than how much retrieval *machinery* is applied to it** —
+> and even perfect evidence leaves latent-relation questions unanswered.
 
 ---
 
-## Overview
+## 🧭 Overview
 
 Enterprise question answering is usually framed as *retrieve relevant internal documents, then
 generate a grounded answer*. But routine enterprise records are produced as **by-products of
@@ -61,13 +64,13 @@ spanning explicit lookup, cross-source composition, latent organizational reason
 aggregation, evidence acquisition, and answer generation. The full evaluation matrix is **56
 configurations** (8 answer models × 7 knowledge-access conditions).
 
-## How EntLORE is built
+## 🏗️ How EntLORE is built
 
 <p align="center">
   <img src="figures/pipeline.png" width="98%" alt="The EntLORE construction pipeline">
 </p>
 
-Construction runs as a deterministic pipeline, not manual labelling:
+Construction runs as a **deterministic pipeline**, not manual labelling:
 
 1. **Reconstruct a raw graph** from heterogeneous enterprise sources (routine documents,
    authoritative organizational tables, operational records).
@@ -80,7 +83,7 @@ Construction runs as a deterministic pipeline, not manual labelling:
    derivation — completeness, uniqueness, and **absence of the target relation from the released
    documents** — so every question's answerability and evidence chain are code-traceable.
 
-## Key findings
+## 🔑 Key findings
 
 - **Access *organization* beats retrieval *machinery*.** All five deployable conditions read the
   same corpus and differ only in how they index and present it. They split into two far-apart
@@ -92,9 +95,9 @@ Construction runs as a deterministic pipeline, not manual labelling:
 - **Flat dense retrieval falls *below* a plain lexical index.** Released documents identify their
   organizational region through sparse anchors (project aliases, module names, ticket terms) that
   BM25 ranks first and a single dense space washes out.
-- **Where documents stop helping, the ranking inverts.** 70% of L3 items resist flat retrieval (the
-  target relation is stated in no released document). On that subset **GraphRAG leads (0.310)** and
-  BM25 falls to 0.251 — GraphRAG answers with a relation it *materialized offline*, not by
+- **Where documents stop helping, the ranking inverts.** 70% of L3 items resist flat retrieval
+  (the target relation is stated in no released document). On that subset **GraphRAG leads (0.310)**
+  and BM25 falls to 0.251 — GraphRAG answers with a relation it *materialized offline*, not by
   retrieving better. This is the sense in which EntLORE measures **relation recovery, not recall**.
 - **A mismatched harness burns the budget reasoning would have used.** On non-retrievable L3 items,
   30-step agentic retrieval scores **0.088 — below the no-corpus closed-book floor (0.077)**.
@@ -110,84 +113,17 @@ Construction runs as a deterministic pipeline, not manual labelling:
   a deployed system actually runs. **Organizing the knowledge well closes the open-vs-closed gap
   more than scaling the answer model does.**
 
-## Main results
+## 📊 Main results
 
-Answer accuracy (**%**) across all 8 answer models and 7 knowledge-access conditions, split into four views: **Overall** (tier-weighted over L1 469 / L2 204 / L3 234) and per level. **Bold** = best *deployable* condition per model (closed-book **CB** and Oracle **Ω** excluded from the comparison). Columns: **CB** closed-book · **Ag** agentic retrieval · **Wiki** LLM Wiki · **GRAG** GraphRAG · **Ω** Oracle ceiling (*n*=216 on L3).
+Answer accuracy (**%**) across all 8 answer models and 7 knowledge-access conditions, split into four
+views: **Overall** (tier-weighted over L1 469 / L2 204 / L3 234) and per level. **Bold** = best
+*deployable* condition per model (closed-book **CB** and Oracle **Ω** excluded from the comparison).
+Columns: **CB** closed-book · **Ag** agentic retrieval · **Wiki** LLM Wiki · **GRAG** GraphRAG ·
+**Ω** Oracle ceiling (*n*=216 on L3).
 
-<table>
-<tr>
-<td valign=top>
-
-<b>Overall</b><br>
-<table>
-<tr><th align=left>Model</th><th align=right>CB</th><th align=right>BM25</th><th align=right>RAG</th><th align=right>Ag</th><th align=right>Wiki</th><th align=right>GRAG</th><th align=right>Ω</th></tr>
-<tr><td align=left>GPT-5.4</td><td align=right>2.7</td><td align=right><b>53.2</b></td><td align=right>37.4</td><td align=right>39.0</td><td align=right>53.2</td><td align=right>49.7</td><td align=right>85.3</td></tr>
-<tr><td align=left>GPT-5.4-mini</td><td align=right>2.0</td><td align=right><b>50.7</b></td><td align=right>33.9</td><td align=right>32.6</td><td align=right>46.0</td><td align=right>41.8</td><td align=right>80.4</td></tr>
-<tr><td align=left>Claude-Sonnet-4.6</td><td align=right>2.7</td><td align=right>54.1</td><td align=right>36.9</td><td align=right>40.1</td><td align=right><b>55.0</b></td><td align=right>53.7</td><td align=right>86.7</td></tr>
-<tr><td align=left>Qwen3.5-397B-A17B</td><td align=right>2.2</td><td align=right><b>54.8</b></td><td align=right>37.5</td><td align=right>34.1</td><td align=right>47.1</td><td align=right>54.6</td><td align=right>81.8</td></tr>
-<tr><td align=left>GLM-5.2</td><td align=right>2.2</td><td align=right>51.0</td><td align=right>34.5</td><td align=right>37.6</td><td align=right>54.6</td><td align=right><b>57.0</b></td><td align=right>85.9</td></tr>
-<tr><td align=left>Kimi-K2.6</td><td align=right>2.3</td><td align=right><b>54.5</b></td><td align=right>37.3</td><td align=right>33.6</td><td align=right>44.4</td><td align=right>49.1</td><td align=right>85.2</td></tr>
-<tr><td align=left>DeepSeek-V4-Pro</td><td align=right>2.3</td><td align=right>52.2</td><td align=right>35.9</td><td align=right>37.5</td><td align=right>54.0</td><td align=right><b>55.2</b></td><td align=right>85.1</td></tr>
-<tr><td align=left>DeepSeek-V4-Flash</td><td align=right>2.6</td><td align=right>50.3</td><td align=right>34.8</td><td align=right>37.7</td><td align=right>53.0</td><td align=right><b>56.9</b></td><td align=right>84.0</td></tr>
-<tr><td align=left><b>Mean</b></td><td align=right>2.4</td><td align=right><b>52.6</b></td><td align=right>36.0</td><td align=right>36.5</td><td align=right>50.9</td><td align=right>52.2</td><td align=right>84.3</td></tr>
-</table>
-
-</td>
-<td valign=top>
-
-<b>L1</b><br>
-<table>
-<tr><th align=left>Model</th><th align=right>CB</th><th align=right>BM25</th><th align=right>RAG</th><th align=right>Ag</th><th align=right>Wiki</th><th align=right>GRAG</th><th align=right>Ω</th></tr>
-<tr><td align=left>GPT-5.4</td><td align=right>1.1</td><td align=right><b>63.0</b></td><td align=right>47.9</td><td align=right>49.1</td><td align=right>62.3</td><td align=right>56.7</td><td align=right>88.9</td></tr>
-<tr><td align=left>GPT-5.4-mini</td><td align=right>0.0</td><td align=right><b>61.9</b></td><td align=right>44.3</td><td align=right>42.5</td><td align=right>55.2</td><td align=right>52.2</td><td align=right>87.5</td></tr>
-<tr><td align=left>Claude-Sonnet-4.6</td><td align=right>0.9</td><td align=right>64.0</td><td align=right>46.8</td><td align=right>54.7</td><td align=right><b>66.7</b></td><td align=right>65.8</td><td align=right>88.5</td></tr>
-<tr><td align=left>Qwen3.5-397B-A17B</td><td align=right>0.4</td><td align=right>64.9</td><td align=right>48.4</td><td align=right>46.0</td><td align=right>59.4</td><td align=right><b>65.6</b></td><td align=right>85.2</td></tr>
-<tr><td align=left>GLM-5.2</td><td align=right>0.5</td><td align=right>60.9</td><td align=right>44.1</td><td align=right>51.0</td><td align=right>67.0</td><td align=right><b>68.5</b></td><td align=right>89.2</td></tr>
-<tr><td align=left>Kimi-K2.6</td><td align=right>0.4</td><td align=right><b>63.8</b></td><td align=right>46.4</td><td align=right>46.5</td><td align=right>57.2</td><td align=right>63.4</td><td align=right>88.2</td></tr>
-<tr><td align=left>DeepSeek-V4-Pro</td><td align=right>0.7</td><td align=right>61.2</td><td align=right>46.1</td><td align=right>48.4</td><td align=right>64.9</td><td align=right><b>66.2</b></td><td align=right>86.4</td></tr>
-<tr><td align=left>DeepSeek-V4-Flash</td><td align=right>1.1</td><td align=right>59.3</td><td align=right>45.0</td><td align=right>49.6</td><td align=right>61.4</td><td align=right><b>67.6</b></td><td align=right>85.6</td></tr>
-<tr><td align=left><b>Mean</b></td><td align=right>0.6</td><td align=right>62.4</td><td align=right>46.1</td><td align=right>48.5</td><td align=right>61.8</td><td align=right><b>63.2</b></td><td align=right>87.4</td></tr>
-</table>
-
-</td>
-</tr>
-<tr>
-<td valign=top>
-
-<b>L2</b><br>
-<table>
-<tr><th align=left>Model</th><th align=right>CB</th><th align=right>BM25</th><th align=right>RAG</th><th align=right>Ag</th><th align=right>Wiki</th><th align=right>GRAG</th><th align=right>Ω</th></tr>
-<tr><td align=left>GPT-5.4</td><td align=right>0.0</td><td align=right>51.8</td><td align=right>34.3</td><td align=right>40.5</td><td align=right><b>52.5</b></td><td align=right>51.5</td><td align=right>95.2</td></tr>
-<tr><td align=left>GPT-5.4-mini</td><td align=right>0.0</td><td align=right>45.1</td><td align=right>27.9</td><td align=right>30.4</td><td align=right><b>47.1</b></td><td align=right>32.9</td><td align=right>84.9</td></tr>
-<tr><td align=left>Claude-Sonnet-4.6</td><td align=right>0.0</td><td align=right><b>51.7</b></td><td align=right>32.1</td><td align=right>35.6</td><td align=right>51.5</td><td align=right>43.7</td><td align=right>94.5</td></tr>
-<tr><td align=left>Qwen3.5-397B-A17B</td><td align=right>0.0</td><td align=right><b>53.0</b></td><td align=right>33.2</td><td align=right>35.0</td><td align=right>49.3</td><td align=right>46.6</td><td align=right>95.9</td></tr>
-<tr><td align=left>GLM-5.2</td><td align=right>0.0</td><td align=right>51.2</td><td align=right>32.1</td><td align=right>35.9</td><td align=right><b>53.2</b></td><td align=right>46.5</td><td align=right>95.3</td></tr>
-<tr><td align=left>Kimi-K2.6</td><td align=right>0.0</td><td align=right><b>55.2</b></td><td align=right>37.0</td><td align=right>31.5</td><td align=right>49.7</td><td align=right>40.9</td><td align=right>94.9</td></tr>
-<tr><td align=left>DeepSeek-V4-Pro</td><td align=right>0.0</td><td align=right>52.6</td><td align=right>33.3</td><td align=right>39.1</td><td align=right><b>56.9</b></td><td align=right>48.8</td><td align=right>95.2</td></tr>
-<tr><td align=left>DeepSeek-V4-Flash</td><td align=right>0.0</td><td align=right>50.8</td><td align=right>30.2</td><td align=right>36.4</td><td align=right><b>59.6</b></td><td align=right>51.7</td><td align=right>94.7</td></tr>
-<tr><td align=left><b>Mean</b></td><td align=right>0.0</td><td align=right>51.4</td><td align=right>32.5</td><td align=right>35.5</td><td align=right><b>52.5</b></td><td align=right>45.3</td><td align=right>93.8</td></tr>
-</table>
-
-</td>
-<td valign=top>
-
-<b>L3</b><br>
-<table>
-<tr><th align=left>Model</th><th align=right>CB</th><th align=right>BM25</th><th align=right>RAG</th><th align=right>Ag</th><th align=right>Wiki</th><th align=right>GRAG</th><th align=right>Ω</th></tr>
-<tr><td align=left>GPT-5.4</td><td align=right>8.3</td><td align=right>34.9</td><td align=right>19.1</td><td align=right>17.5</td><td align=right><b>35.5</b></td><td align=right>34.1</td><td align=right>69.5</td></tr>
-<tr><td align=left>GPT-5.4-mini</td><td align=right>7.7</td><td align=right><b>33.0</b></td><td align=right>18.4</td><td align=right>14.8</td><td align=right>26.5</td><td align=right>28.8</td><td align=right>62.1</td></tr>
-<tr><td align=left>Claude-Sonnet-4.6</td><td align=right>8.5</td><td align=right>36.4</td><td align=right>21.2</td><td align=right>14.9</td><td align=right>34.6</td><td align=right><b>38.3</b></td><td align=right>76.3</td></tr>
-<tr><td align=left>Qwen3.5-397B-A17B</td><td align=right>7.7</td><td align=right>36.2</td><td align=right>19.5</td><td align=right>9.5</td><td align=right>20.4</td><td align=right><b>39.6</b></td><td align=right>62.5</td></tr>
-<tr><td align=left>GLM-5.2</td><td align=right>7.7</td><td align=right>30.9</td><td align=right>17.4</td><td align=right>12.3</td><td align=right>30.8</td><td align=right><b>43.1</b></td><td align=right>70.9</td></tr>
-<tr><td align=left>Kimi-K2.6</td><td align=right>8.1</td><td align=right><b>35.1</b></td><td align=right>19.5</td><td align=right>9.4</td><td align=right>14.0</td><td align=right>27.6</td><td align=right>70.6</td></tr>
-<tr><td align=left>DeepSeek-V4-Pro</td><td align=right>7.7</td><td align=right>33.8</td><td align=right>17.7</td><td align=right>14.3</td><td align=right>29.6</td><td align=right><b>38.6</b></td><td align=right>73.5</td></tr>
-<tr><td align=left>DeepSeek-V4-Flash</td><td align=right>7.7</td><td align=right>31.8</td><td align=right>18.4</td><td align=right>15.1</td><td align=right>30.6</td><td align=right><b>39.8</b></td><td align=right>71.3</td></tr>
-<tr><td align=left><b>Mean</b></td><td align=right>7.9</td><td align=right>34.0</td><td align=right>18.9</td><td align=right>13.5</td><td align=right>27.8</td><td align=right><b>36.2</b></td><td align=right>69.6</td></tr>
-</table>
-
-</td>
-</tr>
-</table>
+<p align="center">
+  <img src="figures/results_tables.png" width="100%" alt="Per-model accuracy across access conditions, split by Overall / L1 / L2 / L3">
+</p>
 
 *No single condition owns a level — structural access (GraphRAG / LLM Wiki) leads L2/L3, lexical BM25 is strongest on some L1 — and open-weight models take most of the bold cells.*
 
@@ -201,7 +137,7 @@ Answer accuracy (**%**) across all 8 answer models and 7 knowledge-access condit
   only on flat retrieval (BM25 / RAG / agentic).</sub>
 </p>
 
-## What's in this repository
+## 📦 What's in this repository
 
 | Path | Contents |
 |---|---|
@@ -232,7 +168,7 @@ The truth graph behind construction holds **1,153 entities and 3,784 typed relat
 
 ---
 
-## Requirements
+## ⚙️ Requirements
 
 - **Python 3.10+**, then `pip install -r requirements.txt`. Core dependencies: `openai`,
   `anthropic`, `httpx`, `tenacity`, `numpy`, `PyYAML`. `networkx` and `graspologic` are needed
@@ -248,7 +184,7 @@ The truth graph behind construction holds **1,153 entities and 3,784 typed relat
   evaluation is heavier — plan for ~16 GB if you use the `graphrag` condition.
 - **OS.** Developed and tested on Linux (x86-64); macOS works. No CUDA required.
 
-## Getting started
+## 🚀 Getting started
 
 ```bash
 pip install -r requirements.txt
@@ -259,11 +195,12 @@ Model calls go through `src/llm.py`: point `API_BASE` at any OpenAI-compatible e
 `ANTHROPIC_BASE_URL` at Anthropic (or a compatible relay). Endpoint routing is by model-name prefix
 — `claude*` uses the Anthropic native protocol, everything else uses the OpenAI-compatible endpoint.
 
-### Smoke test first (a few cents)
+### 🔥 Smoke test first (a few cents)
 
-Verify credentials and the build→run→score wiring end-to-end on the 5-question subset
-(`dataset/smoke.json`) before spending budget on the full run. It uses only `closed_book` + `bm25`,
-so **no embedding endpoint is needed**:
+> [!TIP]
+> Verify your credentials and the whole build→run→score wiring end-to-end on the 5-question subset
+> (`dataset/smoke.json`) **before** spending budget on the full run. It uses only `closed_book` +
+> `bm25`, so **no embedding endpoint is needed**.
 
 ```bash
 scripts/smoke.sh <your-model>   # ~10 chat + ~10 judge calls
@@ -272,7 +209,7 @@ scripts/smoke.sh <your-model>   # ~10 chat + ~10 judge calls
 A clean pass writes `runs/smoke/score_summary.json` with `"complete": true`. A nonzero `bm25` mean
 means retrieval + scoring work; `closed_book` is expected near 0.
 
-### Full evaluation
+### 🧪 Full evaluation
 
 ```bash
 # 1) build retrieval indexes (bm25/rag are fast; okf/graphrag are heavier, many LLM calls)
@@ -293,7 +230,7 @@ All paths and parameters are overridable via `EKWB_*` environment variables (sin
 `src/baselines/config.py`).
 
 <details>
-<summary><b>Configuration notes (build model, concurrency, thinking models)</b></summary>
+<summary>⚙️ <b>Configuration notes (build model, concurrency, thinking models)</b></summary>
 
 - **`okf` / `graphrag` build model.** `bm25` uses no LLM and `rag` only calls the embedding endpoint
   (`EMBED_MODEL`); the `okf`/`graphrag` compilers run an LLM per document using **`CHAT_MODEL` from
@@ -310,14 +247,14 @@ All paths and parameters are overridable via `EKWB_*` environment variables (sin
 
 </details>
 
-### Bring your own system
+### 🔌 Bring your own system
 
 Your system only needs to read `dataset/corpus/` and the question text in `dataset/questions.json`,
 then emit one answer per question. Score it with `scripts/score.py` against
 `dataset/golden_packets.jsonl`. To add it as a baseline, subclass `Baseline` and register with
 `@register("name")` (see `src/baselines/`).
 
-## Citation
+## 🔖 Citation
 
 If you use EntLORE, please cite:
 
@@ -333,10 +270,12 @@ If you use EntLORE, please cite:
 
 <sub>The arXiv identifier and paper link will be filled in once the preprint is posted.</sub>
 
-## License and data statement
+## 📜 License & data statement
 
 Code is released under the **MIT License** (see [`LICENSE`](LICENSE)). The corpus is **fully
 synthetic and anonymized** (English): an audited real enterprise world is reconstructed into a
 fictional organization, with persons, projects, aliases, and dates mapped through a shared identity
 map and private metadata never verbalized into the documents. See [`NOTICE`](NOTICE) for the full
 data statement and the licenses of vendored components (`third_party/`).
+
+<p align="center"><sub>Made with 🧠 &amp; 📈 by <b>ScitiX.ai</b></sub></p>
