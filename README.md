@@ -29,6 +29,15 @@
 
 📄 **Paper:** [arXiv:XXXX.XXXXX](https://arxiv.org/abs/XXXX.XXXXX) &nbsp;·&nbsp; 📊 **Data & code:** this repository
 
+<p align="center">
+  <img src="figures/teaser.png" width="92%" alt="Query-shaped construction versus EntLORE">
+</p>
+<p align="center">
+  <sub><b>Query-shaped construction versus EntLORE.</b> Controlled benchmarks materialize documents along a
+  predefined reasoning path (left). EntLORE reconstructs an audited enterprise world and releases an aligned
+  anonymized corpus; graph programs derive answers and proofs while the target relations remain withheld (right).</sub>
+</p>
+
 ---
 
 ## Overview
