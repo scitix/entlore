@@ -1,3 +1,12 @@
+<p align="center">
+  <img src="figures/teaser.png" width="92%" alt="Query-shaped construction versus EntLORE">
+</p>
+<p align="center">
+  <sub><b>Query-shaped construction versus EntLORE.</b> Controlled benchmarks materialize documents along a
+  predefined reasoning path (left). EntLORE reconstructs an audited enterprise world and releases an aligned
+  anonymized corpus; graph programs derive answers and proofs while the target relations remain withheld (right).</sub>
+</p>
+
 # EntLORE: A Graph-Grounded Benchmark for Latent Organizational Reasoning in Enterprise Question Answering
 
 <p align="center">
@@ -29,15 +38,6 @@
 
 📄 **Paper:** [arXiv:XXXX.XXXXX](https://arxiv.org/abs/XXXX.XXXXX) &nbsp;·&nbsp; 📊 **Data & code:** this repository
 
-<p align="center">
-  <img src="figures/teaser.png" width="92%" alt="Query-shaped construction versus EntLORE">
-</p>
-<p align="center">
-  <sub><b>Query-shaped construction versus EntLORE.</b> Controlled benchmarks materialize documents along a
-  predefined reasoning path (left). EntLORE reconstructs an audited enterprise world and releases an aligned
-  anonymized corpus; graph programs derive answers and proofs while the target relations remain withheld (right).</sub>
-</p>
-
 ---
 
 ## Overview
@@ -65,6 +65,25 @@ The released benchmark contains **2,341 documents** across **three enterprise so
 spanning explicit lookup, cross-source composition, latent organizational reasoning, exhaustive
 aggregation, evidence acquisition, and answer generation. The full evaluation matrix is **56
 configurations** (8 answer models × 7 knowledge-access conditions).
+
+## How EntLORE is built
+
+<p align="center">
+  <img src="figures/pipeline.png" width="98%" alt="The EntLORE construction pipeline">
+</p>
+
+Construction runs as a deterministic pipeline, not manual labelling:
+
+1. **Reconstruct a raw graph** from heterogeneous enterprise sources (routine documents,
+   authoritative organizational tables, operational records).
+2. **Certify derived relations.** Audited, versioned organizational conventions add *certified
+   inference edges*, turning the raw graph into a **truth graph**.
+3. **Release an aligned, anonymized corpus.** A shared anonymization map produces the public
+   document corpus; the private organizational records, certification rules, and the truth graph
+   itself **stay hidden**.
+4. **Compute answers with typed graph programs.** These derive each gold answer and *verify* its
+   derivation — completeness, uniqueness, and **absence of the target relation from the released
+   documents** — so every question's answerability and evidence chain are code-traceable.
 
 ## Key findings
 
@@ -98,23 +117,27 @@ configurations** (8 answer models × 7 knowledge-access conditions).
 
 ## Main results
 
-Overall answer accuracy by level, **averaged over 8 answer models**, for each knowledge-access
-condition. Every deployable cell uses the full bank (L1 469 / L2 204 / L3 234); Oracle Ω is the
-perfect-evidence ceiling (18 L3 items without a complete gold packet omitted, *n*=216). See the
-paper for the full per-model table.
+Overall answer accuracy (**%**) by level (L1 / L2 / L3), across all **8 answer models** and **7
+knowledge-access conditions**. Every deployable cell uses the full bank (L1 469 / L2 204 / L3 234);
+**Oracle Ω** is the perfect-evidence ceiling (18 L3 items without a complete gold packet omitted,
+*n*=216). **Bold** marks the best *deployable* condition per model and level (closed-book and Ω are
+excluded from that comparison).
 
-| Access condition | L1 | L2 | L3 |
-|---|---:|---:|---:|
-| Closed-book *(parametric floor)* | 0.006 | 0.000 | 0.079 |
-| BM25 *(sparse lexical)* | **0.624** | 0.514 | 0.340 |
-| RAG *(flat dense)* | 0.461 | 0.325 | 0.189 |
-| Agentic Retrieval | 0.485 | 0.356 | 0.135 |
-| LLM Wiki *(compiled offline KB)* | 0.617 | **0.525** | 0.277 |
-| GraphRAG *(induced entity graph)* | **0.632** | 0.453 | **0.362** |
-| Oracle Ω *(ceiling, excluded from ranking)* | 0.874 | 0.938 | 0.696 |
+| Model | CB L1 | CB L2 | CB L3 | BM25 L1 | BM25 L2 | BM25 L3 | RAG L1 | RAG L2 | RAG L3 | Ag L1 | Ag L2 | Ag L3 | Wiki L1 | Wiki L2 | Wiki L3 | Graph L1 | Graph L2 | Graph L3 | Ω L1 | Ω L2 | Ω L3 |
+|---|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|
+| GPT-5.4 | 1.1 | 0.0 | 8.3 | **63.0** | 51.8 | 34.9 | 47.9 | 34.3 | 19.1 | 49.1 | 40.5 | 17.5 | 62.3 | **52.5** | **35.5** | 56.7 | 51.5 | 34.1 | 88.9 | 95.2 | 69.5 |
+| GPT-5.4-mini | 0.0 | 0.0 | 7.7 | **61.9** | 45.1 | **33.0** | 44.3 | 27.9 | 18.4 | 42.5 | 30.4 | 14.8 | 55.2 | **47.1** | 26.5 | 52.2 | 32.9 | 28.8 | 87.5 | 84.9 | 62.1 |
+| Claude-Sonnet-4.6 | 0.9 | 0.0 | 8.5 | 64.0 | **51.7** | 36.4 | 46.8 | 32.1 | 21.2 | 54.7 | 35.6 | 14.9 | **66.7** | 51.5 | 34.6 | 65.8 | 43.7 | **38.3** | 88.5 | 94.5 | 76.3 |
+| Qwen3.5-397B-A17B | 0.4 | 0.0 | 7.7 | 64.9 | **53.0** | 36.2 | 48.4 | 33.2 | 19.5 | 46.0 | 35.0 | 9.5 | 59.4 | 49.3 | 20.4 | **65.6** | 46.6 | **39.6** | 85.2 | 95.9 | 62.5 |
+| GLM-5.2 | 0.5 | 0.0 | 7.7 | 60.9 | 51.2 | 30.9 | 44.1 | 32.1 | 17.4 | 51.0 | 35.9 | 12.3 | 67.0 | **53.2** | 30.8 | **68.5** | 46.5 | **43.1** | 89.2 | 95.3 | 70.9 |
+| Kimi-K2.6 | 0.4 | 0.0 | 8.1 | **63.8** | **55.2** | **35.1** | 46.4 | 37.0 | 19.5 | 46.5 | 31.5 | 9.4 | 57.2 | 49.7 | 14.0 | 63.4 | 40.9 | 27.6 | 88.2 | 94.9 | 70.6 |
+| DeepSeek-V4-Pro | 0.7 | 0.0 | 7.7 | 61.2 | 52.6 | 33.8 | 46.1 | 33.3 | 17.7 | 48.4 | 39.1 | 14.3 | 64.9 | **56.9** | 29.6 | **66.2** | 48.8 | **38.6** | 86.4 | 95.2 | 73.5 |
+| DeepSeek-V4-Flash | 1.1 | 0.0 | 7.7 | 59.3 | 50.8 | 31.8 | 45.0 | 30.2 | 18.4 | 49.6 | 36.4 | 15.1 | 61.4 | **59.6** | 30.6 | **67.6** | 51.7 | **39.8** | 85.6 | 94.7 | 71.3 |
+| **Mean** | 0.6 | 0.0 | 7.9 | 62.4 | 51.4 | 34.0 | 46.1 | 32.5 | 18.9 | 48.5 | 35.6 | 13.5 | 61.7 | **52.5** | 27.7 | **63.2** | 45.3 | **36.2** | 87.4 | 93.8 | 69.6 |
 
-*Bold marks the best **deployable** condition per level (closed-book and Ω excluded). No single
-condition owns a level; structural access leads L2/L3, lexical access is strongest on some L1.*
+*Columns: **CB** closed-book · **Ag** agentic retrieval · **Wiki** LLM Wiki · **Graph** GraphRAG ·
+**Ω** Oracle. No single condition owns a level — structural access (GraphRAG / LLM Wiki) leads L2/L3,
+lexical BM25 is strongest on some L1 — and open-weight models take most of the bold cells.*
 
 ## What's in this repository
 
