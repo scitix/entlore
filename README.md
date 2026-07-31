@@ -1,11 +1,6 @@
 <p align="center">
   <img src="figures/teaser.png" width="92%" alt="Query-shaped construction versus EntLORE">
 </p>
-<p align="center">
-  <sub><b>Query-shaped construction versus EntLORE.</b> Controlled benchmarks materialize documents along a
-  predefined reasoning path (left). EntLORE reconstructs an audited enterprise world and releases an aligned
-  anonymized corpus; graph programs derive answers and proofs while the target relations remain withheld (right).</sub>
-</p>
 
 # EntLORE: A Graph-Grounded Benchmark for Latent Organizational Reasoning in Enterprise Question Answering
 
@@ -117,27 +112,84 @@ Construction runs as a deterministic pipeline, not manual labelling:
 
 ## Main results
 
-Overall answer accuracy (**%**) by level (L1 / L2 / L3), across all **8 answer models** and **7
-knowledge-access conditions**. Every deployable cell uses the full bank (L1 469 / L2 204 / L3 234);
-**Oracle Ω** is the perfect-evidence ceiling (18 L3 items without a complete gold packet omitted,
-*n*=216). **Bold** marks the best *deployable* condition per model and level (closed-book and Ω are
-excluded from that comparison).
+Answer accuracy (**%**) across all 8 answer models and 7 knowledge-access conditions, split into four views: **Overall** (tier-weighted over L1 469 / L2 204 / L3 234) and per level. **Bold** = best *deployable* condition per model (closed-book **CB** and Oracle **Ω** excluded from the comparison). Columns: **CB** closed-book · **Ag** agentic retrieval · **Wiki** LLM Wiki · **GRAG** GraphRAG · **Ω** Oracle ceiling (*n*=216 on L3).
 
-| Model | CB L1 | CB L2 | CB L3 | BM25 L1 | BM25 L2 | BM25 L3 | RAG L1 | RAG L2 | RAG L3 | Ag L1 | Ag L2 | Ag L3 | Wiki L1 | Wiki L2 | Wiki L3 | Graph L1 | Graph L2 | Graph L3 | Ω L1 | Ω L2 | Ω L3 |
-|---|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|
-| GPT-5.4 | 1.1 | 0.0 | 8.3 | **63.0** | 51.8 | 34.9 | 47.9 | 34.3 | 19.1 | 49.1 | 40.5 | 17.5 | 62.3 | **52.5** | **35.5** | 56.7 | 51.5 | 34.1 | 88.9 | 95.2 | 69.5 |
-| GPT-5.4-mini | 0.0 | 0.0 | 7.7 | **61.9** | 45.1 | **33.0** | 44.3 | 27.9 | 18.4 | 42.5 | 30.4 | 14.8 | 55.2 | **47.1** | 26.5 | 52.2 | 32.9 | 28.8 | 87.5 | 84.9 | 62.1 |
-| Claude-Sonnet-4.6 | 0.9 | 0.0 | 8.5 | 64.0 | **51.7** | 36.4 | 46.8 | 32.1 | 21.2 | 54.7 | 35.6 | 14.9 | **66.7** | 51.5 | 34.6 | 65.8 | 43.7 | **38.3** | 88.5 | 94.5 | 76.3 |
-| Qwen3.5-397B-A17B | 0.4 | 0.0 | 7.7 | 64.9 | **53.0** | 36.2 | 48.4 | 33.2 | 19.5 | 46.0 | 35.0 | 9.5 | 59.4 | 49.3 | 20.4 | **65.6** | 46.6 | **39.6** | 85.2 | 95.9 | 62.5 |
-| GLM-5.2 | 0.5 | 0.0 | 7.7 | 60.9 | 51.2 | 30.9 | 44.1 | 32.1 | 17.4 | 51.0 | 35.9 | 12.3 | 67.0 | **53.2** | 30.8 | **68.5** | 46.5 | **43.1** | 89.2 | 95.3 | 70.9 |
-| Kimi-K2.6 | 0.4 | 0.0 | 8.1 | **63.8** | **55.2** | **35.1** | 46.4 | 37.0 | 19.5 | 46.5 | 31.5 | 9.4 | 57.2 | 49.7 | 14.0 | 63.4 | 40.9 | 27.6 | 88.2 | 94.9 | 70.6 |
-| DeepSeek-V4-Pro | 0.7 | 0.0 | 7.7 | 61.2 | 52.6 | 33.8 | 46.1 | 33.3 | 17.7 | 48.4 | 39.1 | 14.3 | 64.9 | **56.9** | 29.6 | **66.2** | 48.8 | **38.6** | 86.4 | 95.2 | 73.5 |
-| DeepSeek-V4-Flash | 1.1 | 0.0 | 7.7 | 59.3 | 50.8 | 31.8 | 45.0 | 30.2 | 18.4 | 49.6 | 36.4 | 15.1 | 61.4 | **59.6** | 30.6 | **67.6** | 51.7 | **39.8** | 85.6 | 94.7 | 71.3 |
-| **Mean** | 0.6 | 0.0 | 7.9 | 62.4 | 51.4 | 34.0 | 46.1 | 32.5 | 18.9 | 48.5 | 35.6 | 13.5 | 61.7 | **52.5** | 27.7 | **63.2** | 45.3 | **36.2** | 87.4 | 93.8 | 69.6 |
+<table>
+<tr>
+<td valign=top>
 
-*Columns: **CB** closed-book · **Ag** agentic retrieval · **Wiki** LLM Wiki · **Graph** GraphRAG ·
-**Ω** Oracle. No single condition owns a level — structural access (GraphRAG / LLM Wiki) leads L2/L3,
-lexical BM25 is strongest on some L1 — and open-weight models take most of the bold cells.*
+<b>Overall</b><br>
+<table>
+<tr><th align=left>Model</th><th align=right>CB</th><th align=right>BM25</th><th align=right>RAG</th><th align=right>Ag</th><th align=right>Wiki</th><th align=right>GRAG</th><th align=right>Ω</th></tr>
+<tr><td align=left>GPT-5.4</td><td align=right>2.7</td><td align=right><b>53.2</b></td><td align=right>37.4</td><td align=right>39.0</td><td align=right>53.2</td><td align=right>49.7</td><td align=right>85.3</td></tr>
+<tr><td align=left>GPT-5.4-mini</td><td align=right>2.0</td><td align=right><b>50.7</b></td><td align=right>33.9</td><td align=right>32.6</td><td align=right>46.0</td><td align=right>41.8</td><td align=right>80.4</td></tr>
+<tr><td align=left>Claude-Sonnet-4.6</td><td align=right>2.7</td><td align=right>54.1</td><td align=right>36.9</td><td align=right>40.1</td><td align=right><b>55.0</b></td><td align=right>53.7</td><td align=right>86.7</td></tr>
+<tr><td align=left>Qwen3.5-397B-A17B</td><td align=right>2.2</td><td align=right><b>54.8</b></td><td align=right>37.5</td><td align=right>34.1</td><td align=right>47.1</td><td align=right>54.6</td><td align=right>81.8</td></tr>
+<tr><td align=left>GLM-5.2</td><td align=right>2.2</td><td align=right>51.0</td><td align=right>34.5</td><td align=right>37.6</td><td align=right>54.6</td><td align=right><b>57.0</b></td><td align=right>85.9</td></tr>
+<tr><td align=left>Kimi-K2.6</td><td align=right>2.3</td><td align=right><b>54.5</b></td><td align=right>37.3</td><td align=right>33.6</td><td align=right>44.4</td><td align=right>49.1</td><td align=right>85.2</td></tr>
+<tr><td align=left>DeepSeek-V4-Pro</td><td align=right>2.3</td><td align=right>52.2</td><td align=right>35.9</td><td align=right>37.5</td><td align=right>54.0</td><td align=right><b>55.2</b></td><td align=right>85.1</td></tr>
+<tr><td align=left>DeepSeek-V4-Flash</td><td align=right>2.6</td><td align=right>50.3</td><td align=right>34.8</td><td align=right>37.7</td><td align=right>53.0</td><td align=right><b>56.9</b></td><td align=right>84.0</td></tr>
+<tr><td align=left><b>Mean</b></td><td align=right>2.4</td><td align=right><b>52.6</b></td><td align=right>36.0</td><td align=right>36.5</td><td align=right>50.9</td><td align=right>52.2</td><td align=right>84.3</td></tr>
+</table>
+
+</td>
+<td valign=top>
+
+<b>L1</b><br>
+<table>
+<tr><th align=left>Model</th><th align=right>CB</th><th align=right>BM25</th><th align=right>RAG</th><th align=right>Ag</th><th align=right>Wiki</th><th align=right>GRAG</th><th align=right>Ω</th></tr>
+<tr><td align=left>GPT-5.4</td><td align=right>1.1</td><td align=right><b>63.0</b></td><td align=right>47.9</td><td align=right>49.1</td><td align=right>62.3</td><td align=right>56.7</td><td align=right>88.9</td></tr>
+<tr><td align=left>GPT-5.4-mini</td><td align=right>0.0</td><td align=right><b>61.9</b></td><td align=right>44.3</td><td align=right>42.5</td><td align=right>55.2</td><td align=right>52.2</td><td align=right>87.5</td></tr>
+<tr><td align=left>Claude-Sonnet-4.6</td><td align=right>0.9</td><td align=right>64.0</td><td align=right>46.8</td><td align=right>54.7</td><td align=right><b>66.7</b></td><td align=right>65.8</td><td align=right>88.5</td></tr>
+<tr><td align=left>Qwen3.5-397B-A17B</td><td align=right>0.4</td><td align=right>64.9</td><td align=right>48.4</td><td align=right>46.0</td><td align=right>59.4</td><td align=right><b>65.6</b></td><td align=right>85.2</td></tr>
+<tr><td align=left>GLM-5.2</td><td align=right>0.5</td><td align=right>60.9</td><td align=right>44.1</td><td align=right>51.0</td><td align=right>67.0</td><td align=right><b>68.5</b></td><td align=right>89.2</td></tr>
+<tr><td align=left>Kimi-K2.6</td><td align=right>0.4</td><td align=right><b>63.8</b></td><td align=right>46.4</td><td align=right>46.5</td><td align=right>57.2</td><td align=right>63.4</td><td align=right>88.2</td></tr>
+<tr><td align=left>DeepSeek-V4-Pro</td><td align=right>0.7</td><td align=right>61.2</td><td align=right>46.1</td><td align=right>48.4</td><td align=right>64.9</td><td align=right><b>66.2</b></td><td align=right>86.4</td></tr>
+<tr><td align=left>DeepSeek-V4-Flash</td><td align=right>1.1</td><td align=right>59.3</td><td align=right>45.0</td><td align=right>49.6</td><td align=right>61.4</td><td align=right><b>67.6</b></td><td align=right>85.6</td></tr>
+<tr><td align=left><b>Mean</b></td><td align=right>0.6</td><td align=right>62.4</td><td align=right>46.1</td><td align=right>48.5</td><td align=right>61.8</td><td align=right><b>63.2</b></td><td align=right>87.4</td></tr>
+</table>
+
+</td>
+</tr>
+<tr>
+<td valign=top>
+
+<b>L2</b><br>
+<table>
+<tr><th align=left>Model</th><th align=right>CB</th><th align=right>BM25</th><th align=right>RAG</th><th align=right>Ag</th><th align=right>Wiki</th><th align=right>GRAG</th><th align=right>Ω</th></tr>
+<tr><td align=left>GPT-5.4</td><td align=right>0.0</td><td align=right>51.8</td><td align=right>34.3</td><td align=right>40.5</td><td align=right><b>52.5</b></td><td align=right>51.5</td><td align=right>95.2</td></tr>
+<tr><td align=left>GPT-5.4-mini</td><td align=right>0.0</td><td align=right>45.1</td><td align=right>27.9</td><td align=right>30.4</td><td align=right><b>47.1</b></td><td align=right>32.9</td><td align=right>84.9</td></tr>
+<tr><td align=left>Claude-Sonnet-4.6</td><td align=right>0.0</td><td align=right><b>51.7</b></td><td align=right>32.1</td><td align=right>35.6</td><td align=right>51.5</td><td align=right>43.7</td><td align=right>94.5</td></tr>
+<tr><td align=left>Qwen3.5-397B-A17B</td><td align=right>0.0</td><td align=right><b>53.0</b></td><td align=right>33.2</td><td align=right>35.0</td><td align=right>49.3</td><td align=right>46.6</td><td align=right>95.9</td></tr>
+<tr><td align=left>GLM-5.2</td><td align=right>0.0</td><td align=right>51.2</td><td align=right>32.1</td><td align=right>35.9</td><td align=right><b>53.2</b></td><td align=right>46.5</td><td align=right>95.3</td></tr>
+<tr><td align=left>Kimi-K2.6</td><td align=right>0.0</td><td align=right><b>55.2</b></td><td align=right>37.0</td><td align=right>31.5</td><td align=right>49.7</td><td align=right>40.9</td><td align=right>94.9</td></tr>
+<tr><td align=left>DeepSeek-V4-Pro</td><td align=right>0.0</td><td align=right>52.6</td><td align=right>33.3</td><td align=right>39.1</td><td align=right><b>56.9</b></td><td align=right>48.8</td><td align=right>95.2</td></tr>
+<tr><td align=left>DeepSeek-V4-Flash</td><td align=right>0.0</td><td align=right>50.8</td><td align=right>30.2</td><td align=right>36.4</td><td align=right><b>59.6</b></td><td align=right>51.7</td><td align=right>94.7</td></tr>
+<tr><td align=left><b>Mean</b></td><td align=right>0.0</td><td align=right>51.4</td><td align=right>32.5</td><td align=right>35.5</td><td align=right><b>52.5</b></td><td align=right>45.3</td><td align=right>93.8</td></tr>
+</table>
+
+</td>
+<td valign=top>
+
+<b>L3</b><br>
+<table>
+<tr><th align=left>Model</th><th align=right>CB</th><th align=right>BM25</th><th align=right>RAG</th><th align=right>Ag</th><th align=right>Wiki</th><th align=right>GRAG</th><th align=right>Ω</th></tr>
+<tr><td align=left>GPT-5.4</td><td align=right>8.3</td><td align=right>34.9</td><td align=right>19.1</td><td align=right>17.5</td><td align=right><b>35.5</b></td><td align=right>34.1</td><td align=right>69.5</td></tr>
+<tr><td align=left>GPT-5.4-mini</td><td align=right>7.7</td><td align=right><b>33.0</b></td><td align=right>18.4</td><td align=right>14.8</td><td align=right>26.5</td><td align=right>28.8</td><td align=right>62.1</td></tr>
+<tr><td align=left>Claude-Sonnet-4.6</td><td align=right>8.5</td><td align=right>36.4</td><td align=right>21.2</td><td align=right>14.9</td><td align=right>34.6</td><td align=right><b>38.3</b></td><td align=right>76.3</td></tr>
+<tr><td align=left>Qwen3.5-397B-A17B</td><td align=right>7.7</td><td align=right>36.2</td><td align=right>19.5</td><td align=right>9.5</td><td align=right>20.4</td><td align=right><b>39.6</b></td><td align=right>62.5</td></tr>
+<tr><td align=left>GLM-5.2</td><td align=right>7.7</td><td align=right>30.9</td><td align=right>17.4</td><td align=right>12.3</td><td align=right>30.8</td><td align=right><b>43.1</b></td><td align=right>70.9</td></tr>
+<tr><td align=left>Kimi-K2.6</td><td align=right>8.1</td><td align=right><b>35.1</b></td><td align=right>19.5</td><td align=right>9.4</td><td align=right>14.0</td><td align=right>27.6</td><td align=right>70.6</td></tr>
+<tr><td align=left>DeepSeek-V4-Pro</td><td align=right>7.7</td><td align=right>33.8</td><td align=right>17.7</td><td align=right>14.3</td><td align=right>29.6</td><td align=right><b>38.6</b></td><td align=right>73.5</td></tr>
+<tr><td align=left>DeepSeek-V4-Flash</td><td align=right>7.7</td><td align=right>31.8</td><td align=right>18.4</td><td align=right>15.1</td><td align=right>30.6</td><td align=right><b>39.8</b></td><td align=right>71.3</td></tr>
+<tr><td align=left><b>Mean</b></td><td align=right>7.9</td><td align=right>34.0</td><td align=right>18.9</td><td align=right>13.5</td><td align=right>27.8</td><td align=right><b>36.2</b></td><td align=right>69.6</td></tr>
+</table>
+
+</td>
+</tr>
+</table>
+
+*No single condition owns a level — structural access (GraphRAG / LLM Wiki) leads L2/L3, lexical BM25 is strongest on some L1 — and open-weight models take most of the bold cells.*
 
 ## What's in this repository
 
