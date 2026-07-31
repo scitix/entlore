@@ -52,10 +52,14 @@ class Corpus:
 
     def fuzzy(self, relpath: str, limit: int = 5) -> list[str]:
         stem = Path(relpath).stem
+        if not stem:
+            return []
         if self.index is not None:
             return [self.index.relative_path(document_id)
                     for document_id in self.index.ids() if stem in document_id][:limit]
-        return [self.rel(c) for c in list(self.root.rglob(f"*{stem}*"))[:limit]]
+        # Substring match over a fixed, safe glob — never interpolate agent-supplied text into the
+        # glob pattern (a stem containing `*`/`**` made `rglob(f"*{stem}*")` raise "Invalid pattern").
+        return [self.rel(c) for c in sorted(self.root.rglob("*.md")) if stem in c.name][:limit]
 
     def index_md(self) -> str | None:
         p = self.root / "index.md"
