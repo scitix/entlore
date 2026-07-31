@@ -25,7 +25,7 @@
 </div>
 
 <div align="center">
-  📄 <b>Paper:</b> <a href="https://arxiv.org/abs/XXXX.XXXXX">arXiv:XXXX.XXXXX</a> &nbsp;·&nbsp; 📊 <b>Data &amp; code:</b> this repository
+  📄 <b>Paper:</b> <a href="paper/EntLORE.pdf">PDF</a> &nbsp;·&nbsp; <a href="https://arxiv.org/abs/XXXX.XXXXX">arXiv:XXXX.XXXXX</a> &nbsp;·&nbsp; 📊 <b>Data &amp; code:</b> this repository
 </div>
 
 > **TL;DR** — Enterprise answers often depend on *organizational relations* that no single document
