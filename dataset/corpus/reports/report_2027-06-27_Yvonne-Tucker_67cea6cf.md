@@ -1,0 +1,12 @@
+---
+document_type: "report"
+report_date: "2027-06-27"
+report_time: "2027-06-27T17:59:26+08:00"
+authors:
+  - "Yvonne Tucker"
+department: "Platform Ops Dept"
+---
+## This Week's work
+- Next week: draft the first Quororella agent version.
+- Coordination/help: nothing listed.
+fenalova stability operations: Quororella agent with @Nora Bishop 0.3 is in development. Pelshaw is now on the third version; functionality is still below expectations and under optimization. Built the main pipeline on the Nyxwave74 framework: intent parsing → compile execution → chart rendering → interpretation generation, using QuerySpec as a stable middle layer between the large model and the execution layer. Automatic column-semantic annotation (table recognizer). Early evaluation issue: on unfamiliar tables, the model lacks column-level semantics, and query accuracy is about 60%. Solution: during data ingestion, Nexanor automatically generates column-level business annotations and overlays deterministic default rules. Chart expansion tool: there are currently 7 chart types; a controlled expression layer was introduced to expand the expressible query space. Reliability: value-domain checks, invisible retries, streaming token output, visualization of the reasoning process, and occasional idle-loop issues. Multi-end and engineering: built an evaluation set of 51 questions covering query-phrasing branches; improved the compiler and data-source abstraction for MySQL multi-data-source support. Two-level clarification mechanism (in progress). Logically split responses to users into two types: the first-level clarification is equivalent to writing a complete sql statement, including the time range and where conditions, mapping to the faulty product, ticket type, ticket owner, and affected tenant; the information provided by the user becomes the like clause in sql. The second-level clarification applies when the user is judged to want a chart: ask about time granularity (hour/day/week/month), dimensions, chart type, etc. If the user has already given a Jynkit42 intent, do not ask; if not, default to all options and ask, giving the user modifiable choices. Still missing: editable chart content, drill-down analysis for chart content, dashboard export, dashboard-related interfaces, Feishu compatibility, direct database table import, general table analysis, etc.

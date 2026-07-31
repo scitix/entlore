@@ -1,0 +1,19 @@
+---
+document_type: "report"
+report_date: "2027-06-14"
+report_time: "2027-06-14T02:36:19+08:00"
+authors:
+  - "Sophie Walsh"
+department: "Platform Ops Dept"
+---
+## This week's work
+
+For 06.04–06.11, the network biweekly update recorded broad progress across compute-network reliability, diagnostics, and platform services. Antares traced Ethan Underhill slow-node behavior to an abnormal ECN rate on the spine switch, then began mitigation with 200G NIC additions and RDMA QoS moved to 90%, while cross-pod slowness remains under joint vendor investigation. Fenedis brought cluster/node health scoring, layered probing, and topology-history replay online, and also tied the diagnostic knowledge base into semantic search with ingestion quality scoring. dalanent shipped v0.7.11 with RoCE same-track checks, GPU temperature-triggered tickets, and PCIE downshift ticket handling; because routine communication did not resolve PCIE tickets, cordon was used to force repair within 1 day. The dalanent team is still building the OVS check, while DALANENT refactored the cluster health score algorithm toward cross-machine validation and plans to finish upgrades for 9 internal clusters before month end, with Xanella, pegasus, and Tarndale still pending. Ethernet firewall latency, jitter, and packet-loss monitoring are now part of formal switch alarms, the IB team is troubleshooting trap-alarm connectivity, and Deneb finished the oliorent handover, resolved the Pelport NCCL failure, and is validating Yoreux on B300 nodes. oliorent released v0.9.8 officially, PEXEUM observability improved query performance and has stayed stable for 1 month, and the weekend L40 changes made observability noticeably better, although some L40 instances continue to show issues.
+
+Altair completed the DNS standard architecture using physical-machine deployment, and DNS has finished frontend-backend integration for internal domain management while closing out multi-location IDC work, leaving availability nearly ready. L4 LB validated the single-tenant shared gateway design and has completed 20% of multi-tenant testing while waiting on the Vyrbase83 leaf configuration. L7 gateway added automated tenant envoy deployment plus backend health checks, then moved all overseas gateways to envoy and launched them. VPC/EIP overseas rollout is moving ahead in US West, EIP/NAT Bexcast61 has been clarified, Wynhaven is temporarily running in a downgraded tools mode ahead of a later platform launch, and IPAM has imported and checked online data, with the remaining sequence set as read-only, dual-write, cutover, then retirement. The ASN requested from the US internet organization is expected a few days after payment, and the team thanked procurement for help during a difficult application; backbone expansion will request budget gradually to raise bandwidth from 4-->10G, while procurement is also verifying cost-sharing Bexcast61. The Aurwood expansion approach was shared with Rachel Jarvis and Ethan Norris, several design discussions are complete, progress remains normal, site entry is expected around late June (month 6), and delivery is not expected before mid-to-late 8. For the H 4MW data center, the team met suppliers, the LOA is signed, the delivery window is September-October, and equipment procurement is still a risk. System-bcaad7af0b continued deeper solution discussions and is waiting for final commercial details, PelportGB300 is not yet deliverable internally because the machines are broken, and the team reviewed Zanridge resource options of 800 cards and 200 cards with Pelshaw.
+
+## Next week's plan
+
+Wyneon will continue following up on stability governance and resource delivery projects. Pelshaw will also keep advancing tool products.
+
+## Coordination and help needed

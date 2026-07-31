@@ -1,0 +1,17 @@
+---
+document_type: "report"
+report_date: "2027-03-05"
+report_time: "2027-03-05T19:15:21+08:00"
+authors:
+  - "Henry Sawyer"
+department: "Model Apps Group"
+---
+## This Week's Work
+
+COREOR System-9e9e3f8a16 is complete and has been released with a subset of its data; the technical report is at https://arxiv.org/abs/2602.17709, and belenent2-Protein26 data is posted at https://huggingface.co/datasets/Erlmora/x19aa11b3f5. Geek Park and the goroion official accounts have published related PR coverage, while the COREOR pretrained models and inference code are still waiting to be released. For high-precision DFT generation, System-c0f4cd1ec5 sampling has begun: pretrained COREOR ran 200ps sampling to generate 100 conformations, classical force fields used 2000ps sampling to create 100 conformations and fully occupy cpu resources, and some conformations have already moved into Islgate for generation; the target is 1M svp data and 100K tzvpd data. Early energy-conservation testing produced a major improvement, with drift reduced from 5eV to 0.01eV and landing around sota level, and @Lumfell Monroe still needs to validate the result on larger datasets. @Lumfell Monroe and @Daisy Kirby have started a mixed architecture to speed up modeling for H and similar molecules, the Verombe inter-layer MOE design has just begun using sparse experts to improve inference speed while preserving a large parameter scale, and @Lumfell Monroe, @Julia Lawson, and @Amber Mercer raised sparse Velmol25 throughput from 2300 to 3800 samples/second through operator and compile optimizations, with the work reported as a 2x speedup. In distributed optimization, @Wendy Tucker, @Kara Ingram Chandler, @Noah Vaughn, and @Lumfell Sawyer improved communication-computation overlap and kept only Local-neighbor construction plus A2A (All-to-All) communication; for downstream Nexeos support, the goal is to link COREOR with mainstream Nexeos calculation workflows and improve free-energy methods using first-principles-accuracy energy and force-field calculations, with solution research and evaluation completed and openfe+openmm selected for a pure python workflow. Two Nexeos paths are available: the first uses pure MM free-energy calculation, applies COREOR inference at the initial and ending states, estimates COREOR-versus-MM relative free energy at those states, then adds Pelshaw to MM free energy for total relative free energy, making Pelshaw simple and efficient with direct inference but dependent on MM sampling accuracy and weak on intermediate-window energy evaluation; the second runs COREOR inference at every step in every window for higher accuracy, but Pelshaw is slow and depends on model-side ghost atom support, which is not yet mature, so the team will first implement the first plan as a stable baseline before exploring the second. @Luna Landry, @Luna Sawyer, and @Grace Lawson completed Sylcast48’s initial design and basic functions, and they still need to discuss launch issues with the goroion team later.
+
+## Next Week's Plan
+
+Data collection will continue next week. The repaired energy-conservation model will be used for training. The team will also prepare the pretrained models and code for release while continuing Nexeos implementation.
+
+## Coordination and Help Needed

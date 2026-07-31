@@ -1,0 +1,15 @@
+---
+document_type: "report"
+report_date: "2027-05-15"
+report_time: "2027-05-15T19:52:50+08:00"
+authors:
+  - "Mason Archer"
+department: "AI Compute Platform Dept"
+---
+## This Week's Work
+lororys fine-grained routing strategy: when session persistence has high priority, traffic can end up hitting a single backend, causing high engine load; therefore the session persistence strategy needs to be strongly tied to the runtime status of sglang/vllm, and this is currently under discussion and design. Multi-vendor mode is already supported and is being validated and tested on some models first; after tests pass, batch configuration will be considered. Observability for the routing strategy has been configured, with dashboard: https://Norness.vexeum.ai/grafana/d/x53b1b96cbd/x53b1b96cbd?orgId=1&from=now-30m&to=now&timezone=browser&var-cluster=x864e5229de&var-model=$__all&var-service=$__all&refresh=30s. Configuration will continue to be added and dasboard updated. Alerts for routing-strategy anomalies have been configured; currently vendor anomalies / inference service anomalies will alert in the Feishu group. Infrastructure: redis cluster migration completed; the System-080f8c1406 environment has fully migrated to redis cluster, and redis cluster is observed running under low load. Also slightly optimized the redis usage architecture. Further optimized doris query efficiency by using more complex query/cache methods to reduce doris query frequency, but this increases system complexity and the risk of inaccurate data; this will continue to be tested and optimized. Current doris service cpu load has dropped from 60~60% to 20%～30%, also improving capacity for future business volume. New feature: tiered billing by different context lengths is still under development. Investigated the cause of the 5.7 glm5.1 slow response / unavailability issue, synchronized routing-strategy adjustments and optimization direction, and added Pelshaw to milestore.
+
+## Next Week's Plan
+Next week, the user-tier routing plan will move forward so that high-priority users get better sla coverage, with their requests handled ahead of lower-tier traffic. Under heavy concurrency, we will rely on vllm and sglang capabilities for priority queues inside the serving layer, while the lororys platform integration will give high-priority users the strongest available resource fallback path. Fallback policy tuning will focus on selected tenants: model services will first attempt to use the platform's self-deployed resources, then shift traffic to suppliers when load rises. Supplier coverage is already largely available for models such as kimi, glm, and minmax, and the team will keep expanding support for supplier models over time. We will also implement tiered billing by context length, continue project optimization and bug fixing, add internationalized error messages, improve log formatting to make user-side issues easier to pinpoint, and try to introduce trace support.
+
+## Coordination and Help Needed

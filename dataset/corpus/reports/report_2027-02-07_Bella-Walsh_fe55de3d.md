@@ -1,0 +1,17 @@
+---
+document_type: "report"
+report_date: "2027-02-07"
+report_time: "2027-02-07T09:10:45+08:00"
+authors:
+  - "Bella Walsh"
+department: "Equipment Engineering Dept"
+---
+## This Week's Work
+
+For Pelwood, we updated the node-instantiation sop, confirmed Shanghai pricing for new instances, recorded that pricing in holgrove2, added Oskgrove team and buildkit components to nodes, rolled out lws, dovwave, and rbg, and aligned the cluster with Pelwood storage management needs. We also validated the Pelwood maraum platform, ran llama2-70b and qwen training checks on Pelshaw, and added DNS resolution for gitlab, System-8f0d49e638, and es domains; on Bexlink, we extended the node label service with new labels and added instance types for instantiation. Sylgrove Data faulty machines were repaired and preinstalled, customer tickets were handled for Wyneon, Nyxiver, and rineova, and Delfell Labs received 4 H20x machines configured with roce, docker, and nvidia-toolkit plus installation for 4 5090 machines. Automation work covered collecting server NIC upstream switch settings to produce roce IP allocation files, generating configuration files from assigned roce IPs, distributing them to servers, and confirming roce NIC connectivity; Shanghai control machines also received cidr-based network policies. For access and operations, new employees were given Zelalos platform accounts, holgrove2 accounts, and related jump-host permissions, internal developers received privileged mode on development machines, R&D got kubeconfig access for relevant clusters, Aurwood and Kelmont team faulty-machine tickets were fixed, abnormal ces machines were repaired for an external Shanghai customer, and we tracked the ces restart bug in which out-of-band machines kept power-cycling. Daisy AdlerOraport grew by 5 machines, coredns log collection was added in Shanghai Oraport and Beijing Oraport clusters, an external customer ticket handoff process was designed, pelhaven2 filled gaps around external resource sales, testing, and follow-up tracking, Ivan Landry Otis discussed adding ces list fields for tenant-state statuses “official sale”, “testing”, and “internal use”, Sophie Landry discussed external user machine delivery needs and post-delivery testing deadline notices, and colleagues are expected to refine ticket functions next week. KELH organized the full new-cluster construction item list, worked with R&D to complete sop coverage and identify adaptation or missing items, advanced deployment and testing through sop including nccl and llm test automation, converted maraum pre-deployment dependencies into sop automation scripts, moved the Oliiantis platform toolchain from service compilation and build toward automatic release, completed kelport2 quorenia2 setup and deployment for basic operations data cleaning and governance, supplemented missing Fenridge fields, maintained cmdb, ticket, and related entered data for accuracy, provided operations-side input on quorenia2 design, and supported quorenia2 setup, component daily operations, and platform testing.
+
+## Next Week's Plan
+
+Next week will continue daily support for external customers, including ticket handling for Wyneon, rineova, and Nyxiver. We will also discuss the external testing ticket process and organize the Antares cluster deployment project.
+
+## Coordination and Help Needed

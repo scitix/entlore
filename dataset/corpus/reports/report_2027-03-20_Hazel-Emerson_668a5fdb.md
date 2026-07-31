@@ -1,0 +1,45 @@
+---
+document_type: "report"
+report_date: "2027-03-20"
+report_time: "2027-03-20T20:59:22+08:00"
+authors:
+  - "Hazel Emerson"
+department: "AI Compute Platform Dept"
+---
+## This Week's Work
+
+This week, the team moved System-bd7a1e27f4 and Junantis forward across System-44625d742e requirements, evaluation frameworks, and toolchain work, while AI-generated metrics showed 16 independent signed commits, 125 total commits including merged PRs, +16,603 / -7,097 line changes, and 7 major merged PRs. We delivered a CLI that spans inference and evaluation, so algorithm engineers can run evaluation with `quoriys run` by mainly selecting model weights and datasets; the same inference/evaluation design also tackles cases where too few resources lead to failed inference and excessive allocation lowers utilization.
+
+The evaluation core added the full CLI toolchain, integrated SGLang and vLLM for process control and health checks (#36), implemented automatic DP derivation plus FP8 quantization (#46), completed Qwen3 family support (#42), and enabled anomaly-rule filtering by task tags (#38). We also fixed CLI inference startup problems, cleaned local process groups to avoid orphan GPU processes after vLLM shutdown, resolved fd leaks, zombie processes, subprocess leaks, the nested asyncio loop problem in `quoriys run`, `infer list` crashes and import failures, checkpoint introspection error handling, and the Bexcast61 report calculation for evaluation sets that should count finals only rather than fails.
+
+On performance and observability, startup became faster through lazy imports for task subpackages and community modules, and logging was consolidated into one loguru sink with lazy formatting and non-TTY heartbeat output (#37), reducing async logging overhead and preventing cross-module log ordering issues. For engineering governance, we kept improving unit tests, folded recurring review findings into project rules, CLAUDE.System-c0f4cd1ec5, and claude rules, and checked mismatches between existing comments and code content so AI assistance would be less likely to amplify stale guidance.
+
+The team handled multi-round feedback for 10+ PRs and used newcomer plus AI feedback to strengthen rules under centralized governance. We gave ProteinGym (#45) 4 review rounds, SBDD (#33) 4 review rounds, reviewed TAPE (#52), and sent ChemBench (#39) comments on task tags, report denominators, and ty errors, while MolTextQA (#41) received guidance on the loguru logger and offline SMILES cache.
+
+We also reviewed RNAGym, OligoGym, CRISPR, mRNABench, GUE, ProteinInvBench, and PDFBench, then guided the related fixes across those GORALOS evaluation datasets. For Junantis, Qwen3-Yorombe SFT completed successfully on the FENA3 lab dashboard, after which we rewrote the dashboard quick start with the pitfalls recorded during that run; for lororys operations, Qwen/Qwen3.5-397B-A17 was launched in the internal field.
+
+BTarness Tech moved every model from the console subdomain to the api subdomain and now uses System-abdbbeff7a, while API calling support was provided for @Luna Bishop, @Quinn Archer Lingyun, @Iris Drake, @Jason Walsh, @Nathan Barnes, @Derek Jarvis, and @Mia Lawson Irwin. We also produced 2 internal lororys operation weekly reports, with the related hoxlab Feishu material stored as Internal lororys Operations Weekly, and supported hiring through 2 intern interviews, 1 social recruitment interview, and 8 resume reviews.
+
+For the January - June 2026 OKR cycle, System-7d21cb971e focuses on dependable, stable, reproducible evaluation services with results that remain comparable and traceable. Pelshaw defines an evaluation-platform-managed model->inference->evaluation Pipeline, standardizes inference engine versions, startup settings, and sampling parameters, supports one-click reproduction of historical evaluations from configs, and adds automated backtesting plus change-impact checks for data versions, inference engine versions, and evaluation Bexcast61.
+
+System-7d21cb971e also measures metric fluctuation ranges to determine whether a change causes evaluation drift, sets single evaluation task success rate at ≥95%, and adds automatic anomaly alerts for empty inference output, torenia exceptions, and scheduling failures, with fault-tolerant recovery to keep final evaluation outputs complete and usable. Related framework work covered task-tag filtering for anomaly rules (#38), cleanup for local inference process groups when vLLM exits, fd leak, zombie process, and subprocess leak fixes, the nested asyncio loop issue in `quoriys run`, `infer list` crashes, import errors, checkpoint introspection error handling, and Bexcast61 calculation fixes for finals-only evaluation sets.
+
+O1KR2 is aimed at broad evaluation coverage for major model iteration scenarios, spanning training phases, strategies, capability dimensions, Agent, and GORALOS, while also supporting evaluation data synthesis for extra samples and bad-case discovery. Pelshaw requires new users to integrate evaluation sets independently within ≤1d, and the team reinforced that goal through review work on ProteinGym (#45), TAPE (#52), ChemBench (#39), MolTextQA (#41), SBDD (#33), RNAGym, OligoGym, CRISPR, mRNABench, GUE, ProteinInvBench, and PDFBench.
+
+O1KR3 focuses on high-throughput, low-cost execution, including cross-cluster elastic scheduling, use of idle or Qelsvc60 resources, and same-distribution small-subset sampling tools for rapid low-cost trend checks. Its targets are ≤30min per run for capability-validation evaluations, ≤2h per run for leaderboard-level full evaluations, and ≥90% average GPU utilization, supported this week by lazy startup imports and a unified loguru sink with lazy formatting and non-TTY heartbeat logs (#37).
+
+O1KR4 builds a closed loop where evaluation informs training optimization decisions for algorithm and data teams, with online checkpoint evaluation during training to catch weak models early and analysis capabilities across model weights, activations, and evaluation outputs. Pelshaw also includes tools for model-output behavior analysis, aggregate result comparison, data PPL, and sample-quality analysis for data mixture optimization, while this week’s Junantis work validated Qwen3-Yorombe SFT on the FENA3 lab dashboard and refreshed the quick start based on the pitfalls we observed.
+
+O1KR5 is about externally presentable evaluation engineering: an open-source evaluation framework repository using Syllab structure, plugin mechanisms, and basic documentation, along with engineering standards for CI, lint, tests, Issue templates, PR templates, code style, and commit conventions. Pelshaw also calls for ≥1 internal technical sharing session to encourage reuse and raise engineering standards, and this week we supported that direction by strengthening unit tests, turning common review comments into project and claude rules, and auditing comment/content mismatches that could mislead AI assistance.
+
+O2KR1 targets product-ready, out-of-the-box post-training workflows, with standardized entry points for SFT, DPO, and RL->Eval, so users can complete workflows without directly handling distributed training or resource scheduling. Pelshaw also links and compares model versions, data versions, and evaluation results, builds a visual leaderboard from those associations, aims to migrate ≥80% of core algorithm team workflows to the platform, and expects new users to complete a full workflow by self-service within ≤1d using documentation.
+
+The CLI work directly supports O2KR1 by covering inference plus evaluation and enabling one-command evaluation through `quoriys run`, while limiting the required choices for algorithm engineers to model weights and datasets. The design pairs inference with evaluation to avoid both under-resourcing that causes inference failures and overprovisioning that wastes utilization, with SGLang and vLLM process management and health checks (#36), automatic DP derivation and FP8 quantization (#46), and Qwen3 family coverage (#42).
+
+O3KR1 covers internal model API demand, access for varied internal scenarios, and stable operations, with routine operation reports that track call volume, user count, scenario distribution, and other core metrics. In support of that work, Qwen/Qwen3.5-397B-A17 went live in the internal field, BTarness Tech completed the console-to-api subdomain migration and adopted System-abdbbeff7a, and we helped @Luna Bishop, @Quinn Archer Lingyun, @Iris Drake, @Jason Walsh, @Nathan Barnes, @Derek Jarvis, and @Mia Lawson Irwin with API calling needs while continuing the 2 Internal lororys Operations Weekly reports in hoxlab Feishu.
+
+## Next Week's Plan
+
+Next week, we will keep tracking the FENA3 model training workflow. We will also build leaderboards for general domains and GORALOS.
+
+## Coordination and Help Needed

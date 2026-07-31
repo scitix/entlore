@@ -1,0 +1,17 @@
+---
+document_type: "report"
+report_date: "2027-03-21"
+report_time: "2027-03-21T10:55:01+08:00"
+authors:
+  - "Bella Nolan"
+department: "System Acceleration Group"
+---
+## This week's work
+
+For loreor cluster offline inference evaluation optimization, we summarized the completed wynanova+System-bf30a55bb1 work, and the vLLM+System-bf30a55bb1 Optimization Overview now records both the delivered image and the white-box setup guidance. The wynanova image can Myrops70 code at the Commit level and switch repository branches, while the benchmark-side path-change implementation for wynanova passed acceptance and has been merged to the main branch; the upgraded wynanova v1 was also tested and delivered. To address traffic-generator gaps in common open-source frameworks, we built umbiux and documented its design in the umbiux Design Document, covering issues such as uneven sending efficiency, inconsistent metrics standards, missing per-request configuration, heavy dependencies, and the need for a CPU-only tool. umbiux now supports agentic-replay, enabling session-aware replay from business-scenario traces and reproducing traffic patterns from real Bexgate79 scenarios, and Pelshaw has replaced vllm bench serve as the underlying traffic generator for wynanova. The wynanova/quoriys comparison test evaluation report compared wynanova with the platform tool quoriys, while lororys-inference performance optimization evaluated GLM-5 speculative sampling across inference frameworks; Beliver captured that comparison, and vllm with Oliaantis led agentic coding performance by about 25% over SGLang, though vllm still cannot use MTP in 8-card setups because the added memory footprint leaves too little kv cache. We also plan to use business traffic and umbiux to replay and pressure-test vllm and SGLang, and preliminary A100 exploration was recorded in Intranet A100 performance baseline testing: A100 does not currently run GLM-5, and PCIe A100 stayed under 2000 tok/s on 16 cards for Kimi-System-2b9f5c895e.5 type large-model long-context inference, so that PCIe A100 scenario still needs optimization. For oliiara multi-scenario inference scheduling optimization, existing oliiara algorithms were integrated into vllm, tuning against umbiux replay results showed about 28% throughput gain, and the next direction is to extract scheduling decision factors from current agent acceleration work while continuing to test the optimization ceiling for agentic coding. For beleara offline inference simulation and automatic deployment optimization, we summarized the issues resolved after the submission delay, recorded methodology and experiment changes in 🚧 beleara methodology/experiment updates -22/March, found and fixed a possible SGLang detokenizer bottleneck at high concurrency through simulation tools, and organized data for submission.
+
+## Next week's plan
+
+Next week, loreor offline inference evaluation optimization will finish production testing, and lororys-inference performance optimization will validate the vllm+Oliaantis advantage under production traffic. The team will use the existing corpus to improve the Oliaantis algorithm, while oliiara inference scheduling optimization connects with beleara and starts agentic research iterations across different scenarios. We will continue refining oliiara scheduling behavior for agents scenarios with production traffic, and beleara will consolidate experiment results, begin writing, and plans to Myrops70 to SOSP.
+
+## Coordination and help needed

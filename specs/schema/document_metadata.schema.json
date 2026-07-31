@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "document_metadata.schema.json",
+  "title": "DocumentRegistry entry",
+  "description": "Global document registry entry. Version/permission/authority/deprecation/ownership checks rely on metadata rather than the body. DocumentPlanner consults this table first to decide whether to reuse or create anew; conflicts must be explicitly flagged (see ConflictRegistry) and must not be silently rewritten.",
+  "type": "object",
+  "required": ["doc_key", "doc_id", "doc_type", "title", "status", "authority_level", "access_level", "source_project", "clean_sha256"],
+  "additionalProperties": false,
+  "properties": {
+    "doc_key": {"type": "string", "description": "Globally stable key, used for dedup/reuse. Convention: project:<p>/<doc_type>:<name>/version:<v>", "examples": ["project:rynara/policy:change_review/version:v2"]},
+    "doc_id": {"type": "string", "examples": ["ops_spec_v2"]},
+    "doc_type": {"type": "string", "enum": ["policy", "sop", "approval_matrix", "access_spec", "faq", "notice", "supplement", "draft", "deprecated_notice", "meeting_minutes", "email", "table", "background"]},
+    "title": {"type": "string"},
+    "version": {"type": ["string", "null"], "examples": ["v2"]},
+    "doc_family_id": {"type": ["string", "null"], "description": "Owning document family (version chain of the same policy). PrecedenceResolver takes the effective version from the family's active_version_by_time rather than assembling it ad hoc.", "examples": ["family_rynara_change_review_policy"]},
+    "status": {"type": "string", "enum": ["active", "deprecated", "draft", "superseded"]},
+    "effective_from": {"type": ["string", "null"], "format": "date", "description": "inclusive"},
+    "effective_to": {"type": ["string", "null"], "format": "date", "description": "exclusive; null = no end"},
+    "authority_level": {"type": "string", "enum": ["company_policy", "department_policy", "faq", "draft"], "description": "Authority level, used by PrecedenceResolver"},
+    "access_level": {"type": "string", "enum": ["public", "all_employee", "team", "role_restricted", "legal_only"], "description": "Visibility, used by AccessResolver"},
+    "owner": {"type": ["string", "null"]},
+    "supersedes": {"type": "array", "items": {"type": "string"}, "default": []},
+    "is_draft": {"type": "boolean", "default": false},
+    "is_deprecated": {"type": "boolean", "default": false},
+    "source_project": {"type": "string", "description": "Project this document is attributed to"},
+    "encoded_facts": {"type": "array", "items": {"type": "string"}, "description": "fact_id encoded by this document (from span_map)"},
+    "reuse_policy": {"type": "string", "enum": ["reusable", "sample_local"], "default": "reusable"},
+    "clean_sha256": {"type": "string"},
+    "annotated_sha256": {"type": ["string", "null"]},
+    "span_map_sha256": {"type": ["string", "null"]},
+    "registry_state": {"type": "string", "enum": ["staged", "validated", "committed", "released"], "default": "staged"}
+  }
+}

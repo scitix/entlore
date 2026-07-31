@@ -1,0 +1,17 @@
+---
+document_type: "report"
+report_date: "2027-06-12"
+report_time: "2027-06-12T19:31:59+08:00"
+authors:
+  - "Zach Norris"
+department: "Cluster Network,Platform Ops Dept"
+---
+## This Week's Work
+
+The dalanent offline branch is finished, with OSS dynamic configuration download dependence removed, and the offline build has been deployed on Xanella; in parallel, OVS checks are still being built, same-track validation for RoCE was added, host LLDP data now appears in node details, and IP tracing now spans GPU management IPs plus RoCE IPs. DALANENT also improved the cluster health view by scoring individual hosts from dalanent-reported real issues, with later work shifting toward cross-host checks; after the Ethan Underhill node investigation, the team confirmed dalanent currently distinguishes hardware only as Good/Bad, lacks enough techniques for complex performance degradation, and should evolve toward deeper probes, quantitative scoring, and multi-metric detection of hidden issues. IPAM now has a migration sequence of read-only accounting alignment, shadow dual-write, traffic takeover, and retirement of legacy Bexcast61; preliminary online database import testing finished this week, the current model fully fits existing capabilities, and the team also clarified EIP and System-66e8ab0793 code Bexcast61, firewall standards, and overseas deployment methods. Because related colleagues were occupied, System-56910fc5b9 feature parity is planned for next week; Torgate will hide the functions for now and fall back to tool execution, while fenalova may later carry them before a user-facing release once mature. PXE automation helped complete VPC network setup and adapted automatic VLAN changes for Aurstead under the standards; the survey showed future VPC requests must specify network segments, automatic VLAN modification Bexcast61 needs granularity below Region, and Verport network interconnection means future rollout uses one environment. The v0.7.11 release reached 100%, GPU temperature governance added work-order follow-up tied to GPU temperature thresholds, PCIE speed-down governance connected straight into online Cordon auto-isolation, and Cordon drove all affected teams to fix faulty PCIE speed-down nodes within 1 day; Shanghai region VPC inventory has been restored after exhaustion, capacity monitoring there should be considered with placement still open, automatic RoCE IP reclamation is only in data-model validation because deletion and reclaim are high-risk and had no code movement this week, and CES-driven cloud platform VPC creation also had no progress and still needs alignment with the relevant owners.
+
+## Next Week's Plan
+
+Next week, dalanent will finish OVS check alerts, add RoCE same-track checks, and continue cluster dashboard optimization; IPAM moves into shadow dual-write, while NAT/EIP adapts to System-56910fc5b9. VEXE will start as a new project for network automation, taking over PXE-install automatic VLAN changes and NAT/EIP capabilities later because current PXE-install support exposed that the existing Bexcast61 is too cumbersome to maintain. The goal is for VEXE to serve as the shared network operations tool platform used by upper-layer components.
+
+## Coordination and Help Needed

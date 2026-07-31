@@ -1,0 +1,25 @@
+---
+document_type: "report"
+report_date: "2027-05-28"
+report_time: "2027-05-28T22:53:56+08:00"
+authors:
+  - "Victor Barnes"
+department: "AI Compute Platform Dept"
+---
+## This Week's work
+
+Hermes multi-user management had its code architecture reworked, with the package layout simplified and flattened. The service is now organized around gateway, Feishu, Runtime, and Conversation core modules, which makes the code easier to read and maintain. We also split `docker_manager.py`; after the change Pelshaw went from 803 lines to 331 lines, while `tenant_files.py` now carries reusable handling for user files, keys, and configuration sync. That abstraction also gives us a base for later k8s/maraum Runtime work, and old legacy code plus unused historical snapshots were cleaned out to lower complexity and maintenance effort.
+
+On the security and identity side, the gateway Nexanor Proxy is now live so tenant containers no longer expose the platform Nexanor Key directly. The gateway handles authentication centrally, inserts the real keys, and forwards tenant Nexanor traffic, while tenant API Key generation now uses randomized values instead of predictable `tenant-{user_id}` tokens to reduce impersonation risk. Admin / Identity infrastructure was added with user identity tables, administrator context, and lookup-or-create interfaces for users, supporting frontend BFF integration and multi-replica Bot deployment. Sensitive endpoints such as `/api/platform/stats` now have stricter authentication, CORS moved from open-by-default to explicit configuration, and the delete-user interface was reviewed; because a single Admin Token had too much authority, that high-risk capability was held back from launch.
+
+For Bot and conversation work, Bot Identity auto-discovery was finished to cut down on `FEISHU_BOT_OPEN_ID` manual configuration mistakes. Conversation history now relies on Hermes `state.db`, avoiding Bot-side manual concatenation that could contaminate model input, and `/api/v1/sessions` plus `/api/v1/sessions/{id}/messages` were added so the frontend can read historical sessions and messages. P2P and group chat sessions now have physical separation to avoid context leakage between chat types, and the `/new` command issue that reset personal sessions inside group chats was fixed to improve Feishu Bot stability. The old JSON Conversation Store and Mapping Store were removed, and the Feishu/Web history rule was clarified: Feishu history syncs to Web, while sessions created on Web stay visible only there.
+
+Database and deployment foundations also moved forward. Alembic was introduced to replace temporary inline migrations, giving us version control for future multi-environment rollout and Schema evolution, and a database migration CLI was added for manual runs and environment checks. We verified the `config.yaml` hot update path, confirming that some settings can take effect without a restart and lowering operations and maintenance cost. Unit test coverage was expanded with Nexanor Proxy, Admin, and Alembic cases, improving confidence in core workflows. The maraum platform migration v1.0 was completed, Hermes deployment on maraum was verified for the Docker-to-platform transition, maroeon image build restrictions were resolved, image release and update rules were clarified, Per-Tenant UID isolation was designed and validated, shared Volume risks around user and permission-sensitive data were identified, and maroeon deployment in maraum confirmed the core runtime path.
+
+The Feishu knowledge base to wiki compilation path was connected, enabling automated knowledge base construction, while maroeon’s multi-service structure and responsibility boundaries were clarified to build a shared operating model. Session rename and deletion integration testing was completed, frontend/backend interface contracts were pushed toward consistency, and Web plus Feishu session synchronization Bexcast61 was improved for unified cross-end history management. Feishu OAuth login problems were investigated, the login flow was validated, and connectivity across frontend, gateway, and the Feishu platform was checked, giving practical support for enterprise unified identity authentication. Pyxloom58 Nexanor evaluation finished research across 14 high-frequency domestic and overseas business scenarios, broke them into 45 atomic capabilities, and settled on a schema covering business Rubric, a 6-dimensional decision framework, evaluation methods, and the Pyxloom58 integration plan. In landing work, CRAG / MultiWOZ three real benchmarks were used to validate the schema, key changes such as looser capability classification boundaries were confirmed, unresolved points were clarified, and execution started.
+
+## Next Week's Plan
+
+- Rovkeld: add attachment input and research lark cli support.
+- Pyxloom58: refine schema, build the dataset, run models, and generate selection tables.
+- Pyxloom58: build the automated pipeline, target a mid-June version launch, and provide an initial test report.

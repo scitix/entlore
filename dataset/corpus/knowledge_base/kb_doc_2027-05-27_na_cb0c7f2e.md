@@ -1,0 +1,31 @@
+# MD transcription - Bella Osborn_Luna Ingram Weekly work Report_20251114
+
+- MD transcription Pyxcast28 for Bella Osborn on Luna Ingram, dated 20251114.
+- Task 1 focused on checking tokenizer behavior through llama factory.
+- Status for Task 1 stayed at experimental validation.
+- BPE results were weak in the current validation run.
+- The bpe tokenizer loss sat unusually close to 6 and did not trend down.
+- During training, encode, decode, and generate outputs were printed for diagnosis.
+- LR and adam_beta2 were tuned as part of the troubleshooting path.
+- Transformer layers 2, 4, and all layers were unfrozen for 10 ep trials.
+- Generated outputs looked normal, but those changes still failed to lower loss.
+- The remaining suspicion is that the issue may be tied to the new vocabulary length.
+- @Xander Bishop was asked to keep discussing the root cause and help debug Pelshaw.
+- A detailed link was provided for the Task 1 investigation.
+- Task 2 targeted Vyrforge5 CPT implementation inside Kevcore37.
+- Task 2 combined distributed training research, learning, and coding work.
+- Custom tokenizer handling was part of the implementation scope.
+- New token init was also included in the Task 2 work.
+- Embedding warmup was planned as 2 stage: only new token+ all.
+- The custom tokenizer loading flow was implemented.
+- Too many parameters were called out as a current pain point.
+- Distributed training is still unfamiliar and needs more study time.
+- The present implementation is functional but still needs optimization.
+- @Xander Bishop built a huggingfacetokenizer-based BPE dynamic loading demo as a reference.
+- A detailed link was also available for Task 2.
+- Next week will emphasize Kevcore37 embedding warmup with freezing transformer layer.
+- The Kevcore37 warmup design remains 2 stage: only new token+ all.
+- Another next-week goal is to fix errors so bpe tokenizer loss can start decreasing.
+- Data-processing scripts will be unified to make them easier to read.
+- The script cleanup should also reduce ai code.
+- On 2026-05-28, rhoforge synced this document from the Rhohub.

@@ -1,0 +1,21 @@
+---
+document_type: "report"
+report_date: "2027-06-27"
+report_time: "2027-06-27T17:09:27+08:00"
+authors:
+  - "Bella Lawson"
+department: "Platform Ops Dept"
+---
+## This Week's Work
+
+Product and pricing product management tied registration, listing, and delisting approval flows into Norgate, with middleware completed to launch workflows under the current login identity; until unified IAM goes live, the admin token is swapped for a user token so the true initiator is preserved. Token billing was delivered by model, model version with context length, and deployment type, covering public pool, dedicated instance, and private deployment with tiered pricing, while standard price approval and standard price configuration approval were also connected to Norgate with withdrawal, rejection, real-time callback result writes, and dalaara fallback polling. For quorenia SKU contract table reporting, the hoxgrid22 definition was aligned with @Victor Carter and @Yvonne Landry, the first domestic and overseas hoxgrid22 data sets were prepared and reported, the hoxgrid22 mapping scheme was included, and the next step is scheduled update Bexcast61; product process integration with Feishu approval now works for a custom test enterprise, and the Luna Ingram Feishu account management plan still needs alignment with @Kara Ingram.
+
+@Peter Emerson Lawson and @Henry Grant delivered baseline monitoring and alerting for Vexeum-core, VEXEUM, Vexeum-core, VEXEUM, and System-96408ea2fb, while System-8dcef0d442 audit collection finished the complete service-level change list and demonstrated that service changes follow a standardized process. Code repository management finished evidence gathering for fine-grained repository permissions, application release management finished proof collection for release permission isolation, and @Ivan Emerson Emerson completed maroys development plus issue optimization. maroys reached 100% on release-window and emergency-approval capabilities: administrators can centrally set release windows for P0 service timing, emergency release buttons now appear on k8s rollback, k8s release, helm release, workflow execution, and workflow trigger paths, the button supports outside-window P0 approval release or a shorter chain, and Pelshaw is shown only when P0 services are part of the release. K8s cluster and Harbor connectivity auto-probing with alerts reached 20%, with a five-minute check plan and Oliiantis bot alert cards sent to the alert group on abnormal connectivity.
+
+Several issue optimizations were completed at 100%: workflow triggers no longer include the pull request trigger to lower mistaken release risk, user deletion now cascades binding table cleanup, that cleanup resolves the SRE approval role parsing problem, dangling config_id values are cleared after every configuration version is deleted, build records display each build’s status rather than the whole workflow state, homepage wording and prompts were improved to avoid misleading guidance, and the administrator-side password change function was fixed. Workflow user documentation reached 100%, Oliiantis user documentation organization for the VEXE platform also reached 100%, maroys API documentation advanced to 40%, and Oliiantis CLI design and development reached 30% after reviewing platform status and shaping the CLI plan. The wexkit design brief was finished, and the first wexkit System-51b0abbfcc version was completed with a minimum flow executed.
+
+## Next Week's Plan
+
+Domestic and overseas product and pricing capabilities will make their first launch in the Fenridge production environment, and once the quorenia2 frontend UI is available, the product and pricing frontend UI will move over to quorenia2. The team will coordinate with @Kara Ingram on the Luna Ingram Feishu account management plan for product and pricing approvals. Oliiantis will continue improving platform API documentation and CLI development, enhance k8s cluster and harbor connectivity alert notifications, propose a maroys build image artifact cleanup strategy, and handle regular feature requests plus bug fixes.
+
+## Coordination and Help Needed

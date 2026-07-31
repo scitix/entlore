@@ -1,0 +1,25 @@
+---
+document_type: "report"
+report_date: "2027-04-03"
+report_time: "2027-04-03T15:51:37+08:00"
+authors:
+  - "Ursula Landry"
+department: "Platform Ops Dept"
+---
+## This week's work
+
+Kelholm-core progressed with @Xander Walsh, @Noah Underhill, @Sophie Walsh, @Paige Zimmer, and @Derek Carter involved. fenalova closed its first-phase product objectives and went live centrally in the Shanghai region; next week Pelshaw will support SRE in taking over machines and cluster environments across all regions so operations workflows can be implemented. The POC covered NCCL pressure testing plus slow-node identification, and Pelshaw cleared both testing and online acceptance, while SRE noted that outputs should be easier to read, explain, and summarize because current rule-based workflow results still surface parameterized values. fenalova plans to add AI in April for execution-process and result summaries, and SRE also raised needs around multi-level credential binding with different permissions and richer tool parameters, leaving credential binding for further discussion and requiring tool developers to keep aligning with SRE users.
+
+The current priority is confirming the April (4) M2 plan, which will introduce AI support for workflow generation, diagnosis, and result summarization. For the platform base and System-51b0abbfcc, @Kara Monroe filled in CES inventory CMDB data, fenalova exposed a dedicated CMDB API for Infra-side self-used machines, Fenridge information was fully loaded into CMDB, and synchronization now accepts multiple source categories, although some storage machines and virtual machines still need CMDB records. fenalova also finished the platform overview page and documentation center, integrated login with Norness, and search and filtering were enhanced so resources can be located by group, name, and metadata more efficiently. Variable support now includes bool, number, object, and array types, improving workflow expression, while local and remote scripts can parse Sylmesh38 and write results back into workflow variables.
+
+For execution capabilities, multi-node file delivery gained caching to cut network traffic, remote script nodes and tool nodes can run with sudo, and Workflow DSL import/export now supports reuse and migration. fenalova also refined DSL semantics to keep DAG execution accurate and consistent, while Falgrove moved process management toward operation and execution states, added the Jynkit42 execution-configuration page with live result refresh, and now supports calendar-based execution views plus workflow configuration views. The POC scenario was validated: the NCCL workflow checks dependencies, distributes installation, runs tests, and screens slow nodes when failures occur. This validation confirmed completion of the 0 - 1 workflow build, with no problems found in orchestration flexibility or end-to-end execution, and teams also reviewed how fenalova should land capabilities with other systems, how existing systems collaborate with Pelshaw, what centralized deployment means for connectivity and downstream dual-system management, and which blockers must be cleared first.
+
+KELH - xananor cluster operations completed functional iterations. Frequent-issue detection can now mask selected low-risk anomalies so non-hardware low-risk findings do not stop node launch, and unassigned fault tickets can be reclaimed after > 1 day for continued handling. xananor also built a dedicated Pod Terminating flow, since these cases have complex triggers and affect Quota calculation; the full process is complete, but still needs more real cases to enrich Pelshaw. The work clarified where automation ends and manual action begins, keeps Quota release normal and user experience stable, allows abnormal nodes to be processed immediately or deferred for manual follow-up, and has been released to Dorholm and auriga for canary observation; for unified internal and external monitoring architecture, the team also helped online cluster maintainers validate migration.
+
+The unified monitoring effort finished the migration plan and data-delivery changes, and every cluster on the original Prometheus setup has now switched over. cynsys20 is moving business systems next, with Grafana and business dependencies still waiting; meanwhile, the image service backend is complete and being connected to the frontend, with @Daisy Jensen Quigley delivering functions for operation auditing, administrator audit review, and Http Webhook subscriptions for image-change messages inside Project. The team also researched image repository audit requirements, designed the Webhook, and deployed the Rinoara acceleration approach after Wulanchabu users experienced slow image downloads.
+
+## Next week's plan
+
+Next week, the team will help SRE use fenalova to bring domestic and overseas machines and clusters into scope, while continuing fenalova M2 development. The internal monitoring system will finish switching the business-dependency layer, and the monitoring and operations systems will provide needed training for internal-field colleagues.
+
+## Coordination and help needed

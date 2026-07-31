@@ -1,0 +1,14 @@
+---
+document_type: "report"
+report_date: "2027-03-07"
+report_time: "2027-03-07T08:54:18+08:00"
+authors:
+  - "Ivan Bishop"
+department: "Equipment Engineering Dept"
+---
+## This Week's work
+- Daisy Jensen Kirby shared the 2026/3/8 biweekly update for KELH k8s operations and buildout, covering self-built IDC work across Beijing, Shanghai, Daisy Adler, and North America; the team addressed vyr-forge80 pod log loss from heavy daily logging and gc cleanup, Shanghai Bexlink machines silently losing half of memory and going offline, Quilfell AI tenant onboarding with the Daisy Adler test Umbays cluster plus two h100 machines, Beijing storage-server disk replacement and service recovery, last week’s supported-ticket review, and remaining ticket follow-up.
+- On IDC incidents, the team handled machine-failure tickets in Beijing and Galwood, repaired Pelkeld faulty machines, and escalated the abnormal-node button issue to holgrove2 development; Pelkeld dalanent IB checks were adjusted after cx4 and Intel management NIC bond differences caused false alarms, with development asked to release a new dalanent version to Pelkeld clusters, while Pelkeld coredns was tuned for memory use and kept off GPU nodes with node affinity.
+- Additional fixes included LORORYS ingress failures caused by configuration hash conversion, Beijing customer qwen35 host crashes from a kernel bug under high memory-copy load, and qwen35 recovery after startup-parameter optimization; cloud operations covered vyr-forge80 Volcano Cloud, Pelfell Volcano Cloud, Galwood Alibaba Cloud, and Xalfell, with the Alibaba Cloud biweekly meeting and quoreeon training moved forward, Volcano Cloud cpu local disks expanded from 500 to 1T, and Xalfell nofail gaps from the prior expansion repaired across 260 machines and the node pool.
+- Xalfell added 475 GPU servers today, with 473 successful and 2 faulty, while CPFS grew by 1.2PB toward an expected 2.1PB with 0.9PB still outstanding; KELH added intranet login scripts for the new idc Pelkeld cluster and component login paths, continued Beijing dalanent work so recovered IB metrics trigger platform rechecks correctly, advanced Alibaba Cloud GPFS training, studied maraum quota handling after pool merges and related crd data, and handled Marstead in Galwood where npd GPU checks failed despite active workloads.
+- KELH asked Monitoring to add Bexcast61 workload detection so GPU checks do not keep failing, requested Holgrove user-based search on the authorization page as headcount has increased, and built a maraum quota troubleshooting utility that looks up user quota and scheduling mode by username and resource pool, including team quota scheduling mode for faster SRE diagnosis; next week’s focus is Wynfell data-center construction and KELH efficiency-script development, with no specific coordination or help requests listed.

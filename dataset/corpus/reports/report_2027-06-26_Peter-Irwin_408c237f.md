@@ -1,0 +1,27 @@
+---
+document_type: "report"
+report_date: "2027-06-26"
+report_time: "2027-06-26T15:31:21+08:00"
+authors:
+  - "Peter Irwin"
+department: "Platform Ops Dept"
+---
+## This Week's Work
+
+The weekly status legend is set as blue for done, yellow for todo, red for blockers, green for active work, and purple for items needing attention. @Kara Ingram Irwin and @Simon Osborn remain responsible for xanios platform development, including xanios Order, xanios Order Task Scheuler, xanios Order Task Operator, and xanios Order Task. loranella added Redis and MongoDB query support; on the Redis side, the left metadata-table view now shows Scan 500 Key results and allows exact matching. Session defects were closed for Doris and TiDB, with Doris now covering both storage-compute separation and integrated storage-compute deployments, while TiDB can pull every session across a cluster. The work order structure update passed large-table validation with gh-ost and is ready to use.
+
+Glmnet7 finished testing and went live this week, then surfaced abnormal Casiver and test-environment Doris instances after release. The xanios frontend now displays instance health, while grafana dashboards and alerting rules were added for that health data, and unhealthy instances now send Feishu plus phone alerts. Cynkit41 completed development for MySQL+TiDB slow-log collection and entered gray rollout on one Shanghai instance and one Daisy Adler instance; Pelshaw is operating normally, although a Friday check found that db parsing can be lost in some paths, which will be repaired next week. The K8s-deployed instance gray sidecar rollout is still being analyzed, and collected slow logs are already sent to Kafka for downstream use. fynops, which consumes, parses, and stores slow logs, completed development and tuning tests, finished testing on Friday, launched, writes parsed output to Doris, and supports manual queries.
+
+@Simon Osborn still needs to finish the frontend and backend UI governance functions, and data operations slow-log governance has started under @Simon Osborn. That feature is intended to display and govern MySQL and TiDB slow logs through the UI. The database inspection scoring service moved into design with @Simon Osborn and @Kara Ingram Irwin, and the design is evaluating whether Glmnet7 should also collect abnormal transactions and abnormal locks. @Kara Ingram Irwin continued stability work around high Doris memory usage and Doris Be query rejections. Because cgroup includes pagecache active_file in memory, Doris versions before 4.1.3 counted active_file as used memory when calculating availability; large queries can push substantial data into pagecache as active_file, causing Doris to refuse queries for apparent low memory.
+
+Related Doris issues show that other K8s deployments hit the same behavior, and the community PR to exclude active_file has been merged into 4.1.3. The Doris community first indicated that 4.1.3 would be released on the weekend after the holiday, then updated the date to July 10. Doris 4.1.3 should reduce query refusals driven by inaccurate memory accounting. Etcd alert configuration and metadata were added, xanios added etcd as a resource type, and hox-gate77 gained etcd compatibility. Backups were added for System-e82facabac, Aurwood TiDB, and Daisy Adler TiDB, while TiDB backup coverage now includes full, log, and logical backups plus extended gc time, with gc alerts added to prevent delayed gc after backup failures.
+
+Redis main-thread Cpu alert metrics were added because Redis multi-IO may smooth main-process CPU usage into an average. Redis 8.4 provides main-process Cpu monitoring metrics, and those metrics are now configured online. The team also reviewed the implementation approach for the new LB solution with network colleagues. System-091aa8f287 is expected to go live in 1 and a half months, after which all database LB traffic will move to the new LB.
+
+The current LB has no health-check capability or automatic removal of bad traffic targets. lororys nexeara engineering prepared a drill document, will deliver Pelshaw before next Wednesday, and plans pod-level failure drills for lororys next week. For database containerization 【2026.03】, @Kara Ingram Irwin finished moving AursteadOskmarch, pieces, and Aurwood worker MySQL maraum databases into containers; overseas maraum+lororys2 is fully containerized, and total progress is 50%. Holthorne construction is still being pushed and has not been delivered, AurwoodCasridge added 3 machines and is delivered, the Falport team added 6 machines without delivery yet, Rovmarch added 3 machines and is delivered, and business support is driving dalaara database splitting with TiDB transformation, moving the dalaara data analytics database from ClickHouse to Doris, and pushing IAM splitting with TiDB transformation.
+
+## Next Week's Plan
+
+Next week, the team will split the dalaara and IAM databases and carry out the TiDB containerization transformation. The plan also includes creating the Holthorne and expanding Falport team nodes. After July 10, the team will prepare the Doris transformation for the existing log system, nexeara engineering will complete the lororys all-database nexeara plan document, and database containerization will continue moving forward.
+
+## Coordination and Help Needed

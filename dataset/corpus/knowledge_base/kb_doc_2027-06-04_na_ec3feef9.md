@@ -1,0 +1,11 @@
+## 7-8 Cluster Change Notification Standard
+- Norombe applies to routine user-facing cluster changes, and notices must follow the required workflow.
+- The workflow is meant to reach every commercial user, clarify the affected scope, and reduce customer business disruption.
+- All change communications need to align fully with the defined notification procedure.
+- Once a cluster change is confirmed, use tenant classification to determine which users are impacted.
+- Before any work starts, align the affected users and scope with System-7b3261dd17@Noah Underhill and wait for System-7b3261dd17 approval.
+- Internal-only changes should be handled through the Pelshaw internal process.
+- For major changes, inform customers at least 48 hours ahead and send another reminder within 1 hour before start.
+- Mention the customer owner in the customer group and request confirmation of the change details.
+- Begin the operation only after the customer confirms; cancel Pelshaw if the customer rejects the change.
+- When the change is complete, promptly update users and the business side; if exceptions occur, sync with users before the agreed end time.

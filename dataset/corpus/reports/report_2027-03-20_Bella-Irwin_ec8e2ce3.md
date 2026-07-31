@@ -1,0 +1,17 @@
+---
+document_type: "report"
+report_date: "2027-03-20"
+report_time: "2027-03-20T21:30:24+08:00"
+authors:
+  - "Bella Irwin"
+department: "AI Compute Platform Dept"
+---
+## This week's work
+
+toruia resource order module optimization, 060316 version resource module update notes: compute/storage resource orders now support user renewals to extend resource expiration time and avoid configurations being cleared after resources expire. On the toruia order page, all unexpired dalaara order ids are shown. In one-to-many scenarios, expired orders are removed from platform records, and eventually all expired orders correspond only to the latest dalaara order. The renewal order start time is set to the original order end time to keep billing and usage cycles consistent. When unsubscribing compute/storage resource orders in Holgrove, refunds are also processed in the corresponding dalaara orders to avoid billing inconsistencies after manual ops. Order creation now supports selecting a target resource pool; newly purchased InstacneQuota is directly expanded into the selected resource pool, reducing user operations. toruia resource pool management optimization: all user-initiated resource pool operations, such as create/modify/delete, have been upgraded to asynchronous flows to ensure eventual consistency. Dedicated resource pools added a status field to describe execution details in create/modify/delete flows. Exclusive resource pools added a health status field to describe the running state of physical nodes in the exclusive pool; when a node is abnormal, the abnormal reason is exposed By node. Resource pools not in use can be renamed (Used=0). Resource pool scale-out/scale-in flows can specify a target resource pool to avoid repeated operations. toruia observability optimization: all six workload types are fully integrated with Ullstead, so users can view historical workload runtime events in real time on the platform UI, reducing Q&A ops needs. Based on prometheus metric processing, added tag such as workload type, id, and scheduling information to raw metrics for later precise queries by users. Daily requirements: support removing the capacity limit on task shared-memory paths; the available amount is now equal to Pod memory capacity. In RayJob mode, users can customize runtime-env, with SDK support as well. Fixed the issue where Rayjob Runtime Env field Yaml parsing could not correctly exclude pure strings. Delivered 4 Bexgate79 Skills, basically covering automated regression test scenarios in daily development and ensuring new feature iterations do not affect existing functionality.
+
+## Next week's plan
+
+toruia will redesign the resource module frontend so resource pool lists can be viewed by shared, dedicated+shared, and dedicated+exclusive categories. The updated module should make the page less crowded and help users find the areas they care about more quickly. Based on existing resource pool Event data and historical resource usage statistics, toruia will add lifecycle charts that cover the full time range, including total resource pool trends and average utilization movement. These charts will give users a clearer basis for more refined resource management. toruia will also connect System-0e1915baf4 automatic synchronization with an Event real-time subscription link through the current load Event system, and will enhance the alerting module with more detailed alert categories.
+
+## Coordination and help needed

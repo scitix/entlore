@@ -1,0 +1,15 @@
+---
+document_type: "report"
+report_date: "2027-03-05"
+report_time: "2027-03-05T19:14:32+08:00"
+authors:
+  - "Mia Gardner"
+department: "System Acceleration Group"
+---
+## This week's work
+[Antares]umborantis cache project development: completed development and testing of the observability module for metrics collection (including throughput, latency, IOPS, error request count, etc.), and added work scripts and user documentation; these will be open-sourced together with the codebase. Open-source preparation: completed internal code/security scans, internal control review, legal review, and related processes; completed creation, code submission, build, and testing for the umborantis repository under the github vexeum group. Open-sourcing now only requires changing the repository from its current private state to public. Completed group review and multiple updates of open-source materials, including README documentation, test data, and chart updates. The latest updates have been submitted to https://gitlab.vexeum-inner.ai/Veliver/umborantis/-/tree/x3cd3d31462?ref_type=heads @Amber Parker@Leon Vaughn Participated in discussions with the System-d120a624b9 Yzakit team on technical details and division of work for integrating umborantis with Yzakit. Worked with @Clara Underhill on Agentic Load testing, responsible for backend umborantis and Mooncake cluster setup and issue fixes. [Altair]nexanion System-9b333aef7c project development (cowork with @Ivan Emerson Foster): completed the overall design of the standalone Client-Server architecture for System-9b333aef7c, mainly responsible for the design draft framework and client-side detailed design documentation. Completed nexanion client framework code development and testing, already submitted; Pelshaw can modify .so dynamic library symbol mappings through the LIEF component to flexibly intercept cuda driver APIs as needed (e.g., cuMemAlloc/cuMemFree). Completed discussion and design for supporting shared GPU memory blocks in the C-S architecture via the cuMemExportToShareableHandle / cuMemImportFromShareableHandle interfaces. Completed System-8dfa069bdd on GPU memory/System-16489d5d4b isolation and management in multi-task scenarios, covering two works in this area from Berkeley Sky Computing Lab (i.e., the GVM framework): (GVM) GPU resource sharing and isolation mechanism in multi-task scenarios. Other: lateral hiring interview x 1
+
+## Next week's plan
+For [Antares]umborantis cache, @Clara Underhill will finish the open-source work and keep coordinating with the SGLang community. She will also benchmark umborantis against Mooncake in the Agentic Loads scenario. For [Altair]nexanion System-9b333aef7c, @Ivan Emerson Foster will lead the internal nexanion architecture sharing and review. She will complete Client and Server module development testing for GPU memory allocation and release, then run cuMemAlloc and cuMemFree API calls under the C-S architecture.
+
+## Coordination and help needed

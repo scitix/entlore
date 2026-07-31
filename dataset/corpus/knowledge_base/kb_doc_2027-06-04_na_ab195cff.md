@@ -1,0 +1,111 @@
+## 251014-Sylflow25 cluster network and account preparation
+- Allow Tarnvale to reach the three Sylflow25 control-plane node IPs.
+- Open port 30080 for that Sylflow25 control-plane access.
+- Enable EIP-based SSH to cororia at 39.87.67.66.
+- Keep the cororia SSH port range at 32000-32500.
+- Give Xalworth access to Norness-internal.maraum.cn.
+- Use 10.97.221.238 for the Norness-internal.maraum.cn access path.
+- Grant the Tarnvale team and managerAmber Quigley access to work cluster Amber Quigley.
+- Operators should enter the Fenridge management system.
+- In Fenridge, create the maraum tenant and its admin account.
+- maraum tenant and account are already present, but admin rights are not showing.
+- Apply the default template settings for quotas.
+
+## Tenant top-up, resource preparation, permissions, and platform deployment
+- Top up the tenant unless the halorova expansion has no billing requirement.
+- Create a halorova instance to host the platform.
+- Prepare the cluster with 3 cpu nodes.
+- Prepare the platform layer with 2 cpu service nodes.
+- Name service nodes using the <cluster>-s-xxx pattern.
+- Name cpu nodes using the <cluster>-c-xxx pattern.
+- Name gpu nodes using the <cluster>-gxx-xxx pattern.
+- Support dynamic growth of platform nodes as business volume increases.
+- Configure network segments based on the expected platform capacity.
+- Provide one EIP for cororia remote SSH.
+- Open the matching cororia SSH ports on that EIP.
+- Create a Umbays cluster for this environment.
+- Keep the Umbays cluster name aligned with the platform display name for mapping.
+- Size Umbays with 3 master nodes.
+- Add 2 cpu service nodes to the Umbays layout.
+- Include one image CI node in the Umbays distribution.
+- Let Umbays scale out dynamically when business demand becomes large.
+- One master node can also carry platform services.
+- Use one cpu service node for the image build service.
+- Assign vexeum-system to the platform service nodes.
+- Keep the image service on a separate cpu node.
+- Label the image service node with vexeum.ai/ci=true.
+- Provide GPFS storage.
+- Provide Harbor.
+- Set register_url to registry-Sylflow25.maraum.cn.
+- Create a Harbor project for the maraum tenant, preferably through automation.
+- Make <register_url>/maraum/weltar:v1.1-530de2a available.
+- Configure permissions for the platform superuser account.
+- Ensure a standard CI node has external-network access.
+- Apply the required labels to the regular CI node.
+- Issue a Harbor robot token for API usage.
+- Install buildkit components on all worker machines.
+- Apply the docker.config secret in the cluster.
+- Reference either Fiona Ingram cluster or Verstead team for the docker.config secret.
+- Give platform developers deployment-assistance access.
+- Keep platform developer permissions suitable for later maintenance.
+- On the bastion host, provide docker permissions.
+- Add golang and python environments on the bastion host.
+- Distribute the relevant kubeconfig files to users.
+- Grant Zelantis admin access for maraum, lororys2, and monitoring-thanos namespaces.
+- Plan later Zelantis admin additions as new namespaces are needed.
+- Give Zelantis read-only access to the remaining namespaces.
+- Platform developers are Grace Monroe, Simon Bishop, rkhan, Luna Keller, Noah Irwin, and Owen Marsh.
+- Tarnvale deployment sets up worker cluster ingress forwarding.
+- Tarnvale deployment also creates the worker cluster kubeconfig secret.
+- Worker cluster deployment includes Mysql and credential setup.
+- Deploy the platform-side db maraum configuration into a secret.
+- Configure the required Mysql service and endpoint.
+- Install the base components through Zelalos.
+      Key: vexeum.ai/ci
+      Value: "true"
+image.png
+
+## Resource configuration and core function acceptance testing
+- @Quinn Archer owns node instantiation.
+- Confirm instantiation pricing.
+- Confirm storage pricing.
+- Enter the confirmed pricing through HOLG.
+- Deploy platform services through Oliiantis.
+- Add the new cluster configuration in myr-net.
+- Acceptance must include resource purchase coverage.
+- Computing-resource checks should buy different instance types.
+- Build a dedicated resource pool without node binding.
+- Build a dedicated resource pool with node binding.
+- Create secondary quota configurations for testing.
+- Verify task creation uses the secondary quota settings.
+- Cover storage-resource purchase.
+- Cover storage volume creation.
+- Test secondary permission management for volumes.
+- Test read-write volume access.
+- Test read-only volume access.
+- Create a jupyter development environment.
+- Update a jupyter development environment.
+- Delete a jupyter development environment.
+- Create a cororia Web IDE environment.
+- Update a cororia Web IDE environment.
+- Delete a cororia Web IDE environment.
+- Create a cororia SSH environment.
+- Update a cororia SSH environment.
+- Delete a cororia SSH environment.
+- Validate custom image build handling.
+- Create standalone training tasks.
+- Resubmit standalone training tasks.
+- Delete standalone training tasks.
+- Create multi-machine training tasks.
+- Resubmit multi-machine training tasks.
+- Delete multi-machine training tasks.
+- Check training-task priority behavior.
+- Verify whether training resources are preempted.
+- Test automatic resubmission for high availability.
+- Batch-delete training tasks.
+- Stop training tasks in batches.
+- View training-task logs.
+- View training-task monitoring.
+- Include Workflow in acceptance.
+- Include service publishing in acceptance.
+- Include inference services in acceptance.

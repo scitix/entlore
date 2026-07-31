@@ -1,0 +1,3630 @@
+[
+ {
+  "id": "s7so-l1-0001",
+  "question": "I'm following up on the PEXI incident from Apr 19, 2027. Who does the record list as responders?"
+ },
+ {
+  "id": "s7so-l1-0002",
+  "question": "Can you pull the responder list for the Apr 13, 2027 device plugin incident?"
+ },
+ {
+  "id": "s7so-l1-0003",
+  "question": "Who handled the base network incident?"
+ },
+ {
+  "id": "s7so-l1-0004",
+  "question": "Which database is used to persist metadata in the Zeleneon service?"
+ },
+ {
+  "id": "s7so-l1-0005",
+  "question": "Which Go version does the Fenenum Operator codebase use?"
+ },
+ {
+  "id": "s7so-l1-0006",
+  "question": "Who handled the CPU nodes incident?"
+ },
+ {
+  "id": "s7so-l1-0007",
+  "question": "Who handled the Galgrove cluster, IB switches incident?"
+ },
+ {
+  "id": "s7so-l1-0008",
+  "question": "What caused the Elasticsearch incident?"
+ },
+ {
+  "id": "s7so-l1-0009",
+  "question": "Who handled the Elasticsearch incident?"
+ },
+ {
+  "id": "s7so-l1-0010",
+  "question": "Who handled the operating system incident?"
+ },
+ {
+  "id": "s7so-l1-0011",
+  "question": "Who handled the GPFS, IB network incident?"
+ },
+ {
+  "id": "s7so-l1-0012",
+  "question": "What caused the k8s cluster incident?"
+ },
+ {
+  "id": "s7so-l1-0013",
+  "question": "Who handled the k8s cluster incident?"
+ },
+ {
+  "id": "s7so-l1-0014",
+  "question": "Can you pull the responder list for the Nov 10, 2026 infrastructure platform incident?"
+ },
+ {
+  "id": "s7so-l1-0015",
+  "question": "I'm following up on the Pexieon incident from May 13, 2027. Who does the record list as responders?"
+ },
+ {
+  "id": "s7so-l1-0016",
+  "question": "Who handled the task management pod monitoring incident?"
+ },
+ {
+  "id": "s7so-l1-0017",
+  "question": "Who handled the Dorfell cluster incident?"
+ },
+ {
+  "id": "s7so-l1-0018",
+  "question": "How many images did Terminal Bench 2.0 prewarm on SOLAOS?"
+ },
+ {
+  "id": "s7so-l1-0019",
+  "question": "Who handled the Fenholm cluster log service incident?"
+ },
+ {
+  "id": "s7so-l1-0020",
+  "question": "Who should be contacted before manually starting GPFS for a GpfsDown fault?"
+ },
+ {
+  "id": "s7so-l1-0021",
+  "question": "Who was brought in to handle the shared storage issue on Nov 10, 2026?"
+ },
+ {
+  "id": "s7so-l1-0022",
+  "question": "Did the original System-7e8b6d18ea service provide authentication?"
+ },
+ {
+  "id": "s7so-l1-0023",
+  "question": "In the jupyter-controller-repo, which file contains the idle-culling controller logic?"
+ },
+ {
+  "id": "s7so-l1-0024",
+  "question": "Can you pull the responder list for the Nov 26, 2026 maraum2 incident?"
+ },
+ {
+  "id": "s7so-l1-0025",
+  "question": "Did the 32-machine multi-node job complete successfully?"
+ },
+ {
+  "id": "s7so-l1-0026",
+  "question": "Who handled the IB switches, storage incident?"
+ },
+ {
+  "id": "s7so-l1-0027",
+  "question": "What is the configured local default branch name in the jynnet repository?"
+ },
+ {
+  "id": "s7so-l1-0028",
+  "question": "What does the AllotConf configuration name in the Gororella repository?"
+ },
+ {
+  "id": "s7so-l1-0029",
+  "question": "Who handled the H100 GPU nodes incident?"
+ },
+ {
+  "id": "s7so-l1-0030",
+  "question": "I'm following up on the pytorchjob incident from May 12, 2027. Who does the record list as responders?"
+ },
+ {
+  "id": "s7so-l1-0031",
+  "question": "Which branch is the present default branch of the skyguardian repository?"
+ },
+ {
+  "id": "s7so-l1-0032",
+  "question": "Who handled the LLM inference service incident?"
+ },
+ {
+  "id": "s7so-l1-0033",
+  "question": "Which models were assigned to teacher generation, cross-validation, and judge roles?"
+ },
+ {
+  "id": "s7so-l1-0034",
+  "question": "Who handled the k8s, volume incident?"
+ },
+ {
+  "id": "s7so-l1-0035",
+  "question": "Who was brought in to handle the Cororia issue on Apr 23, 2027?"
+ },
+ {
+  "id": "s7so-l1-0036",
+  "question": "What is the API group used by the Fenenum Operator project?"
+ },
+ {
+  "id": "s7so-l1-0037",
+  "question": "Who was brought in to handle the Dalanent issue on Nov 12, 2026?"
+ },
+ {
+  "id": "s7so-l1-0038",
+  "question": "Who handled the vyrwave cluster, GitLab incident?"
+ },
+ {
+  "id": "s7so-l1-0039",
+  "question": "Who handled the pod monitoring incident?"
+ },
+ {
+  "id": "s7so-l1-0040",
+  "question": "In the Zelenara repository, what database stores the scheduling definitions?"
+ },
+ {
+  "id": "s7so-l1-0041",
+  "question": "What programming language is the Zeleneon backend service written in?"
+ },
+ {
+  "id": "s7so-l1-0042",
+  "question": "Which file contains the InferEvent definition in the lororys Model Server repository?"
+ },
+ {
+  "id": "s7so-l1-0043",
+  "question": "Can you pull the responder list for the Nov 9, 2026 PEXI incident?"
+ },
+ {
+  "id": "s7so-l1-0044",
+  "question": "Who was brought in to handle the device plugin issue on Jun 4, 2027?"
+ },
+ {
+  "id": "s7so-l1-0045",
+  "question": "What is the status of Mongo database and account creation ticket features?"
+ },
+ {
+  "id": "s7so-l1-0046",
+  "question": "What caused the overseas access service interruption incident?"
+ },
+ {
+  "id": "s7so-l1-0047",
+  "question": "Who handled the overseas access service interruption incident?"
+ },
+ {
+  "id": "s7so-l1-0048",
+  "question": "What format does Quota-Exporter publish cluster resource quota details in?"
+ },
+ {
+  "id": "s7so-l1-0049",
+  "question": "I'm following up on the base components incident from Jul 19, 2026. Who does the record list as responders?"
+ },
+ {
+  "id": "s7so-l1-0050",
+  "question": "Which HTTP endpoints does the Fenalion service layer expose in the haloros repository?"
+ },
+ {
+  "id": "s7so-l1-0051",
+  "question": "What caused the opensm, ibdev2netdev incident?"
+ },
+ {
+  "id": "s7so-l1-0052",
+  "question": "Who handled the opensm, ibdev2netdev incident?"
+ },
+ {
+  "id": "s7so-l1-0053",
+  "question": "Which package is missing from the rag service requirements file?"
+ },
+ {
+  "id": "s7so-l1-0054",
+  "question": "Who handled the Brymarch incident?"
+ },
+ {
+  "id": "s7so-l1-0055",
+  "question": "What logs can maraum download for a single pod?"
+ },
+ {
+  "id": "s7so-l1-0056",
+  "question": "Who handled the Maraum service deployment incident?"
+ },
+ {
+  "id": "s7so-l1-0057",
+  "question": "I'm following up on the pytorchjob incident from Jan 12, 2027. Who does the record list as responders?"
+ },
+ {
+  "id": "s7so-l1-0058",
+  "question": "Who handled the log incident?"
+ },
+ {
+  "id": "s7so-l1-0059",
+  "question": "Who handled the Toruantis, FD resources incident?"
+ },
+ {
+  "id": "s7so-l1-0060",
+  "question": "Where are logs kept on quorum nodes?"
+ },
+ {
+  "id": "s7so-l1-0061",
+  "question": "Who handled the Lumgate Pexieon, api.vexeum.ai incident?"
+ },
+ {
+  "id": "s7so-l1-0062",
+  "question": "Who handled the /var/run/nvidia-topologyd incident?"
+ },
+ {
+  "id": "s7so-l1-0063",
+  "question": "Who handled the Pelfell incident?"
+ },
+ {
+  "id": "s7so-l1-0064",
+  "question": "Which backing store handles persistence through GORM in the lororys Inference Server project?"
+ },
+ {
+  "id": "s7so-l1-0065",
+  "question": "Who handled the Tarndale cluster, spine IB switches, storage incident?"
+ },
+ {
+  "id": "s7so-l1-0066",
+  "question": "Who handled the harbor01 node, VM migration, network controller service, vSAN storage incident?"
+ },
+ {
+  "id": "s7so-l1-0067",
+  "question": "Who handled the sidekiq incident?"
+ },
+ {
+  "id": "s7so-l1-0068",
+  "question": "What anomaly types do cluster-type alerts now cover?"
+ },
+ {
+  "id": "s7so-l1-0069",
+  "question": "Who handled the mar-gw incident?"
+ },
+ {
+  "id": "s7so-l1-0070",
+  "question": "Who handled the Xananor incident?"
+ },
+ {
+  "id": "s7so-l1-0071",
+  "question": "Who handled the LLM inference incident?"
+ },
+ {
+  "id": "s7so-l1-0072",
+  "question": "Who handled the task management pod logs incident?"
+ },
+ {
+  "id": "s7so-l1-0073",
+  "question": "Who handled the Malaysia cluster, H100 incident?"
+ },
+ {
+  "id": "s7so-l1-0074",
+  "question": "Which external search APIs does src/Bryness/web_search.py support in the nexoion rag repository?"
+ },
+ {
+  "id": "s7so-l1-0075",
+  "question": "Who handled the tenant VPC incident?"
+ },
+ {
+  "id": "s7so-l1-0076",
+  "question": "Who handled the Galholm cluster, Tarndale cluster incident?"
+ },
+ {
+  "id": "s7so-l1-0077",
+  "question": "Who handled the k8s base services incident?"
+ },
+ {
+  "id": "s7so-l1-0078",
+  "question": "Which endpoint does the Umbadis service use to retrieve Pod events?"
+ },
+ {
+  "id": "s7so-l1-0079",
+  "question": "Which branch actually carries the complete Python backend?"
+ },
+ {
+  "id": "s7so-l1-0080",
+  "question": "For the Jun 4, 2027 automated operations incident, what explanation does the incident report give?"
+ },
+ {
+  "id": "s7so-l1-0081",
+  "question": "In the Umbadis repository, what WorkloadType values does the v2 query filter include?"
+ },
+ {
+  "id": "s7so-l1-0082",
+  "question": "In the haloros repository, what is the central long-term memory metaphor model used by hox-wave-p?"
+ },
+ {
+  "id": "s7so-l1-0083",
+  "question": "How many pairs have structural and affinity data in the L1 tier?"
+ },
+ {
+  "id": "s7so-l1-0084",
+  "question": "I'm following up on the Dalanent incident from Jan 5, 2027. Who does the record list as responders?"
+ },
+ {
+  "id": "s7so-l1-0085",
+  "question": "Who handled the LLM inference service, smart routing, server service incident?"
+ },
+ {
+  "id": "s7so-l1-0086",
+  "question": "Who handled the Maraum, Vexeum incident?"
+ },
+ {
+  "id": "s7so-l1-0087",
+  "question": "Who handled the multus incident?"
+ },
+ {
+  "id": "s7so-l1-0088",
+  "question": "Which backend web framework and server does the Yzagate service stack use?"
+ },
+ {
+  "id": "s7so-l1-0089",
+  "question": "I'm reviewing the Pexieon incident from Jan 11, 2027. What did the write-up identify as the cause?"
+ },
+ {
+  "id": "s7so-l1-0090",
+  "question": "Can you pull the responder list for the Jan 11, 2027 Pexieon incident?"
+ },
+ {
+  "id": "s7so-l1-0091",
+  "question": "Who was brought in to handle the Pexieon issue on Nov 18, 2026?"
+ },
+ {
+  "id": "s7so-l1-0092",
+  "question": "Who handled the Bryford cluster, RoCE QP errors, base services incident?"
+ },
+ {
+  "id": "s7so-l1-0093",
+  "question": "Who handled the instance resources incident?"
+ },
+ {
+  "id": "s7so-l1-0094",
+  "question": "I'm following up on the PEXI incident from Nov 11, 2026. Who does the record list as responders?"
+ },
+ {
+  "id": "s7so-l1-0095",
+  "question": "Who handled the Dunholm cluster, shared storage, Vault, scratch incident?"
+ },
+ {
+  "id": "s7so-l1-0096",
+  "question": "Who handled the mar-gw, Shanghai Oraport cluster incident?"
+ },
+ {
+  "id": "s7so-l1-0097",
+  "question": "Who handled the H20X incident?"
+ },
+ {
+  "id": "s7so-l1-0098",
+  "question": "In the openclawsharedmemorybasecyan repository, what is the default local branch name?"
+ },
+ {
+  "id": "s7so-l1-0099",
+  "question": "Who handled the Rynholm cluster storage incident?"
+ },
+ {
+  "id": "s7so-l1-0100",
+  "question": "Who handled the Nyxbrook incident?"
+ },
+ {
+  "id": "s7so-l1-0101",
+  "question": "Who handled the Bryford cluster task monitoring data incident?"
+ },
+ {
+  "id": "s7so-l1-0102",
+  "question": "Who handled the NCCL incident?"
+ },
+ {
+  "id": "s7so-l1-0103",
+  "question": "Can you pull the responder list for the Jan 15, 2027 Maraum incident?"
+ },
+ {
+  "id": "s7so-l1-0104",
+  "question": "What Go version does the root go.mod declare in the Soravel repository?"
+ },
+ {
+  "id": "s7so-l1-0105",
+  "question": "What baseline throughput did the llama2-70b stress test achieve?"
+ },
+ {
+  "id": "s7so-l1-0106",
+  "question": "Who handled the Tarnquist incident?"
+ },
+ {
+  "id": "s7so-l1-0107",
+  "question": "I'm following up on the log module incident from Mar 22, 2027. Who does the record list as responders?"
+ },
+ {
+  "id": "s7so-l1-0108",
+  "question": "Who handled the Bryford, Dunholm, jupyter incident?"
+ },
+ {
+  "id": "s7so-l1-0109",
+  "question": "What score did math-only training reach on GSM8K?"
+ },
+ {
+  "id": "s7so-l1-0110",
+  "question": "What caused the holgrove2 incident?"
+ },
+ {
+  "id": "s7so-l1-0111",
+  "question": "What was confirmed as the cause of the floating-point precision leakage in logS values?"
+ },
+ {
+  "id": "s7so-l1-0112",
+  "question": "What caused the gateway incident?"
+ },
+ {
+  "id": "s7so-l1-0113",
+  "question": "What resolves the user data write failure in storage?"
+ },
+ {
+  "id": "s7so-l1-0114",
+  "question": "Who handled the Quilombe platform incident?"
+ },
+ {
+  "id": "s7so-l1-0115",
+  "question": "Who handled the AI platform incident?"
+ },
+ {
+  "id": "s7so-l1-0116",
+  "question": "For the Dec 30, 2026 Maraum incident, what explanation does the incident report give?"
+ },
+ {
+  "id": "s7so-l1-0117",
+  "question": "Can you pull the responder list for the Dec 30, 2026 Maraum incident?"
+ },
+ {
+  "id": "s7so-l1-0118",
+  "question": "Who was brought in to handle the PEXI issue on Nov 15, 2026?"
+ },
+ {
+  "id": "s7so-l1-0119",
+  "question": "Who handled the Galwood cluster Cororia incident?"
+ },
+ {
+  "id": "s7so-l1-0120",
+  "question": "I'm following up on the Maraum incident from Jan 26, 2027. Who does the record list as responders?"
+ },
+ {
+  "id": "s7so-l1-0121",
+  "question": "Who handled the external URL incident?"
+ },
+ {
+  "id": "s7so-l1-0122",
+  "question": "Who handled the H100 8-GPU nodes, InfiniBand ports incident?"
+ },
+ {
+  "id": "s7so-l1-0123",
+  "question": "In the maraum Jupyter repository, which external service performs quota validation?"
+ },
+ {
+  "id": "s7so-l1-0124",
+  "question": "Who handled the Dalanent GPFS incident?"
+ },
+ {
+  "id": "s7so-l1-0125",
+  "question": "Who handled the k8s, pytorchjob incident?"
+ },
+ {
+  "id": "s7so-l1-0126",
+  "question": "Why did the H100 System-8c4eade5fc plugin slow measured GLM5 speed?"
+ },
+ {
+  "id": "s7so-l1-0127",
+  "question": "Who handled the Quilombe platform Dalanent incident?"
+ },
+ {
+  "id": "s7so-l1-0128",
+  "question": "What core tasks does cororum support for SRE routine operations?"
+ },
+ {
+  "id": "s7so-l1-0129",
+  "question": "Who handled the base services, GPFS incident?"
+ },
+ {
+  "id": "s7so-l1-0130",
+  "question": "Who handled the internal R&D multi-tenant environment incident?"
+ },
+ {
+  "id": "s7so-l1-0131",
+  "question": "Who handled the base service components incident?"
+ },
+ {
+  "id": "s7so-l1-0132",
+  "question": "Who handled the server side, database incident?"
+ },
+ {
+  "id": "s7so-l1-0133",
+  "question": "Who handled the shared reserved pool, dedicated pool incident?"
+ },
+ {
+  "id": "s7so-l1-0134",
+  "question": "Who handled the Marhaven cluster scheduler incident?"
+ },
+ {
+  "id": "s7so-l1-0135",
+  "question": "Who handled the Pexieon service release incident?"
+ },
+ {
+  "id": "s7so-l1-0136",
+  "question": "Who handled the Pelfell, Galwood, Beijing, Shanghai, Wulanchabu incident?"
+ },
+ {
+  "id": "s7so-l1-0137",
+  "question": "I'm following up on the shared storage incident from Jun 4, 2027. Who does the record list as responders?"
+ },
+ {
+  "id": "s7so-l1-0138",
+  "question": "What is the current end-to-end log transmission delay typically?"
+ },
+ {
+  "id": "s7so-l1-0139",
+  "question": "What is the background scheduler for test tasks in the Rinys inference server branch?"
+ },
+ {
+  "id": "s7so-l1-0140",
+  "question": "Who handled the Rineova external network probing incident?"
+ },
+ {
+  "id": "s7so-l1-0141",
+  "question": "I'm reviewing the Dorness incident from Mar 1, 2027. What did the write-up identify as the cause?"
+ },
+ {
+  "id": "s7so-l1-0142",
+  "question": "Who was brought in to handle the Dorness issue on Mar 1, 2027?"
+ },
+ {
+  "id": "s7so-l1-0143",
+  "question": "How much did redundant query consolidation reduce RAG retrieval latency?"
+ },
+ {
+  "id": "s7so-l1-0144",
+  "question": "I'm following up on the Dalanent incident from Nov 11, 2026. Who does the record list as responders?"
+ },
+ {
+  "id": "s7so-l1-0145",
+  "question": "Who handled the Oraport cluster incident?"
+ },
+ {
+  "id": "s7so-l1-0146",
+  "question": "Which of the nine governance tables were still missing?"
+ },
+ {
+  "id": "s7so-l1-0147",
+  "question": "Who handled the NFS incident?"
+ },
+ {
+  "id": "s7so-l1-0148",
+  "question": "Which Go version is used to build the dify-server repository?"
+ },
+ {
+  "id": "s7so-l1-0149",
+  "question": "Who handled the marhaven-s-004, calico-node incident?"
+ },
+ {
+  "id": "s7so-l1-0150",
+  "question": "Who handled the Oraport, Dalanent, IBGDA incident?"
+ },
+ {
+  "id": "s7so-l1-0151",
+  "question": "Who handled the Toruantis, RoCE NICs incident?"
+ },
+ {
+  "id": "s7so-l1-0152",
+  "question": "What did fenaova2 find about neighbor search performance?"
+ },
+ {
+  "id": "s7so-l1-0153",
+  "question": "What is the entry cap on service release dropdowns for template and config versions?"
+ },
+ {
+  "id": "s7so-l1-0154",
+  "question": "Who handled the training jobs incident?"
+ },
+ {
+  "id": "s7so-l1-0155",
+  "question": "Who was brought in to handle the shared storage issue on Mar 1, 2027?"
+ },
+ {
+  "id": "s7so-l1-0156",
+  "question": "Who handled the Dorholm cluster, GPFS incident?"
+ },
+ {
+  "id": "s7so-l1-0157",
+  "question": "Who handled the Maraum, nginx gateway incident?"
+ },
+ {
+  "id": "s7so-l1-0158",
+  "question": "Who handled the solaos incident?"
+ },
+ {
+  "id": "s7so-l1-0159",
+  "question": "Who handled the storage IB switches, GPFS incident?"
+ },
+ {
+  "id": "s7so-l1-0160",
+  "question": "Who handled the platform logs, Doris database incident?"
+ },
+ {
+  "id": "s7so-l1-0161",
+  "question": "In the fenaova2-server repository, which REST framework handles route binding and HTTP response wrapping?"
+ },
+ {
+  "id": "s7so-l1-0162",
+  "question": "What is the only committed file on the Umboria repository's main branch?"
+ },
+ {
+  "id": "s7so-l1-0163",
+  "question": "What blocks automated writing to the knowledge base?"
+ },
+ {
+  "id": "s7so-l1-0164",
+  "question": "In the unischeduler project, what does the arvwave81 term represent?"
+ },
+ {
+  "id": "s7so-l1-0165",
+  "question": "Can you pull the responder list for the Jul 16, 2026 k8s incident?"
+ },
+ {
+  "id": "s7so-l1-0166",
+  "question": "Can you find the umb-proxy incident record and tell me who responded?"
+ },
+ {
+  "id": "s7so-l1-0167",
+  "question": "Can you find the documented cause of the Elasticsearch issue?"
+ },
+ {
+  "id": "s7so-l1-0168",
+  "question": "I'm trying to follow up on the Brymarch incident. Who handled it?"
+ },
+ {
+  "id": "s7so-l1-0169",
+  "question": "I'm trying to follow up on the Toruantis incident. Who handled it?"
+ },
+ {
+  "id": "s7so-l1-0170",
+  "question": "Can you find the Pelfell incident record and tell me who responded?"
+ },
+ {
+  "id": "s7so-l1-0171",
+  "question": "I'm trying to follow up on the sidekiq incident. Who handled it?"
+ },
+ {
+  "id": "s7so-l1-0172",
+  "question": "I'm trying to follow up on the mar-gw incident. Who handled it?"
+ },
+ {
+  "id": "s7so-l1-0173",
+  "question": "Can you find the Xananor incident record and tell me who responded?"
+ },
+ {
+  "id": "s7so-l1-0174",
+  "question": "Can you find the multus incident record and tell me who responded?"
+ },
+ {
+  "id": "s7so-l1-0175",
+  "question": "I'm trying to follow up on the H20X incident. Who handled it?"
+ },
+ {
+  "id": "s7so-l1-0176",
+  "question": "I'm trying to follow up on the Nyxbrook incident. Who handled it?"
+ },
+ {
+  "id": "s7so-l1-0177",
+  "question": "Can you find the NCCL incident record and tell me who responded?"
+ },
+ {
+  "id": "s7so-l1-0178",
+  "question": "I'm trying to follow up on the Tarnquist incident. Who handled it?"
+ },
+ {
+  "id": "s7so-l1-0179",
+  "question": "I'm trying to follow up on the Halorova incident. Who handled it?"
+ },
+ {
+  "id": "s7so-l1-0180",
+  "question": "Aiden Ellis's Feb 8, 2027 update on Umborantis — what did they get done?"
+ },
+ {
+  "id": "s7so-l1-0181",
+  "question": "In Soravel, which component runs as a node DaemonSet gathering GPU, IB, and system health data?"
+ },
+ {
+  "id": "s7so-l1-0182",
+  "question": "What is the status of the Islbrook registry redevelopment?"
+ },
+ {
+  "id": "s7so-l1-0183",
+  "question": "What was the root cause of flexserve's bandwidth issue?"
+ },
+ {
+  "id": "s7so-l1-0184",
+  "question": "can you pull what Aiden Ingram worked on for Goruella around Feb 7, 2027?"
+ },
+ {
+  "id": "s7so-l1-0185",
+  "question": "What module path does go.mod set for the maraum task server project?"
+ },
+ {
+  "id": "s7so-l1-0186",
+  "question": "In the haloros pipeline, which file acts as the full orchestration entrypoint across clone, analysis, and upload?"
+ },
+ {
+  "id": "s7so-l1-0187",
+  "question": "can you pull what Aiden Jarvis worked on for Lororys around May 15, 2027?"
+ },
+ {
+  "id": "s7so-l1-0188",
+  "question": "What did Aiden Yates accomplish on Umbodis?"
+ },
+ {
+  "id": "s7so-l1-0189",
+  "question": "What did Amber Fleming accomplish on Lororys?"
+ },
+ {
+  "id": "s7so-l1-0190",
+  "question": "Amber Fleming's May 16, 2027 update on Quoraantis — what did they get done?"
+ },
+ {
+  "id": "s7so-l1-0191",
+  "question": "In the Goraum repository, which file defines every external API route?"
+ },
+ {
+  "id": "s7so-l1-0192",
+  "question": "what did Amber Mercer do on Mar 7, 2027 for Beleara?"
+ },
+ {
+  "id": "s7so-l1-0193",
+  "question": "Why did the inference side cause empty monitoring data?"
+ },
+ {
+  "id": "s7so-l1-0194",
+  "question": "How many non-standard nodes were detected by nodegroupcontoller?"
+ },
+ {
+  "id": "s7so-l1-0195",
+  "question": "Amber Parker's Feb 6, 2027 update on Nyxridge — what did they get done?"
+ },
+ {
+  "id": "s7so-l1-0196",
+  "question": "In the Loros repository, what service name does the README on origin/devinit identify?"
+ },
+ {
+  "id": "s7so-l1-0197",
+  "question": "What did automatic diagnosis detect in the Bexlink cluster?"
+ },
+ {
+  "id": "s7so-l1-0198",
+  "question": "What is the local default branch of the yoraion repository?"
+ },
+ {
+  "id": "s7so-l1-0199",
+  "question": "Which web framework does the nexoion rag service use for its Web/API implementation?"
+ },
+ {
+  "id": "s7so-l1-0200",
+  "question": "In the Pelshaw repository, which service name does etc/config-Dorholm.yaml identify?"
+ },
+ {
+  "id": "s7so-l1-0201",
+  "question": "Bella Lawson's Feb 6, 2027 update on Fenridge — what did they get done?"
+ },
+ {
+  "id": "s7so-l1-0202",
+  "question": "what did Bella Nolan do on Feb 6, 2027 for Beleara?"
+ },
+ {
+  "id": "s7so-l1-0203",
+  "question": "what did Bella Nolan do on Feb 6, 2027 for Loreor?"
+ },
+ {
+  "id": "s7so-l1-0204",
+  "question": "Which Go version is the Halalella service built with?"
+ },
+ {
+  "id": "s7so-l1-0205",
+  "question": "Which branch holds Jorfield's actual implementation?"
+ },
+ {
+  "id": "s7so-l1-0206",
+  "question": "Which model identifiers are listed in config.yaml as selectable models in the skyguardian repository?"
+ },
+ {
+  "id": "s7so-l1-0207",
+  "question": "In the Zelantis Manager repository, which file performs the role authorization work?"
+ },
+ {
+  "id": "s7so-l1-0208",
+  "question": "What does the Quota-Exporter component serve as?"
+ },
+ {
+  "id": "s7so-l1-0209",
+  "question": "What does model specification entry now require instead of both model ID and CPU core count?"
+ },
+ {
+  "id": "s7so-l1-0210",
+  "question": "In the skyguardian repository, which module reads config.yaml and starts real model requests?"
+ },
+ {
+  "id": "s7so-l1-0211",
+  "question": "can you pull what Brian Keller worked on for Rineum around Apr 17, 2027?"
+ },
+ {
+  "id": "s7so-l1-0212",
+  "question": "Why do Inspur management-system policy edits block Zelalos bucket policy management?"
+ },
+ {
+  "id": "s7so-l1-0213",
+  "question": "Which file is the effective application entry point in the lororys Model Server repository?"
+ },
+ {
+  "id": "s7so-l1-0214",
+  "question": "What deployment was used for testing the bge-reranker-v2-m3 benchmark?"
+ },
+ {
+  "id": "s7so-l1-0215",
+  "question": "can you pull what Brian Vaughn worked on for Haloros around Apr 4, 2027?"
+ },
+ {
+  "id": "s7so-l1-0216",
+  "question": "What deployment method is used for the Daisy Adler DNS?"
+ },
+ {
+  "id": "s7so-l1-0217",
+  "question": "Brian Walsh's May 29, 2027 update on Xaneys — what did they get done?"
+ },
+ {
+  "id": "s7so-l1-0218",
+  "question": "How much acceleration did Jorquist deliver in sparse long-sequence cases?"
+ },
+ {
+  "id": "s7so-l1-0219",
+  "question": "What database persists instance metadata for the comfyui-server backend service?"
+ },
+ {
+  "id": "s7so-l1-0220",
+  "question": "What GPFS version is required to fix the mmlsquota -d assert bug?"
+ },
+ {
+  "id": "s7so-l1-0221",
+  "question": "What base image does the Dockerfile build from in the quoriys Report Agent repository?"
+ },
+ {
+  "id": "s7so-l1-0222",
+  "question": "can you pull what Caleb Norris worked on for Umborantis around Jun 13, 2027?"
+ },
+ {
+  "id": "s7so-l1-0223",
+  "question": "Which Go version is the Keloum Terminating Alert service written for?"
+ },
+ {
+  "id": "s7so-l1-0224",
+  "question": "What Celery app name does worker.py register in the Yzagate repository?"
+ },
+ {
+  "id": "s7so-l1-0225",
+  "question": "What did Daisy Emerson accomplish on Xanadis?"
+ },
+ {
+  "id": "s7so-l1-0226",
+  "question": "What did Junuum cross-cluster support enable users to access from Oskmarch?"
+ },
+ {
+  "id": "s7so-l1-0227",
+  "question": "can you pull what Daisy Ingram worked on for Fenridge around Mar 19, 2027?"
+ },
+ {
+  "id": "s7so-l1-0228",
+  "question": "How do Master2 and Master3 join the control plane?"
+ },
+ {
+  "id": "s7so-l1-0229",
+  "question": "What HTTP endpoint does the esm3-server service expose for inference requests?"
+ },
+ {
+  "id": "s7so-l1-0230",
+  "question": "What did Daisy Lawson accomplish on Cororia?"
+ },
+ {
+  "id": "s7so-l1-0231",
+  "question": "can you pull what Daisy Lawson worked on for Xananor around Mar 7, 2027?"
+ },
+ {
+  "id": "s7so-l1-0232",
+  "question": "What is the temporary parking rate at the Shanghai office car park?"
+ },
+ {
+  "id": "s7so-l1-0233",
+  "question": "Derek Carter's Feb 5, 2027 update on Umbara — what did they get done?"
+ },
+ {
+  "id": "s7so-l1-0234",
+  "question": "In the Harbor VIP setup, how many backend servers currently work?"
+ },
+ {
+  "id": "s7so-l1-0235",
+  "question": "What is the configured default branch for the fyn-loom repository?"
+ },
+ {
+  "id": "s7so-l1-0236",
+  "question": "What problems did the earlier Pelshaw documentation materials have?"
+ },
+ {
+  "id": "s7so-l1-0237",
+  "question": "In the Junodis repository, which custom resource is used for inference-service steps?"
+ },
+ {
+  "id": "s7so-l1-0238",
+  "question": "What did the OSS SN intersection move to during cross-checking?"
+ },
+ {
+  "id": "s7so-l1-0239",
+  "question": "Where must external customer resource needs from Luxsvc79 be submitted?"
+ },
+ {
+  "id": "s7so-l1-0240",
+  "question": "In Zelenara, what value does the CronServerLabel term define?"
+ },
+ {
+  "id": "s7so-l1-0241",
+  "question": "what did Elena Gardner do on May 15, 2027 for Maraum?"
+ },
+ {
+  "id": "s7so-l1-0242",
+  "question": "What boot device is set once for the KAYTUS install power-on?"
+ },
+ {
+  "id": "s7so-l1-0243",
+  "question": "can you pull what Elena Holt worked on for Cororum around Apr 19, 2027?"
+ },
+ {
+  "id": "s7so-l1-0244",
+  "question": "what did Elena Holt do on May 3, 2027 for Cororum?"
+ },
+ {
+  "id": "s7so-l1-0245",
+  "question": "Ethan Norris's Feb 6, 2027 update on Fenalova — what did they get done?"
+ },
+ {
+  "id": "s7so-l1-0246",
+  "question": "Ethan Norris's Feb 6, 2027 update on Quorenia — what did they get done?"
+ },
+ {
+  "id": "s7so-l1-0247",
+  "question": "What Python version does pyproject.toml set for the Jorfield repository?"
+ },
+ {
+  "id": "s7so-l1-0248",
+  "question": "what did Ethan Zimmer do on Mar 20, 2027 for Vexeum?"
+ },
+ {
+  "id": "s7so-l1-0249",
+  "question": "can you pull what Felix Emerson worked on for Quilholm around Feb 6, 2027?"
+ },
+ {
+  "id": "s7so-l1-0250",
+  "question": "Which persistence technology and database does the fenaova2 backend use?"
+ },
+ {
+  "id": "s7so-l1-0251",
+  "question": "What did Felix Fleming accomplish on Fenalova?"
+ },
+ {
+  "id": "s7so-l1-0252",
+  "question": "What did Felix Gardner accomplish on Lorux?"
+ },
+ {
+  "id": "s7so-l1-0253",
+  "question": "Which web framework does the Junodis repository use?"
+ },
+ {
+  "id": "s7so-l1-0254",
+  "question": "How many tunnels was the AurwoodWexsys customer IPSec VPN capacity raised to?"
+ },
+ {
+  "id": "s7so-l1-0255",
+  "question": "can you pull what Gavin Adler worked on for Goruella around Feb 7, 2027?"
+ },
+ {
+  "id": "s7so-l1-0256",
+  "question": "What limitation does the current slow-node detection method still have?"
+ },
+ {
+  "id": "s7so-l1-0257",
+  "question": "can you pull what Grace Carter worked on for Torenia around Mar 6, 2027?"
+ },
+ {
+  "id": "s7so-l1-0258",
+  "question": "What did the FIM experiment find for the Yorombe model?"
+ },
+ {
+  "id": "s7so-l1-0259",
+  "question": "can you pull what Grace Irwin worked on for Corux around Mar 26, 2027?"
+ },
+ {
+  "id": "s7so-l1-0260",
+  "question": "Grace Irwin's Apr 2, 2027 update on Corux — what did they get done?"
+ },
+ {
+  "id": "s7so-l1-0261",
+  "question": "what did Grace Lawson do on Feb 6, 2027 for Pexieon?"
+ },
+ {
+  "id": "s7so-l1-0262",
+  "question": "In the fenaova2-server repository, which file implements JWT Cookie authentication?"
+ },
+ {
+  "id": "s7so-l1-0263",
+  "question": "What did Grace Reyes accomplish on Oliorent?"
+ },
+ {
+  "id": "s7so-l1-0264",
+  "question": "Grace Walsh's Mar 5, 2027 update on Vexeum — what did they get done?"
+ },
+ {
+  "id": "s7so-l1-0265",
+  "question": "Who handles heterogeneous-task problems on the pexieon platform?"
+ },
+ {
+  "id": "s7so-l1-0266",
+  "question": "What route prefix does the dify-server service expose for its external interface?"
+ },
+ {
+  "id": "s7so-l1-0267",
+  "question": "What base model evaluation parameters does the new eval_mode routing support?"
+ },
+ {
+  "id": "s7so-l1-0268",
+  "question": "How was mixed-precision support added for the molecular modeling project?"
+ },
+ {
+  "id": "s7so-l1-0269",
+  "question": "can you pull what Hazel Dawson worked on for Quilholm around Mar 6, 2027?"
+ },
+ {
+  "id": "s7so-l1-0270",
+  "question": "What database do sessions, chat entries, and file metadata get stored in for lororys-chat-server?"
+ },
+ {
+  "id": "s7so-l1-0271",
+  "question": "can you pull what Hazel Emerson worked on for Fenova around Apr 3, 2027?"
+ },
+ {
+  "id": "s7so-l1-0272",
+  "question": "In the nexoion RAG repository, what external interfaces does App/api.py expose?"
+ },
+ {
+  "id": "s7so-l1-0273",
+  "question": "What is the default branch of the haloros repository?"
+ },
+ {
+  "id": "s7so-l1-0274",
+  "question": "Which databases got broadened work-order coverage for provisioning and account setup?"
+ },
+ {
+  "id": "s7so-l1-0275",
+  "question": "Which database does the kelalos data layer use with GORM?"
+ },
+ {
+  "id": "s7so-l1-0276",
+  "question": "In the nexoion RAG repository, which class is the core class in src/Rovgate/__init__.py?"
+ },
+ {
+  "id": "s7so-l1-0277",
+  "question": "Which command-line framework provides the command structure for the maraum-cli project?"
+ },
+ {
+  "id": "s7so-l1-0278",
+  "question": "What did Henry Drake accomplish on Cororia?"
+ },
+ {
+  "id": "s7so-l1-0279",
+  "question": "What did Henry Drake accomplish on Fenova?"
+ },
+ {
+  "id": "s7so-l1-0280",
+  "question": "what did Henry Grant do on Apr 19, 2027 for IAM?"
+ },
+ {
+  "id": "s7so-l1-0281",
+  "question": "What is the median Spearman correlation between Smina docking scores and experimental pActivity?"
+ },
+ {
+  "id": "s7so-l1-0282",
+  "question": "What is the status of the Quorenia-core support blocker?"
+ },
+ {
+  "id": "s7so-l1-0283",
+  "question": "How much did effective single-card FLOPS improve after forward-backward splitting?"
+ },
+ {
+  "id": "s7so-l1-0284",
+  "question": "What service framework and Go version does the kelalos repository build on?"
+ },
+ {
+  "id": "s7so-l1-0285",
+  "question": "What is the status of the Dorholm deployment?"
+ },
+ {
+  "id": "s7so-l1-0286",
+  "question": "Which HTTP framework provides the service runtime and API layer in the Umboria backend?"
+ },
+ {
+  "id": "s7so-l1-0287",
+  "question": "In the quoriys Report Agent repository, what is the default value of shard_size?"
+ },
+ {
+  "id": "s7so-l1-0288",
+  "question": "In the fenaova2 repository, which readiness endpoint exposes service readiness?"
+ },
+ {
+  "id": "s7so-l1-0289",
+  "question": "In which namespace is unischeduler deployed and with how many replicas?"
+ },
+ {
+  "id": "s7so-l1-0290",
+  "question": "Why is current Decode CP still slower than baseline?"
+ },
+ {
+  "id": "s7so-l1-0291",
+  "question": "Which HTTP framework does the Gororella Go service use for its web service?"
+ },
+ {
+  "id": "s7so-l1-0292",
+  "question": "Which inference engines are supported options in the maraum Inference Server project?"
+ },
+ {
+  "id": "s7so-l1-0293",
+  "question": "What crashes did the inference flow hit on the server side?"
+ },
+ {
+  "id": "s7so-l1-0294",
+  "question": "what did Julia Lawson do on Mar 5, 2027 for Oskworth?"
+ },
+ {
+  "id": "s7so-l1-0295",
+  "question": "What did Julia Otis accomplish on Zelays?"
+ },
+ {
+  "id": "s7so-l1-0296",
+  "question": "What is the status of PD-scenario prediction accuracy in beleara?"
+ },
+ {
+  "id": "s7so-l1-0297",
+  "question": "How much did holgrove2 cut first-screen resource transfer size?"
+ },
+ {
+  "id": "s7so-l1-0298",
+  "question": "what did Kara Ingram do on Mar 19, 2027 for Fenedis?"
+ },
+ {
+  "id": "s7so-l1-0299",
+  "question": "What is the release status of quoriys for open source?"
+ },
+ {
+  "id": "s7so-l1-0300",
+  "question": "Which Beijing storage repair did KELH complete through coordination and debugging?"
+ },
+ {
+  "id": "s7so-l1-0301",
+  "question": "can you pull what Kara Monroe worked on for Umbays around Feb 6, 2027?"
+ },
+ {
+  "id": "s7so-l1-0302",
+  "question": "What processing stages does the unified pretraining data framework cover?"
+ },
+ {
+  "id": "s7so-l1-0303",
+  "question": "can you pull what Kevin Carter worked on for Oraquist around May 2, 2027?"
+ },
+ {
+  "id": "s7so-l1-0304",
+  "question": "What identity headers does the Belenara identity context module expect from requests?"
+ },
+ {
+  "id": "s7so-l1-0305",
+  "question": "What did Kevin Kirby accomplish on Kelenia?"
+ },
+ {
+  "id": "s7so-l1-0306",
+  "question": "What did Kevin Lawson accomplish on Fenridge?"
+ },
+ {
+  "id": "s7so-l1-0307",
+  "question": "What does haloros_lite store before persistence instead of original text?"
+ },
+ {
+  "id": "s7so-l1-0308",
+  "question": "What did trial users report about drafts in the Quilholm writing test group?"
+ },
+ {
+  "id": "s7so-l1-0309",
+  "question": "What percentage of delivery and routine operations does fenalova now cover?"
+ },
+ {
+  "id": "s7so-l1-0310",
+  "question": "What limits scaling the current lororys2 approach across many users?"
+ },
+ {
+  "id": "s7so-l1-0311",
+  "question": "What does frontend grayscale detection for pexieon read?"
+ },
+ {
+  "id": "s7so-l1-0312",
+  "question": "What did Luna Jarvis accomplish on Toruia?"
+ },
+ {
+  "id": "s7so-l1-0313",
+  "question": "can you pull what Luna Landry worked on for Haloros around Apr 18, 2027?"
+ },
+ {
+  "id": "s7so-l1-0314",
+  "question": "what did Luna Landry do on Apr 18, 2027 for Pexieon?"
+ },
+ {
+  "id": "s7so-l1-0315",
+  "question": "What database and ORM does the Goraum repository use for persistence?"
+ },
+ {
+  "id": "s7so-l1-0316",
+  "question": "What is the active default remote name in the jynnet repository?"
+ },
+ {
+  "id": "s7so-l1-0317",
+  "question": "what did Mia Foster do on May 5, 2027 for Soleella?"
+ },
+ {
+  "id": "s7so-l1-0318",
+  "question": "How many outgoing wiki links must each maintained page have?"
+ },
+ {
+  "id": "s7so-l1-0319",
+  "question": "How many b300 cards are enough to complete cpt training within three days?"
+ },
+ {
+  "id": "s7so-l1-0320",
+  "question": "How far along is the PubChem data expansion work?"
+ },
+ {
+  "id": "s7so-l1-0321",
+  "question": "Mia Lawson's Apr 4, 2027 update on Pexenion — what did they get done?"
+ },
+ {
+  "id": "s7so-l1-0322",
+  "question": "What did Mia Nolan accomplish on Goreantis?"
+ },
+ {
+  "id": "s7so-l1-0323",
+  "question": "Which Go version does the jupyter-controller-repo controller stack use?"
+ },
+ {
+  "id": "s7so-l1-0324",
+  "question": "Why did the SFT training results not meet expectations?"
+ },
+ {
+  "id": "s7so-l1-0325",
+  "question": "In the Gororella repository, which component watches tenant S3 credential Secret objects?"
+ },
+ {
+  "id": "s7so-l1-0326",
+  "question": "In the maraum Inference Server repo, what does Fenenum refer to?"
+ },
+ {
+  "id": "s7so-l1-0327",
+  "question": "what did Noah Sawyer do on Mar 20, 2027 for Fenorion?"
+ },
+ {
+  "id": "s7so-l1-0328",
+  "question": "Noah Sawyer's Apr 3, 2027 update on Fenorion — what did they get done?"
+ },
+ {
+  "id": "s7so-l1-0329",
+  "question": "can you pull what Noah Underhill worked on for Belgrove around Feb 6, 2027?"
+ },
+ {
+  "id": "s7so-l1-0330",
+  "question": "Which pretrained model identifier does main.py load in the esm3-server repository?"
+ },
+ {
+  "id": "s7so-l1-0331",
+  "question": "Which FastAPI routes does src/ publish in the haloros repository?"
+ },
+ {
+  "id": "s7so-l1-0332",
+  "question": "What is the completion percentage of the cororum refactor?"
+ },
+ {
+  "id": "s7so-l1-0333",
+  "question": "What did Nora Bishop accomplish on Goraeon?"
+ },
+ {
+  "id": "s7so-l1-0334",
+  "question": "Which task states are defined in comfyui-server's pkg/db/models/comfyui.go?"
+ },
+ {
+  "id": "s7so-l1-0335",
+  "question": "What did Nora Ingram accomplish on Haluantis?"
+ },
+ {
+  "id": "s7so-l1-0336",
+  "question": "can you pull what Nora Ingram worked on for Dalanent around Apr 4, 2027?"
+ },
+ {
+  "id": "s7so-l1-0337",
+  "question": "can you pull what Olivia Adler worked on for Tarnquist around Mar 19, 2027?"
+ },
+ {
+  "id": "s7so-l1-0338",
+  "question": "can you pull what Olivia Adler worked on for Tarnquist around Mar 26, 2027?"
+ },
+ {
+  "id": "s7so-l1-0339",
+  "question": "what did Olivia Archer do on Feb 5, 2027 for Brymarch?"
+ },
+ {
+  "id": "s7so-l1-0340",
+  "question": "Which added dependency package does GPFS require for this upgrade?"
+ },
+ {
+  "id": "s7so-l1-0341",
+  "question": "In the Goraum ShengXin branch, which file is the main ShengXin business surface?"
+ },
+ {
+  "id": "s7so-l1-0342",
+  "question": "what did Olivia Emerson do on May 15, 2027 for Yoreova?"
+ },
+ {
+  "id": "s7so-l1-0343",
+  "question": "Olivia Foster's Feb 6, 2027 update on Toruantis — what did they get done?"
+ },
+ {
+  "id": "s7so-l1-0344",
+  "question": "what did Olivia Foster do on Mar 6, 2027 for Toruantis?"
+ },
+ {
+  "id": "s7so-l1-0345",
+  "question": "what did Olivia Reyes do on Apr 4, 2027 for Junuum?"
+ },
+ {
+  "id": "s7so-l1-0346",
+  "question": "Which web framework provides the HTTP service layer in the quoriys Report Agent repository?"
+ },
+ {
+  "id": "s7so-l1-0347",
+  "question": "can you pull what Olivia Tucker worked on for Umbuys around May 28, 2027?"
+ },
+ {
+  "id": "s7so-l1-0348",
+  "question": "Which databases were covered by the instance-space analysis?"
+ },
+ {
+  "id": "s7so-l1-0349",
+  "question": "What should I search for in user pod logs for NCCL timeouts?"
+ },
+ {
+  "id": "s7so-l1-0350",
+  "question": "can you pull what Owen Monroe worked on for Corholm around Apr 4, 2027?"
+ },
+ {
+  "id": "s7so-l1-0351",
+  "question": "In maraum-cli, which file is the sole executable entry file?"
+ },
+ {
+  "id": "s7so-l1-0352",
+  "question": "can you pull what Owen Osborn worked on for Umbays around Feb 6, 2027?"
+ },
+ {
+  "id": "s7so-l1-0353",
+  "question": "Owen Osborn's Mar 6, 2027 update on Umbays — what did they get done?"
+ },
+ {
+  "id": "s7so-l1-0354",
+  "question": "What did Owen Sawyer accomplish on Yoria?"
+ },
+ {
+  "id": "s7so-l1-0355",
+  "question": "What did Owen Sawyer accomplish on Loroum?"
+ },
+ {
+  "id": "s7so-l1-0356",
+  "question": "what did Owen Tucker do on Mar 13, 2027 for PXE?"
+ },
+ {
+  "id": "s7so-l1-0357",
+  "question": "What did Owen Tucker accomplish on Halorova?"
+ },
+ {
+  "id": "s7so-l1-0358",
+  "question": "What is the core role of the dev_wkfan branch?"
+ },
+ {
+  "id": "s7so-l1-0359",
+  "question": "What did Paige Walsh accomplish on Quororova?"
+ },
+ {
+  "id": "s7so-l1-0360",
+  "question": "Why did four Dorholm cluster nodes stay unchanged?"
+ },
+ {
+  "id": "s7so-l1-0361",
+  "question": "In the haloros repository, what environment variable points to the durable brain/ directory for maroeon?"
+ },
+ {
+  "id": "s7so-l1-0362",
+  "question": "In the maraum task server repository, which package acts as the control plane for tasks?"
+ },
+ {
+  "id": "s7so-l1-0363",
+  "question": "In the Pexanor repository, what does the abbreviation MARAUM refer to?"
+ },
+ {
+  "id": "s7so-l1-0364",
+  "question": "What did Peter Chandler accomplish on Oliiara?"
+ },
+ {
+  "id": "s7so-l1-0365",
+  "question": "What role does lororys-Rinys play for lororys2?"
+ },
+ {
+  "id": "s7so-l1-0366",
+  "question": "In vyr-core26, what does the internal term UBU expand to?"
+ },
+ {
+  "id": "s7so-l1-0367",
+  "question": "What is the minimum Python runtime version required by pyproject.toml in the haloros repository?"
+ },
+ {
+  "id": "s7so-l1-0368",
+  "question": "What database access technology is used in the Zelenara repository?"
+ },
+ {
+  "id": "s7so-l1-0369",
+  "question": "Peter Kirby's Apr 2, 2027 update on Umbara — what did they get done?"
+ },
+ {
+  "id": "s7so-l1-0370",
+  "question": "What is the configured remote URL for the Rovridge repository?"
+ },
+ {
+  "id": "s7so-l1-0371",
+  "question": "what did Quinn Archer do on Feb 6, 2027 for Fenoria?"
+ },
+ {
+  "id": "s7so-l1-0372",
+  "question": "Which file defines the MdTreeNode and Segment writing model in the nexoion-server branch?"
+ },
+ {
+  "id": "s7so-l1-0373",
+  "question": "What final PDB output does the esm3-server origin/dev inference path write?"
+ },
+ {
+  "id": "s7so-l1-0374",
+  "question": "What does the code management module handle for the vexeum platform?"
+ },
+ {
+  "id": "s7so-l1-0375",
+  "question": "What are the supported ServiceRole values in the lororys Model Server repository?"
+ },
+ {
+  "id": "s7so-l1-0376",
+  "question": "What stage has the vexeum new official website reached?"
+ },
+ {
+  "id": "s7so-l1-0377",
+  "question": "can you pull what Rachel Jarvis worked on for Belanova around Mar 7, 2027?"
+ },
+ {
+  "id": "s7so-l1-0378",
+  "question": "what did Rachel Jarvis do on Mar 7, 2027 for Goraeon?"
+ },
+ {
+  "id": "s7so-l1-0379",
+  "question": "What is Sophie Landry's phone number for internal matters?"
+ },
+ {
+  "id": "s7so-l1-0380",
+  "question": "What did Rachel Yates accomplish on Corudis?"
+ },
+ {
+  "id": "s7so-l1-0381",
+  "question": "What does junior Galfell do for the Descheduler?"
+ },
+ {
+  "id": "s7so-l1-0382",
+  "question": "What did Rachel Zimmer accomplish on Quororella?"
+ },
+ {
+  "id": "s7so-l1-0383",
+  "question": "In the quoriys-server repository, which database stores the platform's data?"
+ },
+ {
+  "id": "s7so-l1-0384",
+  "question": "What was the average NCCL bandwidth in Shanghai Oraport cluster testing?"
+ },
+ {
+  "id": "s7so-l1-0385",
+  "question": "Simon Osborn's Feb 5, 2027 update on Loranella — what did they get done?"
+ },
+ {
+  "id": "s7so-l1-0386",
+  "question": "Simon Osborn's Feb 5, 2027 update on Nexenella — what did they get done?"
+ },
+ {
+  "id": "s7so-l1-0387",
+  "question": "can you pull what Simon Quigley worked on for Pexalys around Feb 5, 2027?"
+ },
+ {
+  "id": "s7so-l1-0388",
+  "question": "can you pull what Simon Quigley worked on for Pexalys around Feb 6, 2027?"
+ },
+ {
+  "id": "s7so-l1-0389",
+  "question": "What is the configured origin remote URL for the yoraion repository?"
+ },
+ {
+  "id": "s7so-l1-0390",
+  "question": "Why was the CPT experiment task lowered in priority?"
+ },
+ {
+  "id": "s7so-l1-0391",
+  "question": "what did Sophie Underhill do on Feb 5, 2027 for Halorova?"
+ },
+ {
+  "id": "s7so-l1-0392",
+  "question": "How many cases did the Goralos/XANA public leaderboard expand to?"
+ },
+ {
+  "id": "s7so-l1-0393",
+  "question": "Sophie Walsh's Feb 7, 2027 update on Umbalos — what did they get done?"
+ },
+ {
+  "id": "s7so-l1-0394",
+  "question": "What is the configured origin remote URL for the yoraion-test-ai GitLab repository?"
+ },
+ {
+  "id": "s7so-l1-0395",
+  "question": "What minimum Python version does the haloros pyproject.toml require?"
+ },
+ {
+  "id": "s7so-l1-0396",
+  "question": "In the Pexaleon repository, which Go framework does the backend use?"
+ },
+ {
+  "id": "s7so-l1-0397",
+  "question": "How early do the HTTPS certificate alerts now fire?"
+ },
+ {
+  "id": "s7so-l1-0398",
+  "question": "can you pull what Ursula Emerson worked on for Maranella around May 2, 2027?"
+ },
+ {
+  "id": "s7so-l1-0399",
+  "question": "In the nexoion-server branch, what value does pkg/feishu/types.go set FeishuMessageType to?"
+ },
+ {
+  "id": "s7so-l1-0400",
+  "question": "what did Ursula Landry do on Feb 7, 2027 for Xananor?"
+ },
+ {
+  "id": "s7so-l1-0401",
+  "question": "In the nexoion rag repository, what role is Redis configured to play for Celery?"
+ },
+ {
+  "id": "s7so-l1-0402",
+  "question": "Which remote feature branch of maraum-public-skills contains the main skill package body?"
+ },
+ {
+  "id": "s7so-l1-0403",
+  "question": "can you pull what Victor Barnes worked on for Nexoion around May 1, 2027?"
+ },
+ {
+  "id": "s7so-l1-0404",
+  "question": "Which category should be used for added GPU nodes during expansion initialization?"
+ },
+ {
+  "id": "s7so-l1-0405",
+  "question": "Victor Carter's Apr 3, 2027 update on Aurwick — what did they get done?"
+ },
+ {
+  "id": "s7so-l1-0406",
+  "question": "What is the Go module path for the Gororella project?"
+ },
+ {
+  "id": "s7so-l1-0407",
+  "question": "What is the expected allreduce throughput relative to combined bandwidth?"
+ },
+ {
+  "id": "s7so-l1-0408",
+  "question": "Which REST framework does the Belenara model management service use for its Go implementation?"
+ },
+ {
+  "id": "s7so-l1-0409",
+  "question": "What is the name of the project in the maraum worker-proxy-server repository?"
+ },
+ {
+  "id": "s7so-l1-0410",
+  "question": "How many recent reports does the scheduler pull per user?"
+ },
+ {
+  "id": "s7so-l1-0411",
+  "question": "What VLAN ID should be set for the generated ROCE configuration?"
+ },
+ {
+  "id": "s7so-l1-0412",
+  "question": "In the correctness check, what does a non-zero value in #wrong indicate?"
+ },
+ {
+  "id": "s7so-l1-0413",
+  "question": "Which baseline tables have completed schema designs and field specifications?"
+ },
+ {
+  "id": "s7so-l1-0414",
+  "question": "what did Willa Archer do on Feb 6, 2027 for Rinalos?"
+ },
+ {
+  "id": "s7so-l1-0415",
+  "question": "Which source types are covered by subscription sources in the NEXO repository?"
+ },
+ {
+  "id": "s7so-l1-0416",
+  "question": "can you pull what Xander Gardner worked on for Xanoor around Mar 20, 2027?"
+ },
+ {
+  "id": "s7so-l1-0417",
+  "question": "can you pull what Xander Gardner worked on for Xanoor around Apr 3, 2027?"
+ },
+ {
+  "id": "s7so-l1-0418",
+  "question": "Which ORM library is used with MySQL for persistence in the Umboria backend?"
+ },
+ {
+  "id": "s7so-l1-0419",
+  "question": "can you pull what Xander Walsh worked on for Xananor around Mar 7, 2027?"
+ },
+ {
+  "id": "s7so-l1-0420",
+  "question": "What was the root cause of the Pavo IB card polling issue?"
+ },
+ {
+  "id": "s7so-l1-0421",
+  "question": "What percentage of 72B model startup time was weight loading?"
+ },
+ {
+  "id": "s7so-l1-0422",
+  "question": "can you pull what Yvonne Carter worked on for Xaneent around Jun 26, 2027?"
+ },
+ {
+  "id": "s7so-l1-0423",
+  "question": "What operations does the maraum Skill now support for inference?"
+ },
+ {
+  "id": "s7so-l1-0424",
+  "question": "what did Yvonne Sawyer do on Jun 26, 2027 for Belanux?"
+ },
+ {
+  "id": "s7so-l1-0425",
+  "question": "What did Yvonne Tucker accomplish on Norworth?"
+ },
+ {
+  "id": "s7so-l1-0426",
+  "question": "what did Zach Barnes do on Feb 7, 2027 for Halaum?"
+ },
+ {
+  "id": "s7so-l1-0427",
+  "question": "In the Zeledis repository, what kind of Kubernetes CRD is the Qelops resource model?"
+ },
+ {
+  "id": "s7so-l1-0428",
+  "question": "How is the config.yaml storing ES, MinIO, and model keys?"
+ },
+ {
+  "id": "s7so-l1-0429",
+  "question": "In the Loros repository, what is PolyFleetOps described as?"
+ },
+ {
+  "id": "s7so-l1-0430",
+  "question": "What is the Go module path for the Keloum project?"
+ },
+ {
+  "id": "s7so-l1-0431",
+  "question": "can you pull what Zach Reyes worked on for Yoroum around Mar 7, 2027?"
+ },
+ {
+  "id": "s7so-l1-0432",
+  "question": "which dates did Aiden Ellis file a weekly report on?"
+ },
+ {
+  "id": "s7so-l1-0433",
+  "question": "can you list Aiden Holt's report dates?"
+ },
+ {
+  "id": "s7so-l1-0434",
+  "question": "can you list Aiden Ingram's report dates?"
+ },
+ {
+  "id": "s7so-l1-0435",
+  "question": "when did Aiden Jarvis submit their weekly updates?"
+ },
+ {
+  "id": "s7so-l1-0436",
+  "question": "can you list Aiden Yates's report dates?"
+ },
+ {
+  "id": "s7so-l1-0437",
+  "question": "can you list Amber Fleming's report dates?"
+ },
+ {
+  "id": "s7so-l1-0438",
+  "question": "can you list Amber Irwin's report dates?"
+ },
+ {
+  "id": "s7so-l1-0439",
+  "question": "when did Amber Mercer submit their weekly updates?"
+ },
+ {
+  "id": "s7so-l1-0440",
+  "question": "which dates did Amber Parker file a weekly report on?"
+ },
+ {
+  "id": "s7so-l1-0441",
+  "question": "when did Bella Bishop submit their weekly updates?"
+ },
+ {
+  "id": "s7so-l1-0442",
+  "question": "which dates did Bella Irwin file a weekly report on?"
+ },
+ {
+  "id": "s7so-l1-0443",
+  "question": "when did Bella Lawson submit their weekly updates?"
+ },
+ {
+  "id": "s7so-l1-0444",
+  "question": "can you list Bella Nolan's report dates?"
+ },
+ {
+  "id": "s7so-l1-0445",
+  "question": "which dates did Bella Walsh file a weekly report on?"
+ },
+ {
+  "id": "s7so-l1-0446",
+  "question": "which dates did Brian Gardner file a weekly report on?"
+ },
+ {
+  "id": "s7so-l1-0447",
+  "question": "can you list Brian Irwin's report dates?"
+ },
+ {
+  "id": "s7so-l1-0448",
+  "question": "can you list Brian Keller's report dates?"
+ },
+ {
+  "id": "s7so-l1-0449",
+  "question": "when did Brian Kirby submit their weekly updates?"
+ },
+ {
+  "id": "s7so-l1-0450",
+  "question": "which dates did Brian Vaughn file a weekly report on?"
+ },
+ {
+  "id": "s7so-l1-0451",
+  "question": "which dates did Brian Walsh file a weekly report on?"
+ },
+ {
+  "id": "s7so-l1-0452",
+  "question": "there's only a mention or two of Falwick. what does it say?"
+ },
+ {
+  "id": "s7so-l1-0453",
+  "question": "What did the report say about the work done on Norworth this week?"
+ },
+ {
+  "id": "s7so-l1-0454",
+  "question": "Quilthorne barely shows up anywhere — what's the one thing said about it?"
+ },
+ {
+  "id": "s7so-l1-0455",
+  "question": "can you dig up what's recorded about Quoraantis?"
+ },
+ {
+  "id": "s7so-l1-0456",
+  "question": "Ulldale barely shows up anywhere — what's the one thing said about it?"
+ },
+ {
+  "id": "s7so-l1-0457",
+  "question": "What does next week's plan say about integrating with Vergrove?"
+ },
+ {
+  "id": "s7so-l1-0458",
+  "question": "What does the knowledge base say about Cormora Data?"
+ },
+ {
+  "id": "s7so-l1-0459",
+  "question": "Falmora AI barely shows up anywhere — what's the one thing said about it?"
+ },
+ {
+  "id": "s7so-l1-0460",
+  "question": "Quilfell AI barely shows up anywhere — what's the one thing said about it?"
+ },
+ {
+  "id": "s7so-l1-0461",
+  "question": "can you dig up what's recorded about Tarnworth Cloud?"
+ },
+ {
+  "id": "s7so-l1-0462",
+  "question": "can you dig up what's recorded about Torgrove Cloud?"
+ },
+ {
+  "id": "s7so-l1-0463",
+  "question": "What does the incident report mention about the Deldale cluster?"
+ },
+ {
+  "id": "s7so-l1-0464",
+  "question": "What does our knowledge base say about the Fenholm incident?"
+ },
+ {
+  "id": "s7so-l1-0465",
+  "question": "can you dig up what's recorded about Wyngrove?"
+ },
+ {
+  "id": "s7so-l1-0466",
+  "question": "calico-node barely shows up anywhere — what's the one thing said about it?"
+ },
+ {
+  "id": "s7so-l1-0467",
+  "question": "can you dig up what's recorded about opensm?"
+ },
+ {
+  "id": "s7so-l1-0468",
+  "question": "What does the incident report about umb-proxy say?"
+ },
+ {
+  "id": "s7so-l1-0469",
+  "question": "vyrwave barely shows up anywhere — what's the one thing said about it?"
+ },
+ {
+  "id": "s7so-l2-0001",
+  "question": "besides Elena Ellis, who else works on Belania?"
+ },
+ {
+  "id": "s7so-l2-0002",
+  "question": "The table and formula recognition errors were stalling our book PDF parsing flow — how did we end up handling that?"
+ },
+ {
+  "id": "s7so-l2-0003",
+  "question": "besides Bella Nolan, who else works on MoE?"
+ },
+ {
+  "id": "s7so-l2-0004",
+  "question": "Brian Gardner works on Quororys — anyone else on it too?"
+ },
+ {
+  "id": "s7so-l2-0005",
+  "question": "besides Brian Keller, who else works on Toredis?"
+ },
+ {
+  "id": "s7so-l2-0006",
+  "question": "who's on Ullstead other than Bella Irwin?"
+ },
+ {
+  "id": "s7so-l2-0007",
+  "question": "Bella Walsh works on Zelalos — anyone else on it too?"
+ },
+ {
+  "id": "s7so-l2-0008",
+  "question": "Felix Fleming works on Ullkeld — who else works on it too?"
+ },
+ {
+  "id": "s7so-l2-0009",
+  "question": "Besides the k8s incident, what other incident did Amber Dawson handle?"
+ },
+ {
+  "id": "s7so-l2-0010",
+  "question": "Besides the GPFS and IB network incident, what other incident did Amber Parker handle?"
+ },
+ {
+  "id": "s7so-l2-0011",
+  "question": "Besides the litellm base service incident, what other incident did Amber Quigley handle?"
+ },
+ {
+  "id": "s7so-l2-0012",
+  "question": "Besides the litellm base service incident, what other incident did Clara Jensen handle?"
+ },
+ {
+  "id": "s7so-l2-0013",
+  "question": "Besides the Quilombe platform incident, what other incident did Elena Foster handle?"
+ },
+ {
+  "id": "s7so-l2-0014",
+  "question": "Elena Zimmer handled the infrastructure platform incident on Nov 10, 2026 — what else did they handle?"
+ },
+ {
+  "id": "s7so-l2-0015",
+  "question": "Besides the Dalanent incident, what other incident did Fiona Jarvis handle?"
+ },
+ {
+  "id": "s7so-l2-0016",
+  "question": "besides PEXI on Nov 11, 2026, what other incident did Grace Monroe work?"
+ },
+ {
+  "id": "s7so-l2-0017",
+  "question": "Besides the gateway incident, what other incident did Hazel Chandler handle?"
+ },
+ {
+  "id": "s7so-l2-0018",
+  "question": "Henry Gardner handled the shared storage incident on Nov 10, 2026 — what else did they handle?"
+ },
+ {
+  "id": "s7so-l2-0019",
+  "question": "Iris Fleming worked Daliantis on Jun 4, 2027. any other incidents they touched?"
+ },
+ {
+  "id": "s7so-l2-0020",
+  "question": "Besides the k8s base services incident, what other incident did Ivan Bishop handle?"
+ },
+ {
+  "id": "s7so-l2-0021",
+  "question": "besides Dalanent on Nov 11, 2026, what other incident did Ivan Carter work?"
+ },
+ {
+  "id": "s7so-l2-0022",
+  "question": "Besides the base components incident, what other incident did Ivan Jarvis handle?"
+ },
+ {
+  "id": "s7so-l2-0023",
+  "question": "Ivan Monroe worked base components on Jul 18, 2026. any other incidents they touched?"
+ },
+ {
+  "id": "s7so-l2-0024",
+  "question": "Between Brymarch and DNS, which one had more incidents, and by how much?"
+ },
+ {
+  "id": "s7so-l2-0025",
+  "question": "Did Brymarch or Daliantis run into more incidents? How many apiece?"
+ },
+ {
+  "id": "s7so-l2-0026",
+  "question": "Did Brymarch or GPFS run into more incidents? How many apiece?"
+ },
+ {
+  "id": "s7so-l2-0027",
+  "question": "Between Brymarch and device plugin, which one had more incidents, and by how much?"
+ },
+ {
+  "id": "s7so-l2-0028",
+  "question": "For the sparse Velmol25 workload, how much did throughput rise overall from before the sparse storage change to after the Triton rewrite?"
+ },
+ {
+  "id": "s7so-l2-0029",
+  "question": "Who owns the log capability area, and which backend service supplies the CLI's log data?"
+ },
+ {
+  "id": "s7so-l2-0030",
+  "question": "How much did our overseas LinkedIn follower count go up by between the two cycles?"
+ },
+ {
+  "id": "s7so-l2-0031",
+  "question": "Between DNS and Halorova, which one had more incidents, and by how much?"
+ },
+ {
+  "id": "s7so-l2-0032",
+  "question": "We had the cororum open-source project's CNCF submission still outstanding — did that end up getting done, and under what title?"
+ },
+ {
+  "id": "s7so-l2-0033",
+  "question": "Which had more incidents, Daliantis or Elasticsearch, and how many each?"
+ },
+ {
+  "id": "s7so-l2-0034",
+  "question": "Between Daliantis and H20X, which one had more incidents, and by how much?"
+ },
+ {
+  "id": "s7so-l2-0035",
+  "question": "Which had more incidents, Daliantis or Halorova, and how many each?"
+ },
+ {
+  "id": "s7so-l2-0036",
+  "question": "For the haloros repo, what's the difference in scope between what the main branch holds versus what the dev_fwhitmore branch actually builds?"
+ },
+ {
+  "id": "s7so-l2-0037",
+  "question": "Which had more incidents, Elasticsearch or GPFS, and how many each?"
+ },
+ {
+  "id": "s7so-l2-0038",
+  "question": "Between Elasticsearch and device plugin, which one had more incidents, and by how much?"
+ },
+ {
+  "id": "s7so-l2-0039",
+  "question": "Between Elasticsearch and pytorchjob, which one had more incidents, and by how much?"
+ },
+ {
+  "id": "s7so-l2-0040",
+  "question": "Between GPFS and H20X, which one had more incidents, and by how much?"
+ },
+ {
+  "id": "s7so-l2-0041",
+  "question": "Which had more incidents, GPFS or Halorova, and how many each?"
+ },
+ {
+  "id": "s7so-l2-0042",
+  "question": "Who was involved in the billing-system process design work both times it was worked on?"
+ },
+ {
+  "id": "s7so-l2-0043",
+  "question": "Which had more incidents, H20X or device plugin, and how many each?"
+ },
+ {
+  "id": "s7so-l2-0044",
+  "question": "Between H20X and pytorchjob, which one had more incidents, and by how much?"
+ },
+ {
+  "id": "s7so-l2-0045",
+  "question": "For the NEXO backend, what does the gtxie_dev branch add on top of what main provides?"
+ },
+ {
+  "id": "s7so-l2-0046",
+  "question": "Between Halorova and pytorchjob, which one had more incidents, and by how much?"
+ },
+ {
+  "id": "s7so-l2-0047",
+  "question": "Did NCCL or device plugin run into more incidents? How many apiece?"
+ },
+ {
+  "id": "s7so-l2-0048",
+  "question": "Between NCCL and pytorchjob, which one had more incidents, and by how much?"
+ },
+ {
+  "id": "s7so-l2-0049",
+  "question": "Did Dorness or Nyxbrook run into more incidents? How many apiece?"
+ },
+ {
+  "id": "s7so-l2-0050",
+  "question": "Did Dorness or Pelfell run into more incidents? How many apiece?"
+ },
+ {
+  "id": "s7so-l2-0051",
+  "question": "Between Dorness and Tarnquist, which one had more incidents, and by how much?"
+ },
+ {
+  "id": "s7so-l2-0052",
+  "question": "Did Dorness or Toruantis run into more incidents? How many apiece?"
+ },
+ {
+  "id": "s7so-l2-0053",
+  "question": "Did Dorness or Xananor run into more incidents? How many apiece?"
+ },
+ {
+  "id": "s7so-l2-0054",
+  "question": "Between Nyxbrook and k8s, which one had more incidents, and by how much?"
+ },
+ {
+  "id": "s7so-l2-0055",
+  "question": "How has the vexeum frontend monorepo migration progressed so far?"
+ },
+ {
+  "id": "s7so-l2-0056",
+  "question": "Between Tarnquist and k8s, which one had more incidents, and by how much?"
+ },
+ {
+  "id": "s7so-l2-0057",
+  "question": "How much has the Belhaven startup acceleration cut the memory allocation time, and how does that compare to where it started?"
+ },
+ {
+  "id": "s7so-l2-0058",
+  "question": "How has the Qwen3-1.7B post-training pipeline effort progressed so far?"
+ },
+ {
+  "id": "s7so-l2-0059",
+  "question": "How did the number of product-side and demand-side features toruia 2.0 delivered in its platform release change compared with the previous one?"
+ },
+ {
+  "id": "s7so-l2-0060",
+  "question": "Between Cororia and Pelfell, which one had more incidents, and by how much?"
+ },
+ {
+  "id": "s7so-l2-0061",
+  "question": "We were seeing CRC errors on the nyxsys Japan internet egress port — how did that finally get cleared up?"
+ },
+ {
+  "id": "s7so-l2-0062",
+  "question": "How has our patent data work moved along so far?"
+ },
+ {
+  "id": "s7so-l2-0063",
+  "question": "Which had more incidents, Cororia or Xananor, and how many each?"
+ },
+ {
+  "id": "s7so-l2-0064",
+  "question": "Who's been involved in the Coranella Terminal bench refactoring work throughout?"
+ },
+ {
+  "id": "s7so-l2-0065",
+  "question": "We had that hoxcast14 compatibility issue holding up the pooled task work — how did we end up getting past it?"
+ },
+ {
+  "id": "s7so-l2-0066",
+  "question": "Did Maraum or Tarnquist run into more incidents? How many apiece?"
+ },
+ {
+  "id": "s7so-l2-0067",
+  "question": "Did Maraum or Toruantis run into more incidents? How many apiece?"
+ },
+ {
+  "id": "s7so-l2-0068",
+  "question": "Which had more incidents, Maraum or Xananor, and how many each?"
+ },
+ {
+  "id": "s7so-l2-0069",
+  "question": "The Pelkeld database containerization was stuck because synchronization couldn't proceed — what got it unblocked so the instance switchover could finish?"
+ },
+ {
+  "id": "s7so-l2-0070",
+  "question": "How has the additional CPU rollout for the Pelkeld cluster progressed so far?"
+ },
+ {
+  "id": "s7so-l2-0071",
+  "question": "How far along is the dalaara single-point high-availability remediation now compared to where it started?"
+ },
+ {
+  "id": "s7so-l2-0072",
+  "question": "Did Dalanent or Toruantis run into more incidents? How many apiece?"
+ },
+ {
+  "id": "s7so-l2-0073",
+  "question": "Did Dalanent or Xananor run into more incidents? How many apiece?"
+ },
+ {
+  "id": "s7so-l2-0074",
+  "question": "Which had more incidents, Pexieon or mar-gw, and how many each?"
+ },
+ {
+  "id": "s7so-l2-0075",
+  "question": "Which had more incidents, Pexieon or multus, and how many each?"
+ },
+ {
+  "id": "s7so-l2-0076",
+  "question": "Which had more incidents, Pexieon or sidekiq, and how many each?"
+ },
+ {
+  "id": "s7so-l2-0077",
+  "question": "Did Pexieon or umb-proxy run into more incidents? How many apiece?"
+ },
+ {
+  "id": "s7so-l2-0078",
+  "question": "What did we finally trace the Wexsys IPSec packet loss to?"
+ },
+ {
+  "id": "s7so-l2-0079",
+  "question": "is Belenent carried by just a person or two in this knowledge base, or is it more broadly staffed?"
+ },
+ {
+  "id": "s7so-l2-0080",
+  "question": "For Leon Vaughn's prefill memory optimization on the 72B model, how much has the sequence-length expansion without running out of memory improved?"
+ },
+ {
+  "id": "s7so-l2-0081",
+  "question": "How has the Wynalia next-generation framework refactor progressed so far?"
+ },
+ {
+  "id": "s7so-l2-0082",
+  "question": "does Casport show up as a one- or two-person effort in this knowledge base?"
+ },
+ {
+  "id": "s7so-l2-0083",
+  "question": "How did we end up raising the self-deployed GLM 5.1 kvcache hit rate that still needed improvement?"
+ },
+ {
+  "id": "s7so-l2-0084",
+  "question": "For the haloros repo, how does the dev_lqmiao branch differ in scope from the dev_hvorg branch?"
+ },
+ {
+  "id": "s7so-l2-0085",
+  "question": "For the nexoion RAG codebase, how does the dev_cqwei branch differ in scope from the dev branch?"
+ },
+ {
+  "id": "s7so-l2-0086",
+  "question": "For the haloros repo, how does the work on the dev_wkfan branch differ in scope from what the dev_fwhitmore branch does?"
+ },
+ {
+  "id": "s7so-l2-0087",
+  "question": "How has the XANA open-source release progressed so far?"
+ },
+ {
+  "id": "s7so-l2-0088",
+  "question": "How has the belanova traffic-generation testing progressed so far?"
+ },
+ {
+  "id": "s7so-l2-0089",
+  "question": "Who is working on both linking the CPT-to-SFT-to-RL flow for XANANELLA and advancing the regular RL training?"
+ },
+ {
+  "id": "s7so-l2-0090",
+  "question": "When is the Xalmarch site entry now expected, and how has that target moved from what we were originally planning?"
+ },
+ {
+  "id": "s7so-l2-0091",
+  "question": "How has the OSS bucket directory-level permission control work progressed so far?"
+ },
+ {
+  "id": "s7so-l2-0092",
+  "question": "How has the GLM-5 KVFP8 validation work come along?"
+ },
+ {
+  "id": "s7so-l2-0093",
+  "question": "How has the kernel hot-patch rollout progressed so far?"
+ },
+ {
+  "id": "s7so-l2-0094",
+  "question": "We released the defragmentation capability to administrators in the resource control-plane backend — which pool type does that defrag actually run against?"
+ },
+ {
+  "id": "s7so-l2-0095",
+  "question": "We hit constraints with the runC and CRIU path when sandboxes need bound ports — how did we work around that?"
+ },
+ {
+  "id": "s7so-l2-0096",
+  "question": "In the task server backend, which service supplies the quota limits that the task controller checks before scheduling a task?"
+ },
+ {
+  "id": "s7so-l2-0097",
+  "question": "The SFT coldstart runs kept hitting that inconsistent non-thinking formatting problem — how did we finally get past it?"
+ },
+ {
+  "id": "s7so-l2-0098",
+  "question": "How has the cabling and rack deployment progress for the Wynfell cluster network build moved along so far?"
+ },
+ {
+  "id": "s7so-l2-0099",
+  "question": "For the Aurstead bandwidth problem where heavy outer-field user traffic was hitting inner-field transactions, how did we address it?"
+ },
+ {
+  "id": "s7so-l2-0100",
+  "question": "How has the IB switch monitoring work progressed so far?"
+ },
+ {
+  "id": "s7so-l2-0101",
+  "question": "How many books per day can our 5090 compute handle in the book pipeline now versus where it was before?"
+ },
+ {
+  "id": "s7so-l2-0102",
+  "question": "Which branch on the maredis backend adds proxy support for our permission management service proxy object?"
+ },
+ {
+  "id": "s7so-l2-0103",
+  "question": "For the haloros repo, how does the dev_lqmiao branch differ in scope from the dev_wkfan branch?"
+ },
+ {
+  "id": "s7so-l2-0104",
+  "question": "The unified development image was stuck waiting on Issues 132 testing — how did we finally get that testing unblocked?"
+ },
+ {
+  "id": "s7so-l2-0105",
+  "question": "Which project built the framework enabling the skill tar package upload capability Fiona Ellis reported completing?"
+ },
+ {
+  "id": "s7so-l2-0106",
+  "question": "Which project delivered the automatic full image synchronization with Harbor that Olivia Adler reported working on?"
+ },
+ {
+  "id": "s7so-l2-0107",
+  "question": "Which project includes the inventory IPMI inspection page with task lists, manual creation, and inspection-record viewing that Grace Lawson added?"
+ },
+ {
+  "id": "s7so-l2-0108",
+  "question": "Which project owns the karmada test environment and Cluster API plus CAPI Operator lifecycle research that Owen Osborn reported?"
+ },
+ {
+  "id": "s7so-l2-0109",
+  "question": "Which project owns the CPT checkpoint evaluation over 19 models and 4 benchmarks that Ethan Zimmer completed?"
+ },
+ {
+  "id": "s7so-l2-0110",
+  "question": "Which project's node connectivity and RDMA performance stress-test Web pages did Grace Yates update this week?"
+ },
+ {
+  "id": "s7so-l2-0111",
+  "question": "Which project owns the cmdline, disk, and block collection plugins Owen Tucker developed for delivery acceptance?"
+ },
+ {
+  "id": "s7so-l2-0112",
+  "question": "Which productization project delivered Owen Tucker's consolidated password module handling policy, encryption, decryption, and historical corruption fixes?"
+ },
+ {
+  "id": "s7so-l2-0113",
+  "question": "Which project includes the leaderboard work where Grace Walsh delivered the qwen3-thinking and qwen3-non-thinking presets?"
+ },
+ {
+  "id": "s7so-l2-0114",
+  "question": "For Grace Irwin's test-environment prometheus item on Corux, how did its status change from March 26 to April 2?"
+ },
+ {
+  "id": "s7so-l2-0115",
+  "question": "How did Owen Osborn's Umbays cluster work change from the February to the March report?"
+ },
+ {
+  "id": "s7so-l2-0116",
+  "question": "For Brian Irwin's protein benchmark zero-shot pipeline work, how did the benchmark integration status change between the two report dates?"
+ },
+ {
+  "id": "s7so-l2-0117",
+  "question": "How did Iris Gardner's Caswood workstream change between the May 29 and June 12 reports?"
+ },
+ {
+  "id": "s7so-l2-0118",
+  "question": "How did Noah Sawyer's Fenorion work progress from running test-environment operations to what activity by the later report?"
+ },
+ {
+  "id": "s7so-l2-0119",
+  "question": "How did Olivia Tucker's umbuys work change from her May 28 report to her June 12 report?"
+ },
+ {
+  "id": "s7so-l2-0120",
+  "question": "How did Mia Foster's soleella-database SFT data work move from planning to execution?"
+ },
+ {
+  "id": "s7so-l2-0121",
+  "question": "How did Olivia Archer's Brymarch query/download interface work change from the February 5 to February 26 report?"
+ },
+ {
+  "id": "s7so-l2-0122",
+  "question": "Between Iris Otis's two reports, how did the supplier error handling standardization work progress?"
+ },
+ {
+  "id": "s7so-l2-0123",
+  "question": "How did Kara Ingram's Fenedis workstream advance from the March 19 report to the April 3 report?"
+ },
+ {
+  "id": "s7so-l2-0124",
+  "question": "Across Xander Gardner's two reports, how did the xanoor solution's framework migration progress between the earlier and later dates?"
+ },
+ {
+  "id": "s7so-l2-0125",
+  "question": "How did Caleb Norris's umborantis KV cache evaluation work progress between the May 29 and June 13 reports?"
+ },
+ {
+  "id": "s7so-l2-0126",
+  "question": "How did Olivia Foster's Toruantis work change from early February to early March 2027?"
+ },
+ {
+  "id": "s7so-l2-0127",
+  "question": "How did Aiden Holt's junenella work progress from research completion to rineum integration?"
+ },
+ {
+  "id": "s7so-l2-0128",
+  "question": "How did Wendy Irwin's Toraum workstream advance between the March 6 and March 20 reports?"
+ },
+ {
+  "id": "s7so-l2-0129",
+  "question": "How did Julia Lawson's Oskworth end-to-end speedup change from the February 5 to the March 5 report?"
+ },
+ {
+  "id": "s7so-l2-0130",
+  "question": "How did Aiden Jarvis's lororys inference gateway network work change between the May 2 and May 15 reports?"
+ },
+ {
+  "id": "s7so-l2-0131",
+  "question": "For Grace Carter's torenia work, how did the identified bottleneck change from the March 6 to March 20 report?"
+ },
+ {
+  "id": "s7so-l2-0132",
+  "question": "Between February and March 2027, how did Willa Archer's Rinalos inference throughput versus vllm change?"
+ },
+ {
+  "id": "s7so-l2-0133",
+  "question": "For Zach Reyes's Yoroum Verfield Tech AI companion launch, how did the planned official launch date change between the two reports?"
+ },
+ {
+  "id": "s7so-l2-0134",
+  "question": "For Mia Lawson's Pexenion evaluation framework work, how did the framework's status change from March 6 to April 4?"
+ },
+ {
+  "id": "s7so-l2-0135",
+  "question": "How did Owen Monroe's Corholm load-imbalance/idle-waiting issue change from the April 4 report to April 16?"
+ },
+ {
+  "id": "s7so-l2-0136",
+  "question": "How did Ursula Emerson's Maranella work change from April 18 to May 2, 2027?"
+ },
+ {
+  "id": "s7so-l2-0137",
+  "question": "How did Simon Quigley's pexalys resource-statistics work under Volcano progress from February 5 to February 6?"
+ },
+ {
+  "id": "s7so-l2-0138",
+  "question": "How did Peter Irwin's xanios-System-e6382db83d work advance from early February to late March?"
+ },
+ {
+  "id": "s7so-l2-0139",
+  "question": "How did Daisy Kirby's coreor mixed-resolution work change from June 11 to June 27, 2027?"
+ },
+ {
+  "id": "s7so-l2-0140",
+  "question": "How did Henry Grant's IAM pre-research progress percentage change between his April 19 and April 26 reports?"
+ },
+ {
+  "id": "s7so-l2-0141",
+  "question": "How did Victor Carter's Aurwick shared-machine quota approach change between the April 3 and April 17 reports?"
+ },
+ {
+  "id": "s7so-l2-0142",
+  "question": "Which handler is named in both the NCCL precheck hang incident and the Quilvale default-route image-pull failure incident?"
+ },
+ {
+  "id": "s7so-l2-0143",
+  "question": "What happened with the NC paper that Henry Sawyer had to resubmit after it was rejected?"
+ },
+ {
+  "id": "s7so-l2-0144",
+  "question": "Which responder handled both the Oraness Cloud resource-pool statistics inconsistency and the Dalanent update ib failure incident?"
+ },
+ {
+  "id": "s7so-l2-0145",
+  "question": "Who handled both the Oraness Cloud CPU node taint incident and the Pelfell cluster log-viewing incident?"
+ },
+ {
+  "id": "s7so-l2-0146",
+  "question": "Which handler appears in both the Galgrove cluster storage incident and the resource pool display exception incident?"
+ },
+ {
+  "id": "s7so-l2-0147",
+  "question": "Which responders are named as handlers in both the vsan cluster conflict incident and the Nora Drake platform access-error incident?"
+ },
+ {
+  "id": "s7so-l2-0148",
+  "question": "Which handler is common to both the maraum2 log 401 incident and the image build resource mismatch incident?"
+ },
+ {
+  "id": "s7so-l2-0149",
+  "question": "Which responders handled both the Oraport cluster GPU fault and the Galholm cluster IB switch failure incidents?"
+ },
+ {
+  "id": "s7so-l2-0150",
+  "question": "Which handlers appear in both the vsan cluster conflict incident and the Rinenara instance scheduling incident?"
+ },
+ {
+  "id": "s7so-l2-0151",
+  "question": "Which handler worked on both the Beijing Oraport calico incident and the Galwood Cororia replicas incident?"
+ },
+ {
+  "id": "s7so-l2-0152",
+  "question": "Which handler responded to both the Daisy AdlerDorholm cluster GPFS lag incident and the storage inode file-creation failure incident?"
+ },
+ {
+  "id": "s7so-l2-0153",
+  "question": "Which responders are named as handlers in both the Maraum incident and the overseas access service interruption incident?"
+ },
+ {
+  "id": "s7so-l2-0154",
+  "question": "Which handler worked on both the Beloos cluster misconfiguration incident and the Bryford device plugin incident?"
+ },
+ {
+  "id": "s7so-l2-0155",
+  "question": "Which responders are named as handlers in both the tainted CPU nodes incident and the overwritten self-check image incident?"
+ },
+ {
+  "id": "s7so-l2-0156",
+  "question": "Which handler is named in both the US West storage purchase failure and the frontend network timeout incidents?"
+ },
+ {
+  "id": "s7so-l2-0157",
+  "question": "Which handler appears in both the Galholm ib switch flapping incident and the Galholm29css-maxhil IBLost cordon incident?"
+ },
+ {
+  "id": "s7so-l2-0158",
+  "question": "How has the umborantis open-source effort progressed so far?"
+ },
+ {
+  "id": "s7so-l2-0159",
+  "question": "How has getting the quarkco voice model ready for customers come along so far?"
+ },
+ {
+  "id": "s7so-l2-0160",
+  "question": "Which handler is named in both the Cororia service port change and the Nyxbrook startup failure incidents?"
+ },
+ {
+  "id": "s7so-l2-0161",
+  "question": "Which handler worked on both the Beijing Oraport calico incident and the maraum2 resource loading failure incident?"
+ },
+ {
+  "id": "s7so-l2-0162",
+  "question": "How many servers has panahita's dual-uplink conversion completed now compared to where it was before?"
+ },
+ {
+  "id": "s7so-l2-0163",
+  "question": "Which handlers worked on both the Galgrove IB switch failure and the Shanghai cluster IBLost cordon incident?"
+ },
+ {
+  "id": "s7so-l2-0164",
+  "question": "What memory fraction did we land on for the H100 SGLang colocate runs, compared to what we were testing with before?"
+ },
+ {
+  "id": "s7so-l2-0165",
+  "question": "Who handled both the Cororia auto-recovery failure incident and the network-blip frontend timeout incident?"
+ },
+ {
+  "id": "s7so-l2-0166",
+  "question": "Which handler is named in both the image pull failure incident and the 503 datasets module exception incident?"
+ },
+ {
+  "id": "s7so-l2-0167",
+  "question": "Which handler appears in both the Rhogate53 incident and the Galwood cluster Cororia 404 replica incident?"
+ },
+ {
+  "id": "s7so-l2-0168",
+  "question": "Which handler appears in both the SDK service script incident and the residual pytorchjob CR objects incident?"
+ },
+ {
+  "id": "s7so-l2-0169",
+  "question": "Which responders handled both the Wyndale8Holshaw image pull failure and the Wyndale8kiwi undeletable inference tasks incidents?"
+ },
+ {
+  "id": "s7so-l2-0170",
+  "question": "Which handler responded to both the maraum2 pod monitoring incident and the Beijing cluster GPU statistics incident?"
+ },
+ {
+  "id": "s7so-l2-0171",
+  "question": "Which handlers are named in both the stopped-task pytorchjob incident and the maraum2 scheduling exception incident?"
+ },
+ {
+  "id": "s7so-l2-0172",
+  "question": "Which handler worked on both the January task-scheduling performance incident and the Beijing cluster GPU shortage incident?"
+ },
+ {
+  "id": "s7so-l2-0173",
+  "question": "Which internal users did we give API calling support to in both of our lororys operations pushes?"
+ },
+ {
+  "id": "s7so-l2-0174",
+  "question": "How has the protein-peptide interaction investigation progressed so far?"
+ },
+ {
+  "id": "s7so-l2-0175",
+  "question": "Which handler worked on both the AdlerDorholm cluster inode incident and the Wyngrove cluster storage outage?"
+ },
+ {
+  "id": "s7so-l2-0176",
+  "question": "MinerU's table and formula recognition was blocking our quororova PDF parsing throughput — how did we finally get that unblocked?"
+ },
+ {
+  "id": "s7so-l2-0177",
+  "question": "Which handler is named in both the tausus cluster waiters incident and the customer scheduling incident?"
+ },
+ {
+  "id": "s7so-l2-0178",
+  "question": "Which handler is named in both the Cororia insufficient-ports incident and the Beloos Nyxbrook external URL access incident?"
+ },
+ {
+  "id": "s7so-l2-0179",
+  "question": "Which handler is named in both the port-exhaustion incident and the Cororia service port change incident?"
+ },
+ {
+  "id": "s7so-l2-0180",
+  "question": "Automatic log-level recognition was stuck in frontend-backend joint debugging for a while — how did that finally get unblocked and shipped?"
+ },
+ {
+  "id": "s7so-l2-0181",
+  "question": "For the Goraum data service, how does what the origin/shengxin branch actually implements differ from what the main trunk delivers?"
+ },
+ {
+  "id": "s7so-l2-0182",
+  "question": "PD separation validation had stalled because we didn't have enough H100 capacity — how did that finally get moving again?"
+ },
+ {
+  "id": "s7so-l2-0183",
+  "question": "Which responder handled both the Elasticsearch log-query incident and the Gemini GPU cordon incident?"
+ },
+ {
+  "id": "s7so-l2-0184",
+  "question": "Which handlers worked both the Cororia port exhaustion incident and the missing nvidia-topologyd path Nyxbrook startup failure?"
+ },
+ {
+  "id": "s7so-l2-0185",
+  "question": "Which responders handled both the Beloos cluster misconfiguration incident and the Beijing auriga job preemption incident?"
+ },
+ {
+  "id": "s7so-l2-0186",
+  "question": "How did our merged code volume on the evaluation framework change — the signed commits/PRs and the lines added and removed?"
+ },
+ {
+  "id": "s7so-l2-0187",
+  "question": "Which handler worked both the 2026-11-10 testing incident and the 2027-04-16 backbone network incident affecting maraum2?"
+ },
+ {
+  "id": "s7so-l2-0188",
+  "question": "Beyond the original crew on distributed inference, who else has since jumped in on it?"
+ },
+ {
+  "id": "s7so-l2-0189",
+  "question": "Which handler worked on both the multi-region backbone monitoring incident and the Dalanent 5090 cluster ib failure incident?"
+ },
+ {
+  "id": "s7so-l2-0190",
+  "question": "Which handler appears in both the Fenholm cluster log service incident and the domestic maraum2 image build task incident?"
+ },
+ {
+  "id": "s7so-l2-0191",
+  "question": "Which responder handled both the Pexieon login failure incident and the Syljunc cluster database incident?"
+ },
+ {
+  "id": "s7so-l2-0192",
+  "question": "For the kelalos service, how does the origin/maraum branch differ in scope from what the main branch covers for image handling?"
+ },
+ {
+  "id": "s7so-l2-0193",
+  "question": "Which responder appears both in the 2027-02-25 Galgrove storage incident and the 2026-03-30 inode exhaustion incident?"
+ },
+ {
+  "id": "s7so-l2-0194",
+  "question": "What CI checks did the reliability iteration add for the platform whose backend manages datasets, cases, and leaderboards?"
+ },
+ {
+  "id": "s7so-l2-0195",
+  "question": "Which handler is named in both the Pelfell cluster log incident and the cordoned machines self-check incident?"
+ },
+ {
+  "id": "s7so-l2-0196",
+  "question": "Which responder handled both the Oraport cluster GPU fault and the Northorne cluster MysqlServiceDown incident?"
+ },
+ {
+  "id": "s7so-l2-0197",
+  "question": "Which handlers worked on both the November 2026 test incident and the March 2027 Dorfell cluster quota incident?"
+ },
+ {
+  "id": "s7so-l2-0198",
+  "question": "Which responder handled both the Wyndale AI packet loss incident and the Belwood dedicated line saturation incident?"
+ },
+ {
+  "id": "s7so-l2-0199",
+  "question": "In the training fault-tolerance system, what injection model did the component that supervises training processes inside Pods switch to?"
+ },
+ {
+  "id": "s7so-l2-0200",
+  "question": "Which responders handled both the Beijing maraum2 resource pool incident and the Northorne cluster MysqlServiceDown incident?"
+ },
+ {
+  "id": "s7so-l2-0201",
+  "question": "Which handler appears in both the maraum2 401 log-fetch incident and the Beijing Fenholm cluster log service outage?"
+ },
+ {
+  "id": "s7so-l2-0202",
+  "question": "For serving GLM-5 at 7000W TPM, how has our estimate of the number of A3 machines needed changed?"
+ },
+ {
+  "id": "s7so-l2-0203",
+  "question": "For the haloros repo, how does the work in the dev_hvorg branch differ from what's in the dev_wkfan branch?"
+ },
+ {
+  "id": "s7so-l2-0204",
+  "question": "Which handler is named in both the resource-not-cleared incident and the home-page task inconsistency incident?"
+ },
+ {
+  "id": "s7so-l3-0001",
+  "question": "Who's working on Beleara?"
+ },
+ {
+  "id": "s7so-l3-0002",
+  "question": "Who's working on Coreor?"
+ },
+ {
+  "id": "s7so-l3-0003",
+  "question": "Who's working on Corholm?"
+ },
+ {
+  "id": "s7so-l3-0004",
+  "question": "Who's recorded as working on Umbiux?"
+ },
+ {
+  "id": "s7so-l3-0005",
+  "question": "Who's working on Dalaantis?"
+ },
+ {
+  "id": "s7so-l3-0006",
+  "question": "how many people does Dalaara have on it?"
+ },
+ {
+  "id": "s7so-l3-0008",
+  "question": "Who runs the nccltest acceptance tests in the dalanent cluster acceptance testing SOP?"
+ },
+ {
+  "id": "s7so-l3-0009",
+  "question": "Who did hands-on product or engineering work on DALOROVA's UI, API, website, or billing?"
+ },
+ {
+  "id": "s7so-l3-0011",
+  "question": "Who is working on the goroion post-training and pretraining platform tracks?"
+ },
+ {
+  "id": "s7so-l3-0012",
+  "question": "Who's working on Goruella?"
+ },
+ {
+  "id": "s7so-l3-0013",
+  "question": "Who's working on Halaum?"
+ },
+ {
+  "id": "s7so-l3-0014",
+  "question": "Who's working on IAM?"
+ },
+ {
+  "id": "s7so-l3-0017",
+  "question": "how many people are working on Loreor?"
+ },
+ {
+  "id": "s7so-l3-0018",
+  "question": "Who's working on Nexeova?"
+ },
+ {
+  "id": "s7so-l3-0019",
+  "question": "Who's working on Oliays?"
+ },
+ {
+  "id": "s7so-l3-0020",
+  "question": "how many people are working on Oliiara?"
+ },
+ {
+  "id": "s7so-l3-0021",
+  "question": "Who's working on Oliorent?"
+ },
+ {
+  "id": "s7so-l3-0022",
+  "question": "Across weekly reports, how many distinct authors described personally working on the pexieon→dalaara bill sync?"
+ },
+ {
+  "id": "s7so-l3-0023",
+  "question": "Who's working on Rineova?"
+ },
+ {
+  "id": "s7so-l3-0024",
+  "question": "how many people does Rineum have on it?"
+ },
+ {
+  "id": "s7so-l3-0025",
+  "question": "Who's working on the SOLAOS cluster?"
+ },
+ {
+  "id": "s7so-l3-0026",
+  "question": "Who's working on Umbalos?"
+ },
+ {
+  "id": "s7so-l3-0027",
+  "question": "Who's working on Umbays?"
+ },
+ {
+  "id": "s7so-l3-0031",
+  "question": "who works on the maraum Cororia development environment module?"
+ },
+ {
+  "id": "s7so-l3-0033",
+  "question": "who's on the Dalaara project?"
+ },
+ {
+  "id": "s7so-l3-0035",
+  "question": "In SOP kb doc 6-4-9, who runs k8s container-layer test tasks (nccltest, atest, gpu-burn/llama2/qwen-A3B/OLMo), excluding monitoring, ops, deployment, or image-providing roles?"
+ },
+ {
+  "id": "s7so-l3-0036",
+  "question": "In DALOROVA/lororys, who developed the PD-separated Prefill memory optimization comparison in both the May 30 and Jun 13, 2027 reports?"
+ },
+ {
+  "id": "s7so-l3-0037",
+  "question": "Which people worked on both the beloia distributed inference framework and distributed inference for 1M atoms?"
+ },
+ {
+  "id": "s7so-l3-0042",
+  "question": "who's working on Junuum?"
+ },
+ {
+  "id": "s7so-l3-0043",
+  "question": "Who did hands-on engineering work on loraeon's chat refactor, unified backend, or Quilholm Chat migration?"
+ },
+ {
+  "id": "s7so-l3-0044",
+  "question": "who's working on Loreor?"
+ },
+ {
+  "id": "s7so-l3-0047",
+  "question": "who's working on Oliiara?"
+ },
+ {
+  "id": "s7so-l3-0049",
+  "question": "Which R&D owners handle the Pexieon Rhogate53 and production clusters, excluding contact-only people?"
+ },
+ {
+  "id": "s7so-l3-0051",
+  "question": "can you list who's staffed on Rineum?"
+ },
+ {
+  "id": "s7so-l3-0052",
+  "question": "Who owns the maraum components in the SOLAOS deployment guide?"
+ },
+ {
+  "id": "s7so-l3-0055",
+  "question": "what's Paige Zimmer worked on, project-wise?"
+ },
+ {
+  "id": "s7so-l3-0056",
+  "question": "can you list the projects Xander Gardner's touched?"
+ },
+ {
+  "id": "s7so-l3-0057",
+  "question": "which projects has Amber Mercer worked on?"
+ },
+ {
+  "id": "s7so-l3-0058",
+  "question": "can you list the projects Grace Carter's touched?"
+ },
+ {
+  "id": "s7so-l3-0059",
+  "question": "which projects has Hazel Emerson worked on?"
+ },
+ {
+  "id": "s7so-l3-0060",
+  "question": "can you list the projects Olivia Reyes's touched?"
+ },
+ {
+  "id": "s7so-l3-0061",
+  "question": "which projects has Rachel Sawyer worked on?"
+ },
+ {
+  "id": "s7so-l3-0062",
+  "question": "what's Ethan Zimmer worked on, project-wise?"
+ },
+ {
+  "id": "s7so-l3-0063",
+  "question": "what's Julia Lawson worked on, project-wise?"
+ },
+ {
+  "id": "s7so-l3-0064",
+  "question": "which projects has Ursula Emerson worked on?"
+ },
+ {
+  "id": "s7so-l3-0065",
+  "question": "which projects has Brian Gardner worked on?"
+ },
+ {
+  "id": "s7so-l3-0066",
+  "question": "can you list the projects Owen Osborn's touched?"
+ },
+ {
+  "id": "s7so-l3-0067",
+  "question": "which projects has Leon Fleming worked on?"
+ },
+ {
+  "id": "s7so-l3-0068",
+  "question": "what's Yvonne Tucker worked on, project-wise?"
+ },
+ {
+  "id": "s7so-l3-0069",
+  "question": "can you list the projects Mia Gardner's touched?"
+ },
+ {
+  "id": "s7so-l3-0070",
+  "question": "what's Noah Vaughn worked on, project-wise?"
+ },
+ {
+  "id": "s7so-l3-0073",
+  "question": "which projects has Owen Monroe worked on?"
+ },
+ {
+  "id": "s7so-l3-0074",
+  "question": "what project is MoE under? Bella Nolan's the one working on it"
+ },
+ {
+  "id": "s7so-l3-0075",
+  "question": "which model/project does Ivan Kirby's inter-layer MoE work count toward?"
+ },
+ {
+  "id": "s7so-l3-0076",
+  "question": "which project is Brian Keller's MoE work under?"
+ },
+ {
+  "id": "s7so-l3-0077",
+  "question": "is MoE part of a specific project? Daisy Ingram's been heads-down on it"
+ },
+ {
+  "id": "s7so-l3-0078",
+  "question": "which project does Daisy Kirby's MoE work count toward?"
+ },
+ {
+  "id": "s7so-l3-0079",
+  "question": "trying to book Daisy Otis's MoE work to a project — which one?"
+ },
+ {
+  "id": "s7so-l3-0080",
+  "question": "which project does Derek Carter's MoE work count toward?"
+ },
+ {
+  "id": "s7so-l3-0081",
+  "question": "which project is Elena Ellis's MoE work under?"
+ },
+ {
+  "id": "s7so-l3-0082",
+  "question": "What's the work item behind Gavin Adler's MoE work that lets GLM-4.7-Flash overlap attention and MoE decompression?"
+ },
+ {
+  "id": "s7so-l3-0084",
+  "question": "is MoE part of a specific project? Grace Carter's been heads-down on it"
+ },
+ {
+  "id": "s7so-l3-0087",
+  "question": "which project does Hazel Parker's MoE work count toward?"
+ },
+ {
+  "id": "s7so-l3-0091",
+  "question": "Which operations workstream does Rachel Jarvis file her maraum access problems and DNS/domain troubleshooting under?"
+ },
+ {
+  "id": "s7so-l3-0095",
+  "question": "trying to book Bella Lawson's Oliiantis work to a campaign — which one?"
+ },
+ {
+  "id": "s7so-l3-0096",
+  "question": "which campaign does Bella Lawson's Fenalova work roll up to?"
+ },
+ {
+  "id": "s7so-l3-0097",
+  "question": "what campaign is Pexieon under? Bella Lawson's the one working on it"
+ },
+ {
+  "id": "s7so-l3-0098",
+  "question": "trying to book Bella Lawson's Quoreeon work to a campaign — which one?"
+ },
+ {
+  "id": "s7so-l3-0099",
+  "question": "what campaign is Umborantis under? Bella Nolan's the one working on it"
+ },
+ {
+  "id": "s7so-l3-0101",
+  "question": "trying to book Caleb Monroe's Pexieon work to a campaign — which one?"
+ },
+ {
+  "id": "s7so-l3-0102",
+  "question": "which campaign does Caleb Norris's Toruia work roll up to?"
+ },
+ {
+  "id": "s7so-l3-0103",
+  "question": "trying to book Mia Gardner's Umborantis distributed cache work to a campaign — which one?"
+ },
+ {
+  "id": "s7so-l3-0104",
+  "question": "which campaign is Daisy Lawson's Cororia work under?"
+ },
+ {
+  "id": "s7so-l3-0105",
+  "question": "trying to book Derek Carter's Fenalova work to a campaign — which one?"
+ },
+ {
+  "id": "s7so-l3-0106",
+  "question": "what campaign is System-51b0abbfcc unified-hardware work under? Derek Carter's the one working on it"
+ },
+ {
+  "id": "s7so-l3-0107",
+  "question": "which campaign is Derek Dawson's Cororia work under?"
+ },
+ {
+  "id": "s7so-l3-0108",
+  "question": "what campaign is Dalaara under? Elena Ellis's the one working on it"
+ },
+ {
+  "id": "s7so-l3-0109",
+  "question": "which campaign is Elena Ellis's Fenalova work under?"
+ },
+ {
+  "id": "s7so-l3-0110",
+  "question": "what campaign is Oliorent under? Elena Ellis's the one working on it"
+ },
+ {
+  "id": "s7so-l3-0111",
+  "question": "which campaign does Elena Ellis's Toruia work roll up to?"
+ },
+ {
+  "id": "s7so-l3-0112",
+  "question": "which campaign does Elena Holt's Fenalova work roll up to?"
+ },
+ {
+  "id": "s7so-l3-0113",
+  "question": "which campaign does Fiona Ellis's Fenalova work roll up to?"
+ },
+ {
+  "id": "s7so-l3-0115",
+  "question": "what campaign is Dalaara under? Hazel Dawson's the one working on it"
+ },
+ {
+  "id": "s7so-l3-0116",
+  "question": "which campaign does Hazel Osborn's Dalaara work roll up to?"
+ },
+ {
+  "id": "s7so-l3-0117",
+  "question": "which campaign does Luna Landry's Goroion large-model post-training platformization work roll up to?"
+ },
+ {
+  "id": "s7so-l3-0118",
+  "question": "which campaign does Paige Zimmer's Oliorent work roll up to?"
+ },
+ {
+  "id": "s7so-l3-0119",
+  "question": "what campaign is Toruia under? Hazel Osborn's the one working on it"
+ },
+ {
+  "id": "s7so-l3-0121",
+  "question": "trying to book Henry Bishop's Quoreeon work to a campaign — which one?"
+ },
+ {
+  "id": "s7so-l3-0123",
+  "question": "what campaign is Umborantis under? Aiden Ellis's the one working on it"
+ },
+ {
+  "id": "s7so-l3-0125",
+  "question": "which campaign is Luna Sawyer's xalfield2 work under?"
+ },
+ {
+  "id": "s7so-l3-0126",
+  "question": "what campaign is Fenalova under? Iris Gardner's the one working on it"
+ },
+ {
+  "id": "s7so-l3-0127",
+  "question": "what campaign is Fenalova under? Ivan Bishop's the one working on it"
+ },
+ {
+  "id": "s7so-l3-0128",
+  "question": "which campaign is Jason Dawson's Fenmont work under?"
+ },
+ {
+  "id": "s7so-l3-0129",
+  "question": "which campaign is Kara Monroe's Fenalova work under?"
+ },
+ {
+  "id": "s7so-l3-0130",
+  "question": "what campaign is Umborantis under? Kevin Kirby's the one working on it"
+ },
+ {
+  "id": "s7so-l3-0132",
+  "question": "trying to book Leon Fleming's Fenalova work to a campaign — which one?"
+ },
+ {
+  "id": "s7so-l3-0133",
+  "question": "which campaign does Leon Mercer's Toruia work roll up to?"
+ },
+ {
+  "id": "s7so-l3-0134",
+  "question": "which campaign does Luna Jarvis's Toruia work roll up to?"
+ },
+ {
+  "id": "s7so-l3-0135",
+  "question": "trying to book Mason Archer's Dalaara work to a campaign — which one?"
+ },
+ {
+  "id": "s7so-l3-0136",
+  "question": "which campaign does Noah Underhill's Fenalova work roll up to?"
+ },
+ {
+  "id": "s7so-l3-0138",
+  "question": "what campaign is Umborantis under? Olivia Foster's the one working on it"
+ },
+ {
+  "id": "s7so-l3-0139",
+  "question": "trying to book Paige Walsh's Haloros work to a campaign — which one?"
+ },
+ {
+  "id": "s7so-l3-0140",
+  "question": "which campaign does Peter Chandler's Umborantis work roll up to?"
+ },
+ {
+  "id": "s7so-l3-0144",
+  "question": "which campaign is Quinn Archer's Toruia work under?"
+ },
+ {
+  "id": "s7so-l3-0145",
+  "question": "trying to book Rachel Sawyer's Toruia work to a campaign — which one?"
+ },
+ {
+  "id": "s7so-l3-0146",
+  "question": "what campaign is System-e77ad2552c under? Paige Zimmer's the one working on it"
+ },
+ {
+  "id": "s7so-l3-0148",
+  "question": "trying to book Simon Quigley's Toruia scheduler exists-rsv work to an OKR objective — which one?"
+ },
+ {
+  "id": "s7so-l3-0149",
+  "question": "which campaign does Ursula Mercer's Toruia work roll up to?"
+ },
+ {
+  "id": "s7so-l3-0150",
+  "question": "which campaign does Victor Quigley's Toruia work roll up to?"
+ },
+ {
+  "id": "s7so-l3-0151",
+  "question": "which campaign is Xander Nolan's Umborantis work under?"
+ },
+ {
+  "id": "s7so-l3-0152",
+  "question": "trying to book Yvonne Vaughn's Dalaara work to a campaign — which one?"
+ },
+ {
+  "id": "s7so-l3-0153",
+  "question": "what does Belenent break down into, module-wise?"
+ },
+ {
+  "id": "s7so-l3-0154",
+  "question": "what does Dalorova break down into, module-wise?"
+ },
+ {
+  "id": "s7so-l3-0155",
+  "question": "Who worked on both the Bexlink user Yoreux failure investigation and the DeepSeekV4-Pro profiling?"
+ },
+ {
+  "id": "s7so-l3-0156",
+  "question": "what does Oliorent break down into, module-wise?"
+ },
+ {
+  "id": "s7so-l3-0157",
+  "question": "Which people appear on both the Aurwood build and recurring inventory routines and standards for finance alignment?"
+ },
+ {
+  "id": "s7so-l3-0158",
+  "question": "which department does Elena Gardner's dalaux work fall under?"
+ },
+ {
+  "id": "s7so-l3-0159",
+  "question": "trying to book Elena Gardner's cynloom work to a department — which one?"
+ },
+ {
+  "id": "s7so-l3-0160",
+  "question": "what department is Mia Walsh's Sylworth work booked to?"
+ },
+ {
+  "id": "s7so-l3-0161",
+  "question": "which department does Mia Walsh's Coruella work fall under?"
+ },
+ {
+  "id": "s7so-l3-0163",
+  "question": "which department does Amber Mercer's Beleara work fall under?"
+ },
+ {
+  "id": "s7so-l3-0164",
+  "question": "what department is Amber Mercer's Oliiara work booked to?"
+ },
+ {
+  "id": "s7so-l3-0167",
+  "question": "what department is Bella Lawson's Yoreova work booked to?"
+ },
+ {
+  "id": "s7so-l3-0169",
+  "question": "trying to book Brian Vaughn's Haloros work to a department — which one?"
+ },
+ {
+  "id": "s7so-l3-0170",
+  "question": "trying to book Brian Walsh's Xaneys work to a department — which one?"
+ },
+ {
+  "id": "s7so-l3-0172",
+  "question": "trying to book Daisy Lawson's Cororia work to a department — which one?"
+ },
+ {
+  "id": "s7so-l3-0173",
+  "question": "trying to book Daisy Otis's Goralos work to a department — which one?"
+ },
+ {
+  "id": "s7so-l3-0177",
+  "question": "which department does Derek Dawson's Cororia work fall under?"
+ },
+ {
+  "id": "s7so-l3-0180",
+  "question": "what department is Elena Ellis's Fenedis work booked to?"
+ },
+ {
+  "id": "s7so-l3-0181",
+  "question": "what department is Elena Ellis's Quororella work booked to?"
+ },
+ {
+  "id": "s7so-l3-0182",
+  "question": "trying to book Elena Gardner's Olioova work to a department — which one?"
+ },
+ {
+  "id": "s7so-l3-0184",
+  "question": "trying to book Kara Ingram Irwin's xanios work to a department — which one?"
+ },
+ {
+  "id": "s7so-l3-0186",
+  "question": "which department does Elena Gardner's patent post-processing work fall under?"
+ },
+ {
+  "id": "s7so-l3-0187",
+  "question": "what department is Mia Walsh's Pexia work booked to?"
+ },
+ {
+  "id": "s7so-l3-0188",
+  "question": "what department is Mia Walsh's Umborent work booked to?"
+ },
+ {
+  "id": "s7so-l3-0190",
+  "question": "trying to book Owen Monroe's Pexia work to a department — which one?"
+ },
+ {
+  "id": "s7so-l3-0191",
+  "question": "what department is Rachel Jarvis's Belanova work booked to?"
+ },
+ {
+  "id": "s7so-l3-0193",
+  "question": "trying to book Xander Walsh's Belanova work to a department — which one?"
+ },
+ {
+  "id": "s7so-l3-0194",
+  "question": "what department is Zach Reyes's Holshaw work booked to?"
+ },
+ {
+  "id": "s7so-l3-0196",
+  "question": "how many people are recorded working across Equipment Engineering Dept's projects?"
+ },
+ {
+  "id": "s7so-l3-0197",
+  "question": "Who is recorded as working on the nexanion project?"
+ },
+ {
+  "id": "s7so-l3-0198",
+  "question": "how many people are recorded working across Antares's projects?"
+ },
+ {
+  "id": "s7so-l3-0199",
+  "question": "Who is tagged as involved in Deneb's KR4 precise compute scheduling optimization?"
+ },
+ {
+  "id": "s7so-l3-0200",
+  "question": "across all of Rigel's projects, how many people show up total?"
+ },
+ {
+  "id": "s7so-l3-0201",
+  "question": "Who is recorded as working on Vega's KR2 quoriys evaluation platform?"
+ },
+ {
+  "id": "s7so-l3-0202",
+  "question": "who's the lead on Branding?"
+ },
+ {
+  "id": "s7so-l3-0203",
+  "question": "who's running point on Belenent?"
+ },
+ {
+  "id": "s7so-l3-0204",
+  "question": "who leads Coreor?"
+ },
+ {
+  "id": "s7so-l3-0205",
+  "question": "who's the lead on Corholm?"
+ },
+ {
+  "id": "s7so-l3-0206",
+  "question": "who's the lead on Cororum?"
+ },
+ {
+  "id": "s7so-l3-0207",
+  "question": "who's the lead on belenent2 Molecule Model?"
+ },
+ {
+  "id": "s7so-l3-0208",
+  "question": "the Dalanent incident on Jun 4, 2027 — from the customer side, who'd be affected?"
+ },
+ {
+  "id": "s7so-l3-0209",
+  "question": "which customers does the Jul 14, 2026 Toruantis incident touch?"
+ },
+ {
+  "id": "s7so-l3-0210",
+  "question": "which customers does the Jun 4, 2027 Maraum incident touch?"
+ },
+ {
+  "id": "s7so-l3-0211",
+  "question": "which departments are exposed if something goes wrong with Claude Code?"
+ },
+ {
+  "id": "s7so-l3-0212",
+  "question": "which departments are exposed if something goes wrong with Codex?"
+ },
+ {
+  "id": "s7so-l3-0213",
+  "question": "if DeepSeekV4 broke, which departments would feel it?"
+ },
+ {
+  "id": "s7so-l3-0214",
+  "question": "Which department reported a Dify outage that disrupted its own day-to-day work?"
+ },
+ {
+  "id": "s7so-l3-0215",
+  "question": "if Doris broke, which departments would feel it?"
+ },
+ {
+  "id": "s7so-l3-0216",
+  "question": "say Flink goes down — who's affected, department-wise?"
+ },
+ {
+  "id": "s7so-l3-0217",
+  "question": "say GLM5 goes down — who's affected, department-wise?"
+ },
+ {
+  "id": "s7so-l3-0218",
+  "question": "which departments are exposed if something goes wrong with GitLab?"
+ },
+ {
+  "id": "s7so-l3-0219",
+  "question": "say Grafana goes down — who's affected, department-wise?"
+ },
+ {
+  "id": "s7so-l3-0220",
+  "question": "say Harbor goes down — who's affected, department-wise?"
+ },
+ {
+  "id": "s7so-l3-0221",
+  "question": "which departments are exposed if something goes wrong with Kelania?"
+ },
+ {
+  "id": "s7so-l3-0222",
+  "question": "if LMCache broke, which departments would feel it?"
+ },
+ {
+  "id": "s7so-l3-0223",
+  "question": "which departments are exposed if something goes wrong with NCCL?"
+ },
+ {
+  "id": "s7so-l3-0224",
+  "question": "say NetBox goes down — who's affected, department-wise?"
+ },
+ {
+  "id": "s7so-l3-0225",
+  "question": "Beyond framework contributions, which nexeova capabilities or deployment paths depend on RBG/RBGS?"
+ },
+ {
+  "id": "s7so-l3-0226",
+  "question": "say RayJob goes down — who's affected, department-wise?"
+ },
+ {
+  "id": "s7so-l3-0227",
+  "question": "Which departments run training, inference, evaluation, or deployment workflows on SGLang?"
+ },
+ {
+  "id": "s7so-l3-0228",
+  "question": "say Slime goes down — who's affected, department-wise?"
+ },
+ {
+  "id": "s7so-l3-0229",
+  "question": "which departments are exposed if something goes wrong with TiDB?"
+ },
+ {
+  "id": "s7so-l3-0230",
+  "question": "say Velmol25 goes down — who's affected, department-wise?"
+ },
+ {
+  "id": "s7so-l3-0231",
+  "question": "if VictoriaMetrics broke, which departments would feel it?"
+ },
+ {
+  "id": "s7so-l3-0232",
+  "question": "if Volcano broke, which departments would feel it?"
+ },
+ {
+  "id": "s7so-l3-0233",
+  "question": "which departments are exposed if something goes wrong with Yoranys?"
+ },
+ {
+  "id": "s7so-l3-0234",
+  "question": "say Yoreux goes down — who's affected, department-wise?"
+ },
+ {
+  "id": "s7so-l3-0235",
+  "question": "if flexserve broke, which departments would feel it?"
+ },
+ {
+  "id": "s7so-l3-0236",
+  "question": "say vLLM goes down — who's affected, department-wise?"
+ },
+ {
+  "id": "s7so-l3-0237",
+  "question": "Which projects rely on Argo-Workflow?"
+ },
+ {
+  "id": "s7so-l3-0238",
+  "question": "Is Harbor used broadly, or is it really just one team's thing?"
+ },
+ {
+  "id": "s7so-l3-0239",
+  "question": "is OpenClaw a single-project dependency, or is it shared around?"
+ },
+ {
+  "id": "s7so-l3-0240",
+  "question": "is dalanent used broadly across teams, or is it really just one team's thing?"
+ },
+ {
+  "id": "s7so-l3-0241",
+  "question": "is Openkruise used broadly, or is it really just one team's thing?"
+ },
+ {
+  "id": "s7so-l3-0242",
+  "question": "Which projects rely on TiDB?"
+ },
+ {
+  "id": "s7so-l3-0243",
+  "question": "is PXE used broadly, or is it really just one team's thing?"
+ },
+ {
+  "id": "s7so-l3-0244",
+  "question": "Which projects rely on PolarDB?"
+ },
+ {
+  "id": "s7so-l3-0245",
+  "question": "is Qwen3-1.7B a single-project dependency, or is it shared around?"
+ },
+ {
+  "id": "s7so-l3-0246",
+  "question": "is the training experiment tracking tooling on the Pelwood cluster used broadly, or is it really just one team's thing?"
+ },
+ {
+  "id": "s7so-l3-0247",
+  "question": "is UMA used broadly, or is it really just one team's thing?"
+ },
+ {
+  "id": "s7so-l3-0248",
+  "question": "is Yoranys-commons used broadly, or is it really just one team's thing?"
+ },
+ {
+  "id": "s7so-l3-0249",
+  "question": "is deepgemm a single-project dependency, or is it shared around?"
+ },
+ {
+  "id": "s7so-l3-0250",
+  "question": "Which systems consume Dalanent signals in both the high-availability solution and the architecture data-flow documentation?"
+ },
+ {
+  "id": "s7so-l3-0251",
+  "question": "Which acceptance targets are named across the Dalanent SOPs and completed dalenella customer-delivery records?"
+ },
+ {
+  "id": "s7so-l3-0252",
+  "question": "What customer categories appear in Luna Landry's May 16 and June 27 DALOROVA reports?"
+ },
+ {
+  "id": "s7so-l3-0253",
+  "question": "which businesses and services does Fenridge manage?"
+ },
+ {
+  "id": "s7so-l3-0254",
+  "question": "Which organizations handled the 14 Aurwood storage servers in Leon Mercer's Apr 18 and May 2 updates?"
+ },
+ {
+  "id": "s7so-l3-0255",
+  "question": "who's on the receiving end of Kelport's work?"
+ },
+ {
+  "id": "s7so-l3-0256",
+  "question": "what customers is Lororys serving right now?"
+ },
+ {
+  "id": "s7so-l3-0257",
+  "question": "Which consumer categories are the maraum platform's inference-domain cluster gateways designed to serve?"
+ },
+ {
+  "id": "s7so-l3-0258",
+  "question": "Which storage clusters did Oliays bring into management or deliver as production clusters?"
+ },
+ {
+  "id": "s7so-l3-0259",
+  "question": "What workload appears across Oliorent's NCCL-test and multi-machine stress-testing documents?"
+ },
+ {
+  "id": "s7so-l3-0260",
+  "question": "what customers is Pelhaven serving right now?"
+ },
+ {
+  "id": "s7so-l3-0261",
+  "question": "who's on the receiving end of Rinaella's work?"
+ },
+ {
+  "id": "s7so-l3-0262",
+  "question": "For the tov-kit machine failure that made Daisy Adlermaraum2 unavailable, which customers were affected?"
+ },
+ {
+  "id": "s7so-l3-0263",
+  "question": "Which maraum-hosted repositories reference the SOLAOS cluster or environment label?"
+ },
+ {
+  "id": "s7so-l3-0264",
+  "question": "what customers is Toruantis serving right now?"
+ },
+ {
+  "id": "s7so-l3-0266",
+  "question": "who's on the receiving end of DALIANTIS-NFS's work?"
+ },
+ {
+  "id": "s7so-l3-0267",
+  "question": "In Kara Monroe's 2027-04-17 report (4aeb9e1c), which external customers/tenants were brought online for umboent Umbays cluster management? Exclude internal codenames."
+ },
+ {
+  "id": "s7so-l3-0268",
+  "question": "Which internal teams received the Umborantis integrated image for testing?"
+ },
+ {
+  "id": "s7so-l3-0269",
+  "question": "In March 2027 Equipment Engineering Dept weekly reports, which external customers did the Vexeum team deliver hardware to or support?"
+ },
+ {
+  "id": "s7so-l3-0271",
+  "question": "which project serves Belbrook Data?"
+ },
+ {
+  "id": "s7so-l3-0272",
+  "question": "Which GPU model appears across Bryfield Tech's US East and Umbays demand records?"
+ },
+ {
+  "id": "s7so-l3-0273",
+  "question": "Which customers get U.S. West support in the Original-Wyniver weekly report (20251130)?"
+ },
+ {
+  "id": "s7so-l3-0274",
+  "question": "Which initiative appears alongside Cormora in both Hazel Osborn's Mar 21 and Apr 4 plans?"
+ },
+ {
+  "id": "s7so-l3-0275",
+  "question": "which customer received the 4 H20x machines configured with roce, docker, and nvidia-toolkit plus installation for 4 5090 machines?"
+ },
+ {
+  "id": "s7so-l3-0276",
+  "question": "who's serving Delgate AI on our side?"
+ },
+ {
+  "id": "s7so-l3-0277",
+  "question": "who's serving Falmora AI on our side?"
+ },
+ {
+  "id": "s7so-l3-0278",
+  "question": "Which customer accounts appear in both the Original-Wyniver 20251130 weekly report and the 1031 Pyxcast28 report?"
+ },
+ {
+  "id": "s7so-l3-0279",
+  "question": "what project is behind the work for Quilfell AI?"
+ },
+ {
+  "id": "s7so-l3-0280",
+  "question": "who's serving the Maroara tenant on our side?"
+ },
+ {
+  "id": "s7so-l3-0281",
+  "question": "who's serving Sylgrove Data on our side?"
+ },
+ {
+  "id": "s7so-l3-0282",
+  "question": "For storage slowdown ticket t-20260521032946Inz, who both made the initial assessment and applied a mitigation?"
+ },
+ {
+  "id": "s7so-l3-0283",
+  "question": "In the network failure comparison KB, which tenants were hit by bad route/policy/subnet config or firewall QoS/hardware defects?"
+ },
+ {
+  "id": "s7so-l3-0284",
+  "question": "who's serving Ullwick Data on our side?"
+ },
+ {
+  "id": "s7so-l3-0285",
+  "question": "what project is behind the work for Wyndale AI?"
+ },
+ {
+  "id": "s7so-l3-0286",
+  "question": "which project serves Xaldale Data?"
+ },
+ {
+  "id": "s7so-l3-0287",
+  "question": "what project is behind the work for Yorfield Tech?"
+ },
+ {
+  "id": "s7so-l3-0288",
+  "question": "what project is behind the work for Yorjunc Cloud?"
+ },
+ {
+  "id": "s7so-l3-0289",
+  "question": "who owns the Delgate AI relationship, department-wise?"
+ },
+ {
+  "id": "s7so-l3-0290",
+  "question": "what department is responsible for Falmora AI?"
+ },
+ {
+  "id": "s7so-l3-0291",
+  "question": "which department owns the rineova customer relationship?"
+ },
+ {
+  "id": "s7so-l3-0292",
+  "question": "what department is responsible for Xaldale Data?"
+ }
+]

@@ -1,0 +1,21 @@
+---
+document_type: "report"
+report_date: "2027-05-29"
+report_time: "2027-05-29T20:52:14+08:00"
+authors:
+  - "Zach Norris"
+department: "Platform Ops Dept"
+---
+## This Week's Work
+
+dalanent built LLDP data collection so IPAM can later map physical device locations by IP, added management IP details into Snapshot, and adjusted OSS download endpoint selection for overseas and domestic nodes to avoid deploying with the wrong host address. DALANENT also tuned Snapshot collection Bexcast61 for pre-delivery use, added the Veldale GPU utilization view on the frontend, and still needs to align with the relevant colleagues on whether the GPU utilization figures are accurate. dalanent consolidated Spec files into qelgate, while OSS integration in the release pipeline remains unfinished; for Pelport nodes, the team supported SRE in handling fenalova calls into dalanent and added storage NIC Spec support. fenalova finished package validation for the delivery inspection process, plans to roll Pelshaw out on System-73a1838786, and needs stronger Annotation extraction from Snapshot. On observability, the team resolved platform issues that brought severe nodes from 70 down to 57, cleared the InfiniBand initialization alert, found 15 PCIE bandwidth abnormalities in norvik-Oraport, passed them to SRE for repair, and will connect that handling path with automatic Cordon isolation.
+
+The team added automatic Cordon isolation for the Falvale alert, continued the same capability for Zanombe, Zanlane, and System-04eb38c480, and chose to turn off the old dalanent Marstead alert because Pelshaw overlaps with Falvale triggers. The team recently picked up System-57e7e7c1ed, compared Alibaba Cloud, Tencent Cloud, and System-5e1ae974f7 Cloud VPC tools for design reference, formally took over Xaneella, completed its release process, successfully created a VPC CIDR through the create API, and annotated addresses already assigned in production. System-57e7e7c1ed created a dedicated VPC CIDR for Pelport nodes, bound allocation rules, and used the Pelport adaptation work to clarify the current VPC business status. AllocateEip now uses database transactions plus SELECT ... FOR UPDATE locking to prevent duplicate EIP assignment under concurrency, and duplicate RoCE IP allocation was fixed by reviewing allocation context and system relationships, then locking site_vlanid. Xaneella cannot run local tests because Pelshaw depends on many environments, its code remains hard to test and costly to iterate, so decoupling was recorded as a future requirement; the team also clarified sources for site, vlan_id, and hardware connection relationships to prepare RoCE automatic allocation for Pelport nodes. In parallel, the team supported Panabit traffic-control testing by running the API data path for real-time QoS flow-control information, and advanced the IPAM design with company VPC request Bexcast61 plus major cloud product architectures, bringing the design to 20% completion.
+
+Future EIP management will move into the IPAM system, which is based on the go-ipam module and already has the core foundation running. IPAM now covers standard AllocateIP, including idempotent replay, quota checks, CIDR parsing, database writes, and compensation after failures, and ReleaseIP includes a 5-minute cooling state machine. Pelshaw also supports pool creation through CreatePool and Carve, subnet slicing by instance_type, Reservation Templates, Quota and Domain management, and Audit capability.
+
+## Next Week's Plan
+
+dalanent and DALANENT plan to release v0.7.11 next week, carrying the alert fixes and optimizations noted above, and dalanent will add ovs checks. System-57e7e7c1ed is expected to begin EIP and NAT coverage for the Daisy Adler West Asia cluster, with network team support needed for the overseas rollout. IPAM will keep moving into implementation, but the initial assessment shows that source Bexcast61 cannot be removed in one step, so the plan is to start with read-only accounting, move to shadow dual writes, take over after traffic switching, and then retire the old Bexcast61 only after consistency is proven at each stage; the team’s System-fff0514b59 refactor creates a useful opening for this work.
+
+## Coordination and Help Needed

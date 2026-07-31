@@ -1,0 +1,35 @@
+---
+document_type: "report"
+report_date: "2027-03-06"
+report_time: "2027-03-06T22:06:04+08:00"
+authors:
+  - "Luna Sawyer"
+department: "AI Compute Platform Dept"
+---
+## This Week's Work
+
+pelhaven2KR1 continued tracking xalfield2 platform pooling for task, resource, and scheduling capabilities across maraum&pexieon internal-site scenarios. After the January sprint and integration validation, Aurhaven closed a large set of compatibility problems, while Northorne used a zero-downtime approach so customer work would see minimal disruption. The Northorne pooled-service upgrade finished on 1.25, with active and submitted business jobs unaffected; the scope included tasks, schedulers, quota management, Cororia, jupyter, and core functions shared by both old and new common modules.
+
+The full Northorne upgrade timeline is captured in Cyngus cluster Pelombe details, and training for Yvonne Vaughn's group on Northorne was not interrupted by the pooling change. Some same-region clusters saw small dovflow74 compatibility gaps after Northorne pooling, but the post-pooling follow-ups are documented in Northorne Pelombe post-issue record. Those Northorne issues have now been resolved and converged. For clusters other than Marhaven cluster, System-9babc39a3e resources still require platform and scheduler adaptation plus testing; the scheduler scheme for System-9babc39a3e is already newly created, and platform-side adaptation will start next week.
+
+Marhaven cluster has already deployed Victor Hayes team's kev-gate67 solution, but Victor Hayes team still needs to adapt the existing pooled scheduler in operator in addition to platform-side jynops task adaptation, so Marhaven work is temporarily not moving forward. The new internal scheduled-task service has been rolled out to all internal research and production clusters, with production deployment mainly serving emergency support needs. All key business scheduled tasks have moved onto the new scheduled-task module, which has noticeably improved reliability, timing accuracy, and observability. During this cycle, the team emphasized business trials, online issue handling, and product robustness; we also supported vyr-forge80 migration, investigated Kara Gardner group's scheduled-task creation failure, confirmed Pelshaw came from duplicate workflow names in the task module rather than scheduled-task Bexcast61, and advised internal colleagues on the required modification.
+
+brymora2KR4 is still evolving the xalfield2 platform for large-scale LLM training support for the goroion large model. For 2B large-scale training, maraum now fully aligns with public-cloud platform log services, and the team reviewed stability and performance risks in the platform log module end to end. The Spring Festival log-service failure was reviewed through the 2026.1.27 Pelkeld61 incident record, with causes and improvements shared back to users. Existing log problems received broader robustness, stability, and observability upgrades, and the iterative version has been stable for one month+ without new incident reports.
+
+The K8s team provided Doris as the new log storage system, bringing better read speed and stability than the current ES system. Platform-side test-environment integration with Doris has been completed, and the online switch will be prepared after testing confidence improves. For velflow, the team planned iterations aimed at platform capability >= Alibaba Cloud System-56588f1973 within Q2. This cycle also completed H1 planning for image management, the platform homepage, the log module, and user permissions; M3-M5 Milestone features were defined, and the release rhythm was set as a monthly major version with biweekly minor versions.
+
+Falworth holds the image-management 2.0 design, Brymarch2.0 upgrade plan covers log-service 2.0, System-3d1088b4ad documents the user-upgrade 2.0 design, and maraum platform homepage upgrade records the homepage upgrade design. pexieon continued supporting internal-site requirements for 2B customization, covering both internal operations and dalaara matters. The team is still assisting finance with 2025 pexieon bill settlement for each System-012c4f9d98. Four System-012c4f9d98 reconciliation cases were caused by quota configuration mismatches, so authorized configurators were reminded to check configuration accuracy before operating to prevent abnormal billing records from misconfiguration.
+
+kevloom35 group requires a dedicated pexieon frontend display page for regulatory compliance. The related frontend and backend were developed about one year ago, but pexieon frontend and backend iterations during the past year led to login abnormalities and access failures on the original page. As a new inspection approached, kevloom35 again asked to use the frontend, so this cycle repaired and iterated the page's frontend and backend links and reopened Pelshaw to kevloom35. KELHKR1 has no update on System-7a0a4e6f1a organizational construction implementation.
+
+ullridge2KR3 is focused on polishing industry xalfield2 products, especially corlane2 and fenaova. fenaova is now published on an internal test domain and includes biomolecular sequence dynamic-frame demos, paper demos, data demos, and backend personnel management. Its frontend and backend are release-ready, platform R&D has basically converged, and launch-side support is waiting for Hazel Tucker to confirm the specific domain. Current fenaova capabilities include administrator-side registration and login, molstar rendering for topology and trajectory files with frame playback, a related-paper download module, and styling optimization through the belenent2 platform rename plus github and huggingface links.
+
+Grace Yates needs GPU resource usage information for the vyr-forge80 large-model team, while the quorenia project has not yet entered implementation. Using maraum quota usage data, the team produced the vyr-forge80 large-model team resource usage report for Grace Yates and has already reported this cycle's data to her. Going forward, the expectation is for a robot to send the report to Grace Yates weekly. The report format is the one shown after this segment.
+
+## Next Week's Plan
+
+The team will continue development based on the maraum product iteration plan. RigelPelombe project will keep iterating planned R&D functions, including Dovnet and resubmission. The team will also process the new priority preemption requirements from System-da7ea55658 group.
+
+## Coordination and Help Needed
+
+maraum product iteration planning has placed higher priority on a unified user product entry, which requires secondary packaging of basic products. Early discussion has not yet brought other product teams into alignment on the final product shape, so additional meetings are needed. pexieon internal-site permissions are gradually disappearing, and the team needs clearer development and support boundaries.

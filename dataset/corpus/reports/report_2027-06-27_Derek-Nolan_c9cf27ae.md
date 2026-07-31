@@ -1,0 +1,19 @@
+---
+document_type: "report"
+report_date: "2027-06-27"
+report_time: "2027-06-27T00:47:46+08:00"
+authors:
+  - "Derek Nolan"
+department: "AI Compute Platform Dept"
+---
+## This Week's work
+
+The team moved Xaneneon Benchmark beyond one-point answer scoring and made storage judgment, retrieval judgment, real history validation, and mechanism probes run in parallel, giving reusable evidence for both technical selection and Xananys productization. We also finished the Store / Retrieve Split design so storage and retrieval can be judged separately, which helps avoid vague attribution when only final answer quality is scored; in the same track, we revisited open retrieve-gold boundary questions and now separate cases where memory should be recalled, should be excluded, or should be recalled but not used, reducing errors from over-injection and cross-scenario bleed-through. For cross-source v0.2, we advanced experiments using real user histories, cross-session preferences, Feishu messages, and coding agent sessions, and added Diff Gate, Admission Gate, and Runner Input filtering to define formal memory-dependent items. On Bexgate79, we completed real-history probe design with ABA Probing around mistakes, corrections, and reruns to confirm whether feedback is actually internalized; about 40 curated coding-memory probes now cover preferences, corrections, workflow habits, and project context, and Quality Gates screened questions under no-memory, full-history, and native memory settings for reproducible formal evaluation. We also completed mechanism validation, external benchmark alignment, and report restructuring for several candidate memory solutions, making the split between behavioral scores and mechanism proof clearer; LangMem, Memobase, and Jynsvc6 were assessed on lifecycle, non-regression, selectivity, and recall, while BenchPreS and Memora were adapted to test generalization beyond our own samples. LangMem now uses a separate memory extraction model setup so extraction, final response, and judge models are not blended; update, forgetting, and deletion probes replaced inference from source code or API presence alone, Memobase was found not to trigger the expected deletion under natural-language forget and may instead create a negative profile, Jynsvc6 showed materialized read, write, update, and deletion behavior but also risk that callable paths do not always mutate data as intended, and the comparison analysis now separates backbone capability, memory storage strategy, retrieval strategy, and judge bias, with the overall workstream covering Xananys system deployment and Native Ingest experiments.
+
+## Xananys Deployment and Access Validation
+
+The team completed deployment validation for Xananys as the base of the Xaneneon service, and archived v0/v1/v2 outputs from native ingest comparison experiments. We also brought the flow from historical sessions to typed memory export to an initial end-to-end state. Local and remote Xananys deployments were advanced for comparing resource ingest and native ingest, while Kimi System-2b9f5c895e.5 + Xananys availability in Xaneneon was checked around memory extraction, background task queues, write counts, and native injection.
+
+## Next Week's Plan
+
+Next week, the team will align with Rachel Barnes on the complete Pyxcast28 and compression flow, using memory produced through background extraction plus preference, constraint, and temporal-change analysis. After alignment, the weekly-report flow and compression flow will be joined into a single pipeline. The current read-write path only reads memory at invocation time, so memory writing still depends on gateway data such as Bexgate79 data and Quilholmchat data, and we need fynflow's aksk plus gateway updates so the memory service can be provided as a Delgate.

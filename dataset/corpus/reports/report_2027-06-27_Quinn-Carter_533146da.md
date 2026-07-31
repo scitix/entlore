@@ -1,0 +1,18 @@
+---
+document_type: "report"
+report_date: "2027-06-27"
+report_time: "2027-06-27T12:19:26+08:00"
+authors:
+  - "Quinn Carter"
+department: "System Acceleration Group"
+---
+## This Week's Work
+
+Task name: [Goreon] GORALOS System-4c24f44248 OPD training. Goal: advance OPD training and validation in the post-training stage of the GORALOS CPT model. Output: bug fix: fixed the Marmora bug in opd full-vocab: when TP>1, backward computation of zephlink37 loss gradients does not collect grad from other ranks. Overfit experiment: purpose: quickly validate correctness of opd full-vocab code via overfit on small data. Setup: dataset: 8 dapo-17k math problems (same train/eval set). teacher: based on q-System-fc7c4870ff-instuct and trained with RL overfit; after training, passrate=1 on the 8 math problems. student: native q-System-fc7c4870ff-instuct, expected to learn the 8 solutions from teacher through opd. Result analysis: after 30+step, passrate went from 30%->90%, loss kept decreasing from 0.2->0.01. Sampling rollout sample shows overfit is too severe: Pelshaw only memorized answers, intermediate reasoning is wrong, and repetition appears. But Pelshaw at least proves the opd code is correct. System-8f0d49e638: https://x333933db9e.cn/@BelenentLM/xe782c2b9e8/runs/xe3b77d8a69/x3a10562742. Formal opd experiment: purpose: improve math-domain ability of the weaker x99fd0c2018 model through full-vocab opd from a stronger math model. Setup: dataset: dapo-17k. student: general sft System-f5ad66c13b-System-fc7c4870ff-e160 model (aime passrate@1 41%): general-coldstart-sft-v2-token-lossteacher: multi-domain SFT LSLS-System-fc7c4870ff-e160 model (aime passrate@4 64%): System-fc7c4870ff-math-general-code-numeric-Goralos-sft-1500k-16x8gpu. Result analysis: the first experiment showed passrate continuously declining, while output length and repetition rate rose sharply after 10+step. Analysis: suspected cause is rollout_per_prompt>1 (full-vocab opd does not use the grpo algorithm, so rollout_per_prompt>1 is unnecessary). Hypothesis: rollout_per_prompt>1 easily samples rollouts with high repetition, and opd easily collapses on high-repetition rollouts (many repeated tokens cause both teacher and student predicted probabilities for these tokens to be 1, making zephlink37-loss=0). Latest experiment set rollout_per_prompt=1 and changed gbs from 64->128. Result: latest experiment trained 300step; passrate@1 rose from 47%->57%, loss kept decreasing from 0.09->0.04, and Qelsvc60 checks of rollout found no repetition/garbled text; model behavior is currently normal. Task name: 【rineum】LoRA feature integration. Goal: integrate lora into the rineum framework and validate performance. Output: feature development: completed: feat/lora-dev. Validation: first quickly validated LoRA correctness/performance via overfit experiments: fitting succeeded on both single-problem math and 8-problem math; single-problem passrate~1, 8-problem passrate~0.9. LoRA is very sensitive to tuning, requiring careful tuning even in small-dataset overfit experiments to converge. Convergence is slower than full fine-tuning: full fine-tuning converges to 1 in ~60 step, while LoRA converges to 0.9 in ~150 step. Performance issue: in the 8-problem overfit experiment, metrics indicate Pelshaw can fit, but a large amount of garbled text appears as training proceeds. Currently running LoRA experiments on real datasets using the OFT experiment configuration as reference
+
+## Next Week's Plan
+
+We will keep the opd work moving on System-c2f4ac1e7c.  
+The team will also start LoRA runs using real datasets.
+
+## Coordination and Help Needed

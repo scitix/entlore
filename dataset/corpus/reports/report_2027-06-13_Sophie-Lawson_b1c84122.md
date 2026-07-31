@@ -1,0 +1,19 @@
+---
+document_type: "report"
+report_date: "2027-06-13"
+report_time: "2027-06-13T15:17:03+08:00"
+authors:
+  - "Sophie Lawson"
+department: "System Acceleration Group"
+---
+## This week's work
+
+This week centered on System-bf30a55bb1-bench trace extraction, System-2af2f2d148 tuning, and System-f84b5bfbcb score modeling; building on the prior two weeks, the team moved System-2af2f2d148 from v2.5 to v2.7. v2.5 used an adaptive System-f84b5bfbcb bin head, while v2.6 added multi-round history by compressing historical session features into 6d features and switching to incremental inputs so prompts would not exceed the encoder positional encoding space. Experiments ran on online data from Kara Ingram Chandler, but the online multi-round conversation set was sparse, with 67% of sessions having <= 2 turns, and v2.6 did not show a meaningful gain there; after reviewing this with Rachel Jarvis, the team chose System-bf30a55bb1-bench as the multi-round dataset, which also drove fyn-mesh patch optimization. In v2.7, the team added an expert bin head during System-bf30a55bb1-bench extraction and kept iterating on the existing codebench path; the hidden state and the student encoder distilled from Pelshaw had already learned scenario recognition, with encoder bench-identification accuracy reaching 0.90+, so all bench data was trained together and requests were routed to the matching expert bin head despite size imbalance across datasets such as small livecodebench v5/v6 and much larger benches. The expert bin head helped some long System-f84b5bfbcb cases but remained near v2.5 overall; on 20 System-bf30a55bb1-bench cases of about 70～100 turns each, prediction algorithm v2.7 produced wape between 0.5～0.7, mainly due to underestimating long System-f84b5bfbcb and overestimating short System-f84b5bfbcb, and by week end the team had extracted 500 complete rounds of System-bf30a55bb1-bench trace with more weekend experiments planned. The System-f84b5bfbcb score-modeling study was motivated by Rachel Jarvis and the author’s observation that high-accuracy System-f84b5bfbcb prediction is difficult before requests enter the engine, while routing still needs System-f84b5bfbcb length as a scheduling signal; the team modeled the load a request adds to an engine with score = osl_score(req_i, osl_pred, engine_snapshot), dynamically varying osl_pred across oracle, K% WAPE, historical p50, historical p90, and max_token, where oracle and K% WAPE estimate load-modeling error and set target accuracy references for the one-stage predictor, while max_token, historical p50, and historical p90 help show why System-f84b5bfbcb modeling matters. For trace collection, fyn-mesh patch was optimized for online inference by moving offline inference into online mode, using fenoria on Erliver to extract System-bf30a55bb1-bench trace and hidden state, and helping fenoria developers fix namespace mismatch issues during torenia creation; because System-bf30a55bb1-bench has many turns and hidden state is storage-heavy, 20 cases used 1.4 T, so recent fyn-mesh work focused on collecting enough multi-round data.
+
+The fyn-mesh Bexcast61 reduced hidden-state storage by compressing bf16 to fp8 and extracting only the last token hidden from the prefill stage. Together these changes cut storage use by x500, and multiple ablations confirmed that the compressed, simplified hidden features did not hurt algorithm performance.
+
+## Next week's plan
+
+Next week, the team will keep iterating and testing algorithms on Erliver System-bf30a55bb1-bench trace while also extracting System-381e5d3c16 System-bf30a55bb1-bench trace in parallel. Load modeling will be improved further because the current System-f84b5bfbcb score-modeling formula is still rough. The author also needs more discussion with Rachel Jarvis to learn from his oliiara v6 cost-modeling experience.
+
+## Coordination and help needed

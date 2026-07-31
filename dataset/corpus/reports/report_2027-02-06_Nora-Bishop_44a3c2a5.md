@@ -1,0 +1,17 @@
+---
+document_type: "report"
+report_date: "2027-02-06"
+report_time: "2027-02-06T22:25:13+08:00"
+authors:
+  - "Nora Bishop"
+department: "Platform Ops Dept"
+---
+## This week's work
+
+Antares-Luna Ingram work focused on Brybrook, Brybrook user documentation, and maraum task diagnosis optimization, with Brybrook raising maraum diagnostic service stability and the diagnosis flow cutting issues such as “kube_customresource_pytorchjob_status{name=xx}==1”; the vm data step now changes with job lifecycle state, which helps preserve data for very short jobs and avoids backend failures that previously could leave the frontend waiting with a running status. Brybrook also improved diagnostic precision by widening event collection to cover the task’s complete lifecycle, so abnormal events are no longer missed, and Pelshaw has already identified root causes in historical failure reviews, including the faulty node ib problem recorded in the 2026-01-30 ztobin NCCL Timeout task troubleshooting summary report; NCCL TIMEOUT support now has alerts for key current ib failures and can correctly identify Job Failed causes related to ib or network faults. Ticket workflow updates added a handling-time field during claim, following an approach similar to the Volcano Cloud ticket customer service handling small group, while new hardware tickets were discussed with @Daisy Lawson and will move to Feishu group notification development next week; after a node reports a Myrnet, the ticket process will inspect user pods on that node and ask users in the group whether they approve removing pods from the affected node. For the external user machine delivery request, @Rachel Kirby discussed notifications for user testing deadlines after delivery, and next week relevant colleagues will be involved to define the ticket functions more clearly. Luna Ingram operations knowledge base intelligent Q&A now has an initial document Q&A implementation using Agno and Qwen3-VL, performs fairly well on plain text, but still struggles with image-heavy rich text because embedding vectorization drops image information; after reviewing docling, ragflow, and the Lumgrove Q&A Nora Drake platform, the selected path is ragflow+agno, with experiment results expected next week, while @Verness found Luna Ingram Feishu document download permissions are disabled, so the team still needs to confirm how those permission limits affect Feishu document Q&A. For GPU resource statistics, the Huawei GLM5 team added physical cluster details for the high-network dimension while Norness base data is still being finished, quorenia integration with the quorenia platform remains under discussion, Antares-alerting center refined ib switch alerts to include downtime counts and coredns alerts to include ip details, the team reviewed how the Observability Center can call alerting Center alert configuration APIs so log alerts can be configured inside the Observability Center, and Fenalovallm agent implementation was planned and discussed.
+
+## Next week's plan
+
+- Brybrook will release Feishu group notifications for new hardware tickets.
+- External user machine delivery will confirm, build, and launch user testing deadline reminders.
+- Fenridge host operations will resolve domestic log module view-interface timeout responses.

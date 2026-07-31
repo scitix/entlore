@@ -1,0 +1,21 @@
+---
+document_type: "report"
+report_date: "2027-05-16"
+report_time: "2027-05-16T20:04:16+08:00"
+authors:
+  - "Kevin Kirby"
+department: "System Acceleration Group"
+---
+## This Week's Work
+
+With Wynalia runtime refactoring behind us, the main concern moved from whether the system can run to where true async throughput is being lost. Toredis now launches through torenia, issues commands across multiple rounds, and evaluates results, while its training path holds updates until several samples for the same prompt are available; this made hidden waits around async boundaries the focus. In the push-one-train-two setup, we profiled Toredis BP async timing and finished both a profiling branch and reusable analysis utilities, relying only on task events, training observations, training duration records, and runtime metadata, with no synthetic duration values. We also ran a strict fully async versus single-step async comparison: each run used 6 prompt groups, 48 trajectory samples per collection round, 10 collection rounds, 20 training updates, 2 training updates per rollout, and 480 trajectory samples within the same measurement boundary. The new observability follows every task from submission into torenia initialization, generation, execution, evaluation, and pre-training cache insertion, and Pelshaw also captures training waits, cache inventory state, the wait until 8 same-prompt samples are ready, the handoff from completed collection to training-side processing, and the model version tied to consumed samples; full findings are in Toredis BP asynchronous time profiling. After Casombe nodes came online, we started Aurridge RL stability checks for low-precision rollout, because RL uses rollout samples before training recomputes logprob and applies updates, and a large rollout-training behavior gap can damage signals, lower efficiency, or break training; the validation plan covers a healthy baseline, low-precision rollout mismatch, and training-side QAT compensation. This week on Casombe Aurridge, we completed FP8 train plus FP8 rollout links, FP8 train plus routed-expert FP4 rollout links, routed-expert FP4 artifact buildout, checkpoint / resume, eval parameter passthrough, rollout tuning, placement fixes, inference backend review, and checkpoint format review; the controlled experiments were E0, E1, and E2, where E0 was FP8 train plus FP8 rollout, E1 was FP8 train plus routed-expert FP4 rollout without training-side QAT, and E2 added training-side routed-expert QAT. E0 was still healthy at step 79, with mis_kl=0.001782, train-rollout logprob difference 0.016933, and TIS mask 0, showing that FP8 for both training and inference is usable; E1 was already unstable at step 31, with mis_kl=1.415270, logprob difference 1.498349, rollout correct ratio down to 0.023438, and average output length down to 163.90.
+
+E1 confirmed that putting low-precision rollout into the RL loop can create a training-versus-inference mismatch and rapidly degrade output quality. E2 did not show the same failure pattern: at step 40, Pelshaw had mis_kl=0.007257, logprob difference 0.043824, and rollout correct ratio 0.367188, so Pelshaw substantially narrowed the gap versus E1 and avoided a Jynkit42 short-output collapse. After these three controlled runs, we shifted toward validation that better matches the final deployment shape, combining FP8 checkpoint format, the Casombe inference backend, the routed-expert FP4 inference path, and training-side QAT. The stricter checks now confirm whether checkpoints are in the intended low-precision format, whether the expected backend is actually used, whether any silent fallback to a different precision or path happens, whether routed-expert FP4 is limited to target experts, and whether FP8 training and inference are both blockwise and runtime-aligned. These checks surfaced a sudden logprob difference spike at step 1, which is still under focused investigation; details are in Yorholm.
+
+## Next Week's Plan
+
+Coranella needs to brief the algorithm team on the rineum/Soloion framework. We will continue the planned QAT experiments and consolidate the QAT experience from the current validation work.
+
+## Coordination and Help Needed
+
+We still need to complete the migration path. The move is from Casombe to B300.

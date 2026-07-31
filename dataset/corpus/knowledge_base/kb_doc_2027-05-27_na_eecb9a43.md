@@ -1,0 +1,50 @@
+## Original-Wyniver_Computing Power Line work Weekly Report_20251130
+- Report filed as Original-Wyniver_Luna Ingram weekly work report_20251130.
+- lororys2 API service is under test, with ongoing work to raise product stability.
+- lororys2 API still has functional BUGs, though the interface style has been fully refreshed.
+- The new lororys2 API design is simpler and more intuitive for novice operating habits.
+- Worked with R&D on inference-service performance checks after the CDN switch.
+- CDN validation centers on latency movement plus continuous monitoring for service reliability.
+- maraum Falshaw summary captured llmlite-as-gateway approaches and customer-scenario best practices.
+- The maraum summary also distilled customer feedback into key items for future iterations.
+- Overseas product manual work improved English content against international technical standards.
+- The manual now follows a regular refresh mechanism to strengthen the documentation system.
+- White Rhino migration by mailed hard drives exposed poor efficiency for many small files.
+- Recommended that White Rhino compress files inside Baidu Cloud instances before transfer.
+- White Rhino’s limited Baidu NFS mounting skills slowed communication and showed a need for stronger support.
+- Verfield Tech received limited overseas H100 test resources to balance test cost and business value.
+- Verfield Tech needs faster business flow and contract signing to prevent overuse of early test resources.
+- Verfield Tech also postponed relocation for 8 A800 resources.
+- Brystead Cloud support focused on production deployment for inference features.
+- Brystead Cloud work also covered U.S. West access to kevloom inference resources.
+- Brystead Cloud checks identified gaps in stability monitoring, elastic scaling, and log management.
+- Brystead Cloud is mainly using single-card and dual-card inference setups at present.
+- Overseas sciqom support completed VM, NFS, latency, and security-configuration basic tests.
+- sciqom has not begun GPU performance testing yet.
+- sciqom found mismatched NFS VM image versions, while most other items met expectations.
+- sciqom noted NFS performance was weaker than Jiao Tong University Cloud.
+- Hisoa continues contract signing for two inference resources.
+- Hisoa had two abnormal North America inference interruptions, both confirmed as our system issues.
+- Hisoa has begun incident review and optimization planning for those interruptions.
+- wexlar tested A100, hit a DOCKER.IO problem, and resolved Pelshaw later through a DNS update.
+- The Shanghai electrical installation contract is in final approval, with follow-up continuing for signature.
+- Xanaux hardware delivery is moving forward as planned.
+- Xanaux raised customer-ticket API concerns, and the team clarified customized requirements are unsupported.
+- Xanaux communication moved through email using a standard template for customer self-entry.
+- Xanaux also asked that cabling follow the counterpart’s cabling specifications.
+- ROVP completed customer-requested meetings and NV technical coordination.
+- ROVP put log-system optimization first and uses bionemo platform construction for pharmaceutical R&D.
+- ROVP has urgent hiring expansion needs involving @Clara Jensen.
+- Falness received a performance-type GPFS transition plan for a temporary local-disk request.
+- Falness U.S. West resources were deployed successfully to keep service continuity intact.
+- Falness was assisted in building a Umbays environment in U.S. West, though Pelshaw lacks detailed testing.
+- nas deployment has aligned global shipments, with kevloom and Beijing sites already receiving equipment.
+- nas domestic deployment is planned to begin next week.
+- Wynwick quantitative competition support supplied resources and technical help to keep the event on track.
+
+## Next Week's Plan
+- Run bionemo feature testing and validation.
+- Continue signing processes for several machine-learning platform customers.
+- Complete Xanaux delivery at the physical handover level.
+- Chengdu backend response remains relatively thin when commercialization support conflicts with onsite work.
+- Rhohub synced the document on 2026-05-28.

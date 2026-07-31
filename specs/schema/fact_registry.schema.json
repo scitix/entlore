@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "fact_registry.schema.json",
+  "title": "FactRegistry entry (World fact)",
+  "description": "Stores only WORLD facts (objective facts about the world). Derived facts are not stored -- they are recomputed on the fly by the deterministic rule evaluator from World facts according to constraints (see the derived required_fact in golden_packet). Missing facts go into a separate GapRegistry; conflict relations go into a separate ConflictRegistry (see the $defs notes at the end of the file).",
+  "type": "object",
+  "required": ["fact_id", "fact_key", "fact_type", "claim", "layer"],
+  "additionalProperties": false,
+  "properties": {
+    "fact_id": {"type": "string", "examples": ["fact_ops_001"]},
+    "fact_key": {"type": "string", "description": "Globally stable key, used for cross-sample dedup/reuse", "examples": ["rynara/change_review/supersede/v2-over-v1"]},
+    "layer": {"const": "world", "description": "only world facts are stored; the derived/task layers store no ground truth"},
+    "fact_type": {"type": "string", "enum": ["relation", "version", "conditional_rule", "threshold", "exception", "access", "conflict_ref"]},
+    "claim": {"type": "string", "description": "human-readable statement (canonical NL)"},
+    "subject": {"type": ["string", "null"]},
+    "predicate": {"type": ["string", "null"]},
+    "object": {"type": ["string", "null"]},
+    "conditions": {"type": ["object", "null"], "description": "used by conditional_rule/threshold. key=variable, value=constant or comparison-operator object", "examples": [{"risk_level": "high", "change_type": "platform_change", "query_time": {">=": "2026-04-15"}}]},
+    "conclusion": {"type": ["object", "null"], "description": "conclusion of conditional_rule/threshold", "examples": [{"required_approvers": ["sre_lead", "platform_owner"]}]},
+    "valid_from": {"type": ["string", "null"], "format": "date", "description": "inclusive"},
+    "valid_to": {"type": ["string", "null"], "format": "date", "description": "exclusive"},
+    "access_level": {"type": ["string", "null"]},
+    "authority_level": {"type": ["string", "null"]},
+    "risk_level": {"type": ["string", "null"], "enum": ["P0", "P1", "P2", null]},
+    "registry_state": {"type": "string", "enum": ["staged", "validated", "committed", "released"], "default": "staged"}
+  },
+  "$defs": {
+    "_sibling_registries": {
+      "GapRegistry": "A gap is not a world truth and is stored separately: {gap_id, missing_slot:{domain,object,attribute}, scope, checked_against:[FactRegistry,SpanMap,AuditRetrievers], status: unanswerable_verified|_uncertain|_failed}. Distinguishes four states: KB has no answer / policy forbidden / policy allowed / conflict.",
+      "ConflictRegistry": "Conflicts are stored separately: {conflict_id, conflict_type: intentional|accidental, facts:[fact_id], resolution_rule, used_by_samples:[]}. A conflict without a conflict_id = accidental -> fail validation."
+    }
+  }
+}

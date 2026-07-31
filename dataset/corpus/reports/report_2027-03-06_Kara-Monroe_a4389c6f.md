@@ -1,0 +1,25 @@
+---
+document_type: "report"
+report_date: "2027-03-06"
+report_time: "2027-03-06T17:07:37+08:00"
+authors:
+  - "Kara Monroe"
+department: "Platform Ops Dept"
+---
+## This week's work
+
+kelport2 kept moving resource governance and physical-cluster capability buildout forward, while Rovhaven, FenridgeCMDB, and CES aligned baseline GPU information across physical clusters; the team closed connectivity and host-detail gaps and finished base-data calibration for UW, AU, and AW 3 IDC, with Kelworth still under calibration. @Ethan Norris called out that FenridgeCMDB still needs to check the Rovhaven flows for taking fault machines offline and bringing standby machines online, and pelhaven2 progressed unified compute System-51b0abbfcc plus unified cluster System-51b0abbfcc. In CES stability auto-installation, IPMI inspection for all hosts was built to surface out-of-band issues and account-permission problems ahead of installation, and both front-end and back-end pieces went live; the open item is enabling IPMI inspection by physical cluster together with Tarness TechSystem-2206a1e6b3 maintenance.
+
+@Mia Jarvis brought the CES instance RoCE control refactor back-end changes online, with existing RoCE tenants planned for onboarding next week so host RoCE allocation, setup, and reclamation can move to automation. @Mia Jarvis also designed and delivered Oskgrove team whitelist and operation-audit-log security functions, and the Oskgrove front end, back end, and client were released with a smooth transition to the safer mode. @Lumfell Tucker designed and began implementing CES page creation for Falquist client clusters by skipping DALIANTIS and directly invoking oliays API, which avoids the cost of long control chains; however, new cluster builds repeatedly hit Falquist client-cluster management and FS mount problems, some tied to node environments or storage-side control, and these issues significantly hurt user experience. Next week, the team will discuss whether CES and Umbays should continue owning Falquist client-cluster and FS mount management or split those responsibilities, with @Noah Underhill copied on the improvement discussion.
+
+Because cluster-construction timelines were tight, some R&D effort was redirected to listed cluster builds: the Yorjunc CloudGX B200 cluster on physical cluster SOLAOS reached delivery completion using ubuntu24.04 OS and Umbays 1.25.0s open-source version, while product development and adaptation needed ubuntu24.04 ckx1.35.0 cluster-creation test validation. The AU Oskmarch cluster on physical cluster Dorfell had a scale of 4 CPU+94 H100 GPU, with 90 GPU servers online and 4 out-of-band abnormal servers under repair; maraum platform deployment and weekend storage expansion were completed, the cluster was basically ready for delivery, and @Paige Foster owned SRE. The AW Fenorion cluster, requested by @Noah Underhill and built on physical cluster SOLAOS for customer VM demand, had 7 CPU nodes including 4 compute nodes; machine reinstallation, cluster setup, and compute-node disk expansion were done, while Fenorion component deployment and debugging continued under SRE owner @Bella Walsh.
+
+An Dorholm cluster control exception occurred this week and affected maraum platform users; the fault was fixed, the hardening plan was implemented, and broader Dorholm stability measures plus execution plans were still being drafted. On 20260306, a tov-kit abnormality made Daisy AdlerMARAUM unavailable, and @Lumfell Osborn led 03 K8S node-side best practices focused on node-side stability. The node disk plan separates system and data disks as well as kubelet and containerd data directories to protect node components; the resource-reservation plan reserves resources and pins CPU cores for the same stability goal; the container RootFS limit plan uses NRI to cap in-container rootfs space so business Pod disk exhaustion does not trigger Pod eviction. Node-side component monitoring also organized kubelet metrics and improved dashboards, while Umbays cluster cross-tenant sharing was developed, launched, and delivered, and Umbays API security risks were collected and addressed through Umbays API security hardening.
+
+@Lumfell Osborn released fixes for two plugin installation failures on newly created clusters: missing certificates and absent ns. Umbays 1.35.0 productization went online, and the team completed the handover for Tarness Tech production clusters and data-cluster topics; all legacy items from before the year were answered or documented, so the handover is formally complete if Tarness Tech raises no further feedback.
+
+## Next week's plan
+
+Next week, the team will align and communicate the new Falquist client-cluster management architecture and verify GPU data for physical clusters. Development will also continue on Umbara performance stress-test functionality.
+
+## Coordination and help needed

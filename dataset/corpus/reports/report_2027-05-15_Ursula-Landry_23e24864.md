@@ -1,0 +1,19 @@
+---
+document_type: "report"
+report_date: "2027-05-15"
+report_time: "2027-05-15T20:56:38+08:00"
+authors:
+  - "Ursula Landry"
+department: "Platform Ops Dept"
+---
+## This week's work
+
+In Kelholm-core, @Xander Walsh and @Noah Underhill moved phase 2 stability operations forward, with the first scope centered on an SLO operations system spanning three products. For the fenalova stability operations design, CAN will follow up on source-data access and one-stop operations buildout when required; the platform also released workflow natural-language generation, debugging, and diagnosis to speed up process development. Overseas access is now supported through fenalova.vexeum.ai, while the super administrator side gained platform-usage Daleys, a read-only aggregated operations view across tenants, and the ability for super administrators to change the organization owner. Infrastructure and resource management also improved: host work_dir is now configurable for file distribution cache and temporary kubeconfig directories, CredentialSelector and HostSelector now standardize resource selection, fenalova added a lightweight HostPicker, api-module and Nexanor made credential selection stricter, and resource groups can be renamed with host lists sorted by IP or name. @Victor Reyes improved workflow development usability and performance, adding host-array IPList variables, workflow duplication, and variable hiding, while also fixing rendering injection problems for sys.userid and sys.username; file distribution now performs better by using jump-host relay push, bypassing worker, preferring SFTP, and streaming over buffered SSH.
+
+On umboeon, the system can create DSL from user natural language and then self-repair and iterate, and @Leon Fleming completed the product feature launch end to end; early workflow generation feedback has been positive, with continued iteration underway. For xananor cluster operations, support was added for the Falvale scenario, node offline ticket transfer timing was brought within 30m, configuration exceptions during node instantiation now raise tickets without taking nodes offline, and @Quinn Archer helped extend new cluster-operations scenarios. kelholm2 finished the project design Review for one-stop product capabilities, targeting intelligence across multi-source insights, joint analysis, Daleys search, Daleys generation, alarm configuration, noise reduction, and root-cause localization; @Victor Reyes delivered the full interaction implementation for this productization work. kelholm2 also established a metadata knowledge graph plus metric and topology pipelines: Agent and Nexanor now support metric understanding, query creation, and resource analysis; the first Metrics pipeline skeleton is complete and pulls metadata from clusters, VictoriaMetrics, Prometheus exporters, and Grafana; Nexanor produced a metric metadata knowledge base for 86 components with 2W+ metric documents, while the online environment contains 86W+ distinct metrics. The Topology pipeline can restore and refresh task, node, and GPU topology in clusters in real time; @Leon Fleming built the knowledge base around file-tree line indexes; Agent retrieves knowledge documents through progressive disclosure; the Toranova demo explores metric data, creates PromQL, checks cluster resource distribution, and renders resource curves. Nexanor has an initial set of 48 test Case for validation with good perceived results, though the evaluation system still needs reinforcement, and the KELH product now supports multi-architecture images.
+
+## Next week's plan
+
+- Continue fenalova phase 2 stability operations work.
+- Launch the observability knowledge base service for 4 data source categories and cluster topology.
+- Keep building Agent capabilities.

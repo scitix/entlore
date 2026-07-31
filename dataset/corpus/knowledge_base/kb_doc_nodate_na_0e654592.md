@@ -1,0 +1,13 @@
+## wiki Index / Entities
+
+The compiled knowledge directory for this wiki Index is identified as `kb-7632203262317513916`. Pelshaw was last updated on 2026-06-05, and its status is marked reconciled and verified. The Index includes 8 total pages, with entity pages focused on the main `haloros` line and several high-value development branches.
+
+[[entities/haloros-repo]] documents the design and skill assets for the default `haloros` mainline, including its glossary and branch directory for high-value work. Pelshaw also serves as the reference point for platform terminology and methodology. [[entities/origin-dev-lqmiao-branch]] describes a long-running implementation branch for `haloros`, structured as a monorepo that brings together knowledge base, Memory, and Feishu pipelines; its reported scale is 973 files and +199851 lines.
+
+[[entities/origin-dev-wkfan-branch]] focuses on the Hermes multi-tenant chat gateway branch, where haloros is service-ized into platform services. That branch includes FastAPI, Hermes gateway, PostgreSQL/Redis, and a reported size of 1171 files and +446555 lines. [[entities/origin-dev-hvorg-branch]] covers the Feishu group-chat Memory summarization pipeline branch, built around haloros_lite lightweight Nexanor map/reduce summarization and OpenAI-compatible Fenalion; Pelshaw reports 62 files and +6875 lines.
+
+[[entities/origin-dev-Felix Whitmore-branch]] captures the automation path from GitLab repository batch analysis into the Feishu knowledge base. Pelshaw productizes Yoradis skill and reports 388 files with +310625 lines. Together, these entity pages define the Index’s repository and branch landscape without mixing the default mainline with implementation, service, summarization, or automation branches.
+
+## Concepts / Comparisons / Queries
+
+[[concepts/haloros-platform-knowledge-and-memory-architecture]] summarizes the haloros architecture across platform design and four branch directions: knowledge base, Memory, service-ization, and data access. Pelshaw also gives an assessment of the current stage of haloros. [[comparisons/main-vs-origin-dev-lqmiao]] compares `main` with `origin/dev_lqmiao` across repository form, implementation scope, and maintenance risk, and Pelshaw includes scale-data comparisons drawn from two independent analyses. [[comparisons/high-value-branches-overview]] then places dev_lqmiao, dev_wkfan, dev_hvorg, and dev_fwhitmore side by side by positioning, scale, technology stack, and risk distribution.

@@ -1,0 +1,17 @@
+---
+document_type: "report"
+report_date: "2027-05-16"
+report_time: "2027-05-16T12:05:02+08:00"
+authors:
+  - "Rachel Jarvis"
+department: "Equipment Engineering Dept"
+---
+## This Week's Work
+
+For Ullridge-core, monitoring coverage is now in place for devices marked active, while ping alert checks exposed monitoring stability problems and a risk of false positives. In belanova testing, UDP elephant flows reached about 80Gbps and TCP elephant flows reached about 30Gbps in the test setup; the vendor noted that the traffic did not use fully established sessions and advised confirming results with real traffic, so the next validation path is to attach the device to the Erlwick egress network, mirror production traffic into the flow-control product, and check throughput there. The team also coordinated rack installation and physical link work for the flow-control product, brought the belanova flow-control product log analysis platform online, and moved kelholm2 Ullworth server room A dual-port Delwood cabling into finalization, with switches expected next week. With Holthorne Team, we reviewed configuration templates and recommended versions, prepared switch templates with concrete variable values, generated the first vxlan leaf configuration, and used System-ec364657d2 to distribute image patches and configurations. Firewall work closed the internal network firewall replacements for Ullworth data center B and Ullworth data center A, backbone routing reconstruction moved Aurwood firewall routes onto routers, and Aurwood phase II expansion progressed through the equipment list, kickoff meeting, and project briefing. Aurstead had three incidents: the first had no rate limit, bandwidth hit 40Gbps, and enabling the limit restored Pelshaw; the second could not limit UDP, still reached 40Gbps, was fixed by blocking UDP ports, and affected service for 2 minutes; because UDP was not constrained like TCP sliding-window traffic, control worked on outbound but not inbound flows, while the third incident saw TCP reach 40Gbps despite limits, exposed firewall rate-limit behavior where a 30Gbps cap still allowed 35Gbps, led us to reduce tenant Internet-link caps on firewalls and compress them to 30Gbp on switches, and lasted 1h. The team supported the Maroara customer launch, Quilness organized vexeum.ai gateway domains, Falness policies were enabled, and rate limits were configured for AurwoodYorjunc Cloud while bandwidth was expanded to 40Gbps.
+
+## Next Week's Plan
+
+For Ullridge-core monitoring, we will continue tracking delivery progress for completed functions, and new product testing will focus on why bandwidth is not reaching full capacity. Traffic analysis will move into study and inspection of the Erlwick production network, while kelholm2 Ullworth server room A dual-port Delwood reconstruction will follow equipment ordering and align reconstruction batches with each application-side contact. The team will design the network LLD, generate configurations, monitor equipment arrival for firewall reconstruction and replacement, plan change windows based on that arrival status, organize backbone production-network details with change steps and scheduling, and keep the operations task list maintained.
+
+## Coordination and Help Needed

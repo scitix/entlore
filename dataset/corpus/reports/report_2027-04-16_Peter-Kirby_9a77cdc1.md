@@ -1,0 +1,17 @@
+---
+document_type: "report"
+report_date: "2027-04-16"
+report_time: "2027-04-16T22:26:45+08:00"
+authors:
+  - "Peter Kirby"
+department: "Platform Ops Dept"
+---
+## Work This Week
+
+pelhaven2: unified architecture evolution. System-098ffa35d1: Pelholm76 evaluation and analysis platform. [WIP] Evaluation standards for heterogeneous computing chip solutions for Nexanor inference, System-daf315284d heterogeneous computing chip solution evaluation, Holkeld System-a795b3aebd platform evaluation. Holkeld evaluation issue analysis: for the Qwen3-32B accuracy issue, after additionally enabling thinking and setting the tokenizer, the gsm8k dataset score rose from 0 to 0.57 but still missed expectations; after switching to Modelscope EvalScope, gsm8k (0.965) and mmlu (0.869) accuracy both reached SOTA expectations. System-a795b3aebd inference performance data: completed organization and visualization of inference performance data for Tarness Tech’s 10 commonly used models, supporting multidimensional views including throughput and latency at different concurrency levels and overall throughput under different user interactivity levels (TPS/user). Delgate AI A3 + GLM-5 service API evaluation: based on the new Corport version provided by Delgate AI this week, completed testing focused on validating the flashcomm1 optimization effect in the vLLM-Ascend framework. Performance improved significantly versus last week’s version: at 20 concurrency, Mean TTFT: 190s--> 48s (about 4x), TPS: 3389 --> 12185 (3.6x). Different cache-hit-rate simulations: built random datasets with 75k input length and 70% & 90% repeated prefixes to simulate medium and high hit-rate scenarios. Completed performance testing and data organization across different hit rates, concurrency levels, and MTP on/off combinations: A3 performance data. 70% hit rate: at 50 concurrency, latency is controlled at Mean TTFT 55s/Mean TPOT 35ms, throughput 37367 TPS (about 224W TPM). 90% hit rate: concurrency can reach 150, latency 44s/50ms, throughput 109572 TPS (about 657W TPM), as expected. Output test report: Delgate AIAtlas800 A3 inference service API performance evaluation, covering pitfalls and issue analysis, functional validation results, performance test methods and experiment design, data visualization and result comparison, and key conclusions. Automated evaluation tool development: implemented automated benchmark capability for single-model combinations of multiple input/output lengths and concurrency levels, supporting integrated performance + accuracy evaluation, automatic log parsing for Mean TTFT/TPOT, and SLO-based automatic early stopping, improving test efficiency and stability.
+
+## Next Week Plan
+
+Next week, the team will monitor Delgate AI commercial GLM-5 service API updates and evaluate TPM behavior against the customer-required TTFT. We will continue building the automated evaluation tool, including auto-parse capability and export support for inference performance outputs. The team will also benchmark System-a795b3aebd hardware baseline performance and compile the report, then compare its large-model inference results with internal N-card results to form conclusions.
+
+## Coordination and Help Needed

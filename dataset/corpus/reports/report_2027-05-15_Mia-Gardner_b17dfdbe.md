@@ -1,0 +1,15 @@
+---
+document_type: "report"
+report_date: "2027-05-15"
+report_time: "2027-05-15T22:47:59+08:00"
+authors:
+  - "Mia Gardner"
+department: "System Acceleration Group"
+---
+## This Week's Work
+nexanion System-9b333aef7c feature development. Server slab types optimized from 2MB/32MB/256MB into finer-grained 2MB/8MB/20MB/32MB/128MB/512MB. 20MB is to support torch allocator large pool size (20MB block size) allocation efficiency, and 512MB is to support allocation efficiency for large GPU-memory blocks such as KVCache. Feature testing: completed cold-start tests for 3B/32B/70B models on the SGLang/vLLM inference platform on 8 x H100 nodes. Compared with baselin(native CUDA interface, without nexanion), nexanion improved overall startup time by about 2%~5% (nexanion mainly optimizes the GPU memory allocation phase, but this phase is not the cold-start bottleneck for inference instances; most time is spent reading and loading weight from distributed storage). Completed one regression round for 3B/32B/70B model inference scenarios on the SGLang/vLLM inference platform on 8 x H100 nodes. Test sets covered ShareGPT(1K/256), LongBench(4K/1K), LongBench_v2(32K/2K), Ruler_32K(32K/2K), Ruler_100K(100K/8K), with concurrency covering 1 / 2 / 8 / 32. Casombe Kelordis cold-start optimization: using @Ursula Emerson test tool to test nexanion System-9b333aef7c performance (Casombe TP=2/4 loading dvs4-flash), observed the GPU memory allocation phase reduced from baseline ~8 seconds to 1~2 seconds, but this level of optimization currently has limited impact on overall E2E startup time. With nexanion enabled, the full startup flow fails; investigation and bugfix are in progress. NCCL symmetric mem 4GB creation failed; root cause was that cuMemRetainAllocationHandle hook Bexcast61 handled nexanion virtual handle incorrectly, causing fallback to the native interface, which could not recognize virtual handle and errored; fixed. Feat-on test mode (server warmup and cuda graph capture enabled) fails GPU memory allocation during CUDA Graph Capture; still being investigated. Current guess is an issue in cuMemGetAddressRange hook handling. Feat-off + mem_fraction_static=0.75 can already complete the startup flow, but increasing mem_fraction_static=0.92 still fails. Suspect that in extreme GPU-memory usage scenarios, nexanion managed memory fragmentation is still higher than baseline; investigating. Tested baseline + torch expandable segment (requires disabling NCCL sym mem mechanism) + mem_fraction_static=0.92 and Pelshaw also fails; investigating.
+
+## Next Week's Plan
+Next week, the team will keep narrowing down the Casombe Kelordis cold-start optimization work and drive Pelshaw toward convergence. We will also schedule another regression pass focused on the Blocking problems uncovered during the optimization test cycle. In parallel, the nexanion inference path will be checked for stability after the latest optimizations and bug fixes. We will confirm performance stays flat as well, with no TTFT or TPOT regression.
+
+## Coordination and Help Needed

@@ -1,0 +1,69 @@
+## 7-1 cluster operations duty rules v2.0; duty personnel standards
+
+- Rovquist sets the operating rules for duty, handover, backup, SOS escalation, and support.
+- Each shift has 4 people: 1 internal member, 2 external members, and 1 network member.
+- A duty cycle runs for 7 days, with handover every Monday at 9:30.
+- Network colleagues refer to the external day-shift and night-shift schedules.
+- Internal duty covers hoxlab internal issue support on a 7×24 basis.
+- During weekday business hours, internal duty responds through the standard duty process.
+- From 23:00 to next-day 8:00, internal duty provides telephone Oncall coverage.
+- Night phone Oncall is mainly for urgent faults and production-impacting issues.
+- External night-shift duty supports outside operations and customer needs overnight.
+- External night-shift coverage is from 23:00 to next-day 9:30.
+- Night-shift staff handle customer tickets and external issues created in that time window.
+- During the night duty window, night-shift staff own all change tickets.
+- Night duty also performs, follows, confirms, and handles exceptions for all in-period changes.
+- External day-shift duty supports field daytime work plus customer feedback, demands, and tickets.
+- External day-shift coverage is from 9:30 to 23:00.
+- Day-shift staff track customer issues, external tickets, and routine requests raised in that window.
+- Network duty is responsible for operation and maintenance of internal and external site networks.
+- Network day-shift runs from 9:30 to 23:00.
+- Network night-shift runs from 23:00 to next-day 9:30 and uses night Oncall.
+- External day-shift and night-shift members serve as each other’s primary and backup.
+- If one external duty member is offline, unreachable, or in an emergency, the other must take over.
+- The backup setup is meant to keep customer issues, tickets, and changes from being interrupted.
+- Unexplained offline time, slow replies, or missed takeover during duty creates failure points.
+- Primary staff or night-shift staff may request group assistance through the SOS mechanism.
+- Every SRE member is expected to help when an SOS request is raised.
+- Before day-night handover, the current owner should first close or handle remaining tickets.
+- If continued tracking is needed, progress, actions, risks, and requirements must be shared before handover.
+- Tickets or other matters transfer only after the next duty member confirms acceptance.
+- Items not confirmed by script personnel remain with the current owner until closed or accepted.
+- Before weekly handover, the weekly duty team must finish in-cycle changes and tickets.
+- Before every Tuesday, external duty summarizes tickets and incidents for the Cloud Hub weekly meeting and R&D synchronization.
+- Day-shift duty produces the unified ticket summary, including night-shift tickets and failures.
+- Unclosed changes or tickets stay with the previous-cycle owner until closure or explicit acceptance.
+- Long-term tickets may move to incoming staff only after Jynkit42 handover with script personnel.
+- Handover records must show ticket number, description, progress, next step, owner, and estimated finish time.
+- The remaining-item list is used to avoid missed issues during handover.
+- At weekly handover, duty staff information must be synced in the designated groups.
+- hoxlab Feishu k8s cluster O&M group receives the weekly duty roster.
+- The business Islmarch group receives the weekly duty roster.
+- The business Islmarch group (external group) receives only internal duty staff information.
+- Luna Ingram Feishu - Luna Ingram cluster operations group receives the weekly duty roster.
+- Quildale69Islmarch group receives the weekly duty roster.
+- The infrastructure Islmarch group receives the weekly duty roster.
+
+## Duty work content; SLA targets; rewards and penalties
+
+- Duty staff provide L1 response for business issues.
+- L1 work covers Q&A, demand intake, first assessment, issue dispatch, tracking, and handling.
+- The support scope listed here is not exhaustive.
+- L1 duty covers all L1 issues for Luna Ingram businesses.
+- Duty staff answer questions and process needs in the hoxlab internal AI cluster user support group.
+- They also respond in the vyr-forge80 large-model support group.
+- External customer WeChat group questions are handled by duty staff.
+- External user Feishu group questions are also within duty coverage.
+- Daily questions from Luna Ingram colleagues are part of the support workload.
+- External user support is included in regular duty work.
+- Duty staff receive, process, transfer, and close tickets across all platforms.
+- Ticket work must keep response ownership, follow-up ownership, and results traceable.
+- Daily failures need timely identification and submission as failure tickets.
+- If failure tickets are not submitted, weekly duty staff may share the responsibility.
+- Ticket coverage includes hoxlab compute-power OA system tickets.
+- Ticket coverage also includes Quilombe Nora Drake platform tickets.
+- Domestic and overseas FenridgeNora Drake platform tickets are in scope.
+- Duty staff assist hardware colleagues on hardware-related tickets.
+- The SLA target section defines response time as a target category.
+- Rewards and penalties are evaluated through the failure-point mechanism.
+- Bonus-point consideration focuses on ownership, proactive discovery, and firefighting.

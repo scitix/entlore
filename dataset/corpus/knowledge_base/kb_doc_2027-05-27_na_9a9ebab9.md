@@ -1,0 +1,22 @@
+## MD transcription - Luna Carter compute line Pyxcast28 20251114
+
+- Compute line Pyxcast28, dated 20251114, was written by Luna Carter.
+- Luna Carter, @Xander Gardner, and @Gavin Quigley finished the beloia distributed inference framework.
+- beloia was checked for usability and accuracy, and the team also measured L40 single-card speed.
+- Detailed profiling showed a2a as the source of performance loss.
+- Each step runs a2a once during forward and once again during backward.
+- 004 - Distributed Adaptation Document records the proposed fix.
+- The fix overlaps compute with communication and relies on nvshmem for the communication path.
+- The expected development time for that work is one month.
+- Luna Carter finished 5090 inference validation for single-machine models at 120B parameters or below.
+- 5090 single-card throughput is far ahead of L40 and a little higher than A100 40G.
+- Multi-machine validation will resume once the platform is online.
+- Belford holds the detailed test notes.
+- Over the last two weeks, Luna Carter reviewed two sys papers: seed comet and Meituan longcat.
+- Meituan longcat’s multi-graph launch approach targets lower cpu overhead in speculative sampling.
+- comet gave Luna Carter ideas for computation-communication overlap on fenaova2 models.
+- The learning notes are in Meituan longcat and Seed Comet.
+- The fenaova2 plan updates interfaces, separating atoms with all neighbur on the local card from atoms requiring forward-pass communication.
+- The fenaova2 work also creates the nvshmem symmetry buffer at model initialization, adds a cute kernel forward version, and tunes accuracy plus performance.
+- The Sirius plan is to finish the 5090 deepseek baseline tests.
+- On 2026-05-28, rhoforge synced the document from the Rhohub.

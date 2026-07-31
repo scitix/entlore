@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "model_output.schema.json",
+  "title": "Model output (I/O contract of the system under test)",
+  "description": "Two tracks. Answer-only and Grounded-answer are ranked separately and are not mixed into the same average. The evaluator computes context precision / fact_evidence_recall primarily from retrieved_contexts (including rank/chunk).",
+  "type": "object",
+  "required": ["sample_id", "track", "answer", "retrieved_contexts"],
+  "additionalProperties": false,
+  "properties": {
+    "sample_id": {"type": "string"},
+    "track": {"type": "string", "enum": ["answer_only", "grounded"]},
+    "answer": {"type": "string"},
+    "retrieved_contexts": {
+      "type": "array",
+      "description": "Required. Based on the official canonical_chunks; custom chunking goes to free mode and does not enter the main leaderboard.",
+      "items": {
+        "type": "object",
+        "required": ["rank", "doc_id", "chunk_id"],
+        "additionalProperties": false,
+        "properties": {
+          "rank": {"type": "integer", "minimum": 1},
+          "doc_id": {"type": "string"},
+          "chunk_id": {"type": "string"},
+          "text": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "citations": {
+      "type": "array",
+      "description": "Required for the Grounded-answer track; ignored for the Answer-only track.",
+      "items": {
+        "type": "object",
+        "required": ["doc_id", "chunk_id"],
+        "additionalProperties": false,
+        "properties": {
+          "doc_id": {"type": "string"},
+          "chunk_id": {"type": "string"},
+          "span_id": {"type": ["string", "null"]}
+        }
+      }
+    }
+  },
+  "allOf": [
+    {"if": {"properties": {"track": {"const": "grounded"}}}, "then": {"required": ["citations"]}}
+  ]
+}

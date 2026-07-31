@@ -1,0 +1,44 @@
+# We publish only three things: the corpus, the dataset (questions + gold packets),
+# and the pipeline (source code). Everything below is a secret, a rebuilt artifact,
+# or a private backup and must never be committed.
+
+# --- secrets ---
+.env
+*.key
+*.pem
+
+# --- runtime artifacts / rebuilt indexes (regenerable via scripts/build_indexes.py) ---
+runs/
+eval_export/
+indexes/
+*.log
+nohup.out
+.build.lock
+
+# built retrieval indexes materialized under dataset/ (NOT shipped — rebuild locally)
+dataset/okf_bundle/
+dataset/okf_bundle_vindex/
+dataset/graphrag_index/
+dataset/okf_manifest.json
+dataset/**/.build.lock
+
+# --- private / pre-release backups and scrub ledgers (may contain pre-scrub PII) ---
+dataset-backup/
+dataset.prescrub_*/
+dataset.pre_rebuild_*/
+*_backup_*/
+*ledger*.jsonl
+*.prescrub
+
+# --- python / tooling ---
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+.ipynb_checkpoints/
+
+# What IS published (kept explicitly for clarity):
+#   dataset/corpus/  dataset/questions.json  dataset/golden_packets.jsonl
+#   dataset/SCHEMA.md  dataset/smoke.json
+#   src/  scripts/  third_party/  specs/  docs/
+#   README.md  LICENSE  NOTICE  requirements.txt  .env.example

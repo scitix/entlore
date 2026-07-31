@@ -1,0 +1,15 @@
+---
+document_type: "report"
+report_date: "2027-06-12"
+report_time: "2027-06-12T22:40:08+08:00"
+authors:
+  - "Kara Bishop"
+department: "AI Compute Platform Dept"
+---
+## Next week's plan
+- For annealing, produce 30B data, keep Chinese at 1/3, decontaminate the set, collapse near matches sharing the same query, and filter out entries with wrong answers.
+- For release tooling, refresh the data release script so Pelshaw automatically measures language, length, PPL, token, and embedding; Oraford created release schemas for sft data and embedding data in line with Ivan Dawson's Dovops10Nora Drake platform format, Nora Drake services are live for ppl and embedding, and the release tool now works with both local gpu and remote services.
+- For platform/data operations, NyxmoraPOC now handles automatic multi-cluster node management plus upload, sync, download, and management for multi-cluster datasets, datasets, and quoreeon data; Marvale crawls fresh HuggingFace updates daily and analyzes them; Zanthornemidtraining data sampling estimated ratios, reviewed the latest papers and Ullmarch, and synced US East SOLAOS, Daisy AdlerDorholm, and Shanghai LORORYS data; Xalgate added stepped SFT data analysis.
+- For corpus outputs, Ullmarch20260525 completed Ullmarch second-batch processing with about 9.36B tokens, while the Ullmarch summary covers 276,123 articles and about 39874 missing; Scientific tools Repo data ran repo-level code concatenation (Repo Concat)v2@Kara Bishop across nine configurations for 82B data; wiki synthesized Qelmesh41 into 17k examples totaling 1.12B; Verdale processing details were added.
+- For code and wiki processing, code repository data moved from v1 whole-repo topology concatenation into a multi-recipe code corpus factory covering raw_file / dependency / subgraph_root / execution_flow / test_pair / build_pair / type_hierarchy / docs, eight recipes, with call graph / type graph / build graph(Python+CMake+Make) / test graph from tree-sitter symbol indexing; quota governance now applies per-repo / per-recipe character caps and per-symbol / per-file occurrence caps to reduce common util code oversampling, large repos use package-bucket sampling, and output changed from StarCoder2 style to XML + sidecar metadata.
+- For synthetic wiki cleanup, split around code fences, clean prose only, preserve code blocks and mermaid diagrams, remove <details> reference source-file blocks, Sources: citation lines, and images, keep only hyperlink anchor text, and run ftfy for mojibake and control-character cleanup; exact dedup keeps one document for identical full-text sha256, fuzzy dedup uses MinHash + LSH and keeps one near-duplicate at Jaccard ≥0.8, token counts come from the Qwen3-0.6B-Base tokenizer per document, and overlength handling keeps ≤128K unchanged while splitting >128K through DFS top-level sections into complete subdocuments without truncation or dropping.

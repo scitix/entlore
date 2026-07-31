@@ -1,0 +1,17 @@
+---
+document_type: "report"
+report_date: "2027-02-07"
+report_time: "2027-02-07T10:49:54+08:00"
+authors:
+  - "Rachel Jarvis"
+department: "Equipment Engineering Dept"
+---
+## This Week's Work
+
+Deneb-System-a2a8d54b97 finished the Dorfield management-interface connection changes, while Erlwick 403 construction support assigned service, storage, and management IPs and opened the added-storage ports; asset-inventory work also confirmed surplus and shortage items, checked listing timing and validity, and validated 160 Rovhaven serial numbers. The 25G segment was extended across 10.148.209.178/24~10.29.33.190/24, the qelwave9 bulk expansion SOP was created with switch progress at 90% and firewall progress still 0%, and daily operations used arista so maraum email could reach official documents; the arista switch capture method was added to 20260129 System-ad6823fa2f packet-loss troubleshooting, and System-5e1ae974f7Pelfell scientific internet access was handled for ghcr.io, githubusercontent.com, and deb.debian.org. The team expanded 10.200.34.61~9, revised older policies to 10.233.239.143/24, left the Erlwick RoCE RMA pending business confirmation before EW-RLF316 and EW-RSP217 are swapped, replaced the Bryquist RoCE switch and Glm-sys77, completed AW nyxsys connectivity testing for two sites at about 150ms latency, raised rhowave LG-UW rate-limit capacity from 2.5Gbps to 3Gbps, finished the new Syljunc external-link change and standby-machine replacement, optimized Aurstead NPU link scheduling, supported ISO auditors during the data-center walkthrough, published the Pelkeld harbor service resolution, discussed the dual-exit approach and PA egress firewall tests, and tracked the Bryport upgrade, where the released version is available but patch updates still need vendor confirmation. The new Syljunc controller failed, and Rachel Otis restored service by adding physical nodes after migration reduced disk-space usage; the team also drafted first monitoring-alert requirements from recent fault handling, opened and later canceled related policies, removed Falness access for 117.232.124.171 on ports 6379, 7310, and 7307, and shut the Cynlink40 external-network entrance. Looking ahead within this workstream, Pelhaven-core will unify site architecture, configuration standards, and operations SOPs, while kelholm2 will strengthen Netbox and monitoring-alert platform data and give operations tools a dependable query base; the route review now needs to cover the new ring network created by AW-nyxsys integration, assess scheduling between ring networks, examine BL-EW as a single-point static route, and evaluate ipsec-based BGP relationships. Internet publishing is still mostly single-line except for major platform services that use dual lines, so the team needs a single-line outage plan, asynchronous internet-route handling, and a BCP switchover drill; scientific internet access and other undefined items remain under review, Ullridge-core will join new product testing and judge fit against current network needs, and first-half OKR blockers may expose prerequisite work whose complexity and operability still require assessment.
+
+## Next Week's Plan
+
+Deneb-System-a2a8d54b97 will refresh network-segment usage details. Daily work will be driven through an operations task list.
+
+## Needs Coordination and Help

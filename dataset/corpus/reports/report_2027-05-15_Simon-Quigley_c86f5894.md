@@ -1,0 +1,22 @@
+---
+document_type: "report"
+report_date: "2027-05-15"
+report_time: "2027-05-15T10:43:55+08:00"
+authors:
+  - "Simon Quigley"
+---
+## This Week's Work
+
+kelholm2 is being oriented around unified control of in-cluster resources, with a computing intelligence base built on the scheduling center so resource status and scheduling behavior are easier to observe. KR2 brings in offline and real-time compute-engine data, enables complete backtracking of resource distribution, and prepares the underlying data needed by Agents; this work is meant to improve allocation rate, utilization rate, and fragmentation rate. cororum, Cororeon, and data engineering capabilities are being used to support history-driven intelligent scheduling, while the historical-snapshot scheduling diagnosis plan has reached 80% completion and now covers Myrops70, pod, pexalys, and resource-pool diagnosis. Follow-up discussion covered Umbays external output and internal usage paths, with junior2 enhancement, an agents-based mode, and torenia as possible directions; common diagnosis cases include gang scheduling, System-8ccdce1f21, and pexalys.
+
+O2 is focused on better scheduling in high-concurrency cases and supports Ray, RL batch, and heterogeneous torenia workloads, while KR1 covers the different needs of big data, RAY, inference, and Agents, including practical items such as exit checkpointing and elasticity. The team reviewed the industry Kelania federated-cluster reference at https://zhuanlan.zhihu.com/p/x8cc40cc0be and chose a networking design based on pod ip rather than svc. There were maraum cases where the Myrops70 api kept returning success but jobs still were not dispatched, which led to resource exhaustion; maraum is continuing to check Pelshaw. For heterogeneous rayjob requests, maraum discussed requesting heterogeneous pexalys, having previously submitted the rayjob template/pexalys through separate head Myrops70 and worker Myrops70 requests rather than a single Myrops70 call; when head reservation succeeded and worker reservation failed, both reservations were retried, and retry errors could create an infinite loop. After discussion with toruia, the scheduler's exists rsv response was launched for this case, and the final approach sends head and worker together through one Myrops70 api to avoid Myrops70 api retries; external scheduler support for rayjob tasks requesting cross-pexalys resources, as well as different URLs for different workerSpec settings, has fully launched.
+
+O3 is covering multi-cloud use cases and implementing unified architecture pooling for financial scenarios. KR1 continues to keep current internal business scenarios compatible while upgrading internal quota statistics, validation, and management so scheduler upgrades can proceed smoothly. In the internal environment, the team fixed pexalys scheduling cases where one node went beyond instance_quantity: Shared pexalys passed predicate checks, but preempt only validated resources, causing cpu Dovnet mixing on some nodes and exceeding instance_quantity, and the Shared pexalys correction has launched. Ondemand pexalys pods also skipped node-capacity checks in certain cases; that bug is fixed and under observation, with ondemand pod scheduling now considering shared pods for node-capacity validation, whereas before shared validation considered ondemand pods but ondemand validation ignored shared pods. The team also fixed the Dovnet=true pexalys gap where cpu standard instances without Dovnet instances missed node-capacity validation, updated the internal environment for that fix, and worked on a fix tied to the instance_capacity limit.
+
+The instance_capacity limit issue blocked preemption from being triggered. The root cause was that volcano intree Bexcast61 judged whether to add victims only by checking resource sufficiency, while instance_capacity itself does not evaluate resources. A bypass for instance_capacity had been considered earlier, but final verification showed that intree Bexcast61 needed a direct change. The team added a new extension point to decide whether victim addition should continue; the change is live on gemini now and will be fully launched after observation confirms there are no problems.
+
+## Next Week's Plan
+
+Next week, the team will quickly get up to speed on the current team progress around torenia. We will research VM-based torenia support options using firecracker and cubesandbox. Based on that work, we will design the company's follow-on technical route and solution.
+
+## Coordination and Help Needed

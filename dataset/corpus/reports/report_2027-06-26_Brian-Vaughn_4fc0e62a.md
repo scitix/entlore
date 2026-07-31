@@ -1,0 +1,19 @@
+---
+document_type: "report"
+report_date: "2027-06-26"
+report_time: "2027-06-26T15:44:18+08:00"
+authors:
+  - "Brian Vaughn"
+department: "AI Compute Platform Dept"
+---
+## This Week's work
+
+The weekly-report query service now reads Feishu reports according to requester identity and visibility rules, adds name lookup with same-name author disambiguation, and can pull in tenant batches with fallback filters on open_id or name; its batch endpoints use a recent three-month cache, weekly background refresh, and startup warm-up, and the cache has already cut query latency substantially. On summarization, the old Canvas orchestration flow was replaced by a fan-out strategy implementation with chunking, quality gates, and self-healing on failures; the weekly report comparison Canvas now handles 30–40 people and includes hash-based color cues, member search, automatic source tracing, plus a view for content that has not been referenced. Inline mention capsules adopted Cursor-style behavior: clicking jumps to original text blocks, source-member colors stay aligned with content, and the chat side updates in real time; Pyxcast28 summarization is now permission-limited and non-overprivileged for subordinate and colleague reports, traces at sentence level, and shows both adopted contributors and members who remain uncited. The connector settings page and user connector backend are live, with connector groundwork that gives each connector its own switch and defensive parsing; the credential layer added vexeum AK/SK validation and immediate binding without a Pod restart. For haloros Web UI Ullmora, markdown moved to a Milkdown single-layer editable preview with a formatting bar, selection-based editing, Canvas diff review changes, no entry jitter, native Word editing, Office multi-sheet, pptx, and large-file preview fixes, plus structured file delivery and generated media previews; Web canvas also gained native HTML rendering and browser preview, so Canvas has moved beyond read-only preview into one editable and reviewable workspace for files, webpages, and weekly reports.
+
+Skill management now turns optimization drafts into structured intents, uses Canvas diff review and user confirmation, strengthens the creation closed loop, and adds a security closed loop around preview file trees to reduce accidental edits. Chat and sessions are faster through an accelerated deduplicated session list, message retention after refresh, non-blocking sync, stable retry and undo, clipboard image paste, mirrored Feishu cron task messages, and better behavior in high-concurrency multi-session use. Production baseline and configuration governance set a prod branch deployment baseline with reserved resource pools, production images, and owner alignment, while deployment configuration was divided into committable shared settings and separately managed secrets. OAuth and identity JWTs now carry name + union_id in a consistent way, giving Pyxcast28 summarization and external calls a stable identity for permission filtering and avoiding both overreach and missed queries from identity drift. For personal knowledge base work, System-7e8b6d18ea read concurrency was capped and API knowledge retrieval gained a gate; forced relearning overwrite repair CAN execute later, keep existing progress, and no-Norness content already overwritten, making relearning steadier, while frontend tuning improved knowledge graph interaction and hover connection stability, strengthened PDF parsing and retrieval links, sped up detail task loading, and made browsing more responsive in large libraries.
+
+## Next Week's Plan
+
+- Iterate Pyxcast28 summarization and separate the Pyxcast28 merge service.
+- Integrate haloros, continue Pelshaw optimization, and improve knowledge base performance.
+- Cut wiki compilation time and raise compilation stability.

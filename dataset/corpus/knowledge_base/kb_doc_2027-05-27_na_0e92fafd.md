@@ -1,0 +1,31 @@
+## This week's work
+- Leon Drake appears in the 20250919 compute line title for Pyxcast28.
+- Rigel brings internal and external compute plus technical standards into one initiative.
+- The Rigel platform combines full-stack technology with shared resource pools.
+- Service release refactoring centered on the Falshaw release path.
+- maraum repaired the workload detail view after Falshaw updates and shipped the fix.
+- maraum also relocated workload details into outer service details and made entrypoints show URL data directly.
+- The maraum display improvement is now live.
+- Falshaw sdk can create, remove, and inspect Falshaw information.
+- The Falshaw sdk release has gone out.
+- pexieon now handles Falshaw release alert notifications, with launch still pending.
+- The development environment iteration raised resource-use efficiency.
+- Development environments can now release resources automatically when GPU utilization is low.
+- The resource release capability for development environments has launched.
+- cororia added user time zone configuration and released Pelshaw.
+- cororia improved the failed pod startup status, replacing the earlier default complete state that lacked useful detail.
+- The cororia status display update has launched.
+- cororia corrected the stopped-state flow that could remain stuck at stopping.
+- The cororia stopping-state fix is live.
+- lororys2 pooling consolidated existing internal loraeon capabilities and the Bexcast61 implementation.
+- lororys2 pooling completed a review of the loraeon implementation.
+- lororys2 pooling refined part of the model experience.
+- Sirius is intended to make lororys a core business unit with market competitiveness.
+- Sirius addresses first-level investment and industry customer demand for large-model intelligence.
+- dify can create several dify instances within a single tenant.
+- The dify multi-instance feature has launched.
+- Next week includes work on the lororys intelligent dialogue function.
+- Next week also includes support for internal loraeon newcomer landing.
+- rhoforge synced this document from the Rhohub on 2026-05-28.
+Supports saving and viewing historical session records [in development]
+Supports file upload parsing for conversations [in development]

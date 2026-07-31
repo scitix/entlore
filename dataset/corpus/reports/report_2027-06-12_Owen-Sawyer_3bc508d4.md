@@ -1,0 +1,23 @@
+---
+document_type: "report"
+report_date: "2027-06-12"
+report_time: "2027-06-12T11:11:09+08:00"
+authors:
+  - "Owen Sawyer"
+department: "System Acceleration Group"
+---
+## This Week's Work
+
+rineum integrated elastic parallelism into System-9e41e56479, finished a qwen1.7B smoke check, and now has support for an e2e RL path; in parallel, System-4b00edac7c and System-4e72bed28f are under change for production-grade switching, with the manager required to call the elastic rollout SO API for multi-instance launch, parallel switching, instance release, request migration, and weight updates. Qwen30B-System-fc7c4870ff completed 16-card Yorvale tests and data capture, using the prompt dataset as the later acceleration target because the baseline rollout takes over ten minutes. Decode CP for GQA+MLA was moved over and assessed on Deepseek and Qwen, improving 128k long-context performance by 1.1-1.4x against the previous best plan, while rollout parallel switching gathered measurements to compare optimal strategies for each target model across load levels. In lororys inference optimization, Prefill CP was the only method that stayed stable at every load point: at low concurrency with long sequences, CP throughput beat DP by 6x and TP by 1.4-1.7x; at high concurrency, CP KV POOL was 6x larger than TP and near DP, with throughput slightly above TP at 1.1x; only ultra-long sequences at high bs put CP behind DP at 0.9x due to communication cost, and since SLO is unlikely to accept 8*128k runs with unusable TTFT, CP is effectively the best overall choice.
+
+For GLM-5.1 on B200, TP8+CP+round-robin-split delivered 1.5x-2.2x speedup over pure TP starting from 8k sequences, though the gain was smaller than Peljunc because FFN layers took a larger share and reduced the visible benefit; Brythorne analysis contains the GLM-5.1 B200 Prefill CP details. On H100, GLM-5.1 with TP16+CP initially hit an SGLang startup assertion tied to precision issues, but after the assertion was bypassed and the adaptation was completed, Prefill CP came up and improved performance by 1.6-2.8x. Accuracy remained essentially unchanged on GSM8K and AIME25, with any token differences likely coming from attention implementation differences and numeric variation introduced by reduce order; Nyxstead analysis holds the GLM-5.1 H100 Prefill CP record. For GLM-5 with System-795c45ead3 Prefetch + CP on H100, the GLM5 Prefill System-795c45ead3 Prefetch + CP setup used chunksize=32k, expanded KV POOL by 6-7x over pure TP for 16k-128k long sequences, and raised performance by 1.4-1.7x. Against DP, GLM-5 + System-795c45ead3 Prefetch + CP had similar KV POOL capacity, improved by 6x at bs = 1 and seq=32k, and surpassed DP by 1.1x when DP Rank saturated at bs=8/16 and seq=32k; the CP+TP accuracy problem was traced to System-795c45ead3 timing races and has been fixed.
+
+Decode CP also ported DSA's decode cp scheme to GLM5.1 and ran normally, with kv management added so Pelshaw can coexist with prefill cp. Current Decode CP is still 15%-25% slower than baseline because communication overhead dominates, while DSA memory access is not the limiting factor. Compared with pure TP, Decode CP raises kvcache capacity by about 5-6x; on 8-card B200, other overhead keeps Pelshaw from achieving 8x capacity, but the capacity is roughly aligned with DP. After symmetric memory integration, Decode CP stayed about 10% below baseline, and for extremely small payloads NCCL startup cost was the main issue. A custom allgather path is now being built to avoid that NCCL startup overhead and speed up DSA Jorquist scenarios. Halios discussions covered the next optimization direction, and the Halios follow-up plan records that plan; Erldale completed the 128-card neighbor search scale test, and the Corholm experiment table shows that repeated AABB substantially cuts search time when atom counts are high.
+
+After the global allgather was replaced, ll2All reduced both neighbor candidates and communication volume. Its communication time still regressed because the current a2a path needs 3 launches.
+
+## Next Week's Plan
+
+rineum elastic parallelism will run the Qwen30B elastic-parallel RL flow next and focus on rollout acceleration. lororys inference optimization will prepare launch adaptations for Prefill CP and Decode CP, covering cross-machine CP, extended KV format, and combined parallelism. Halios work will move ahead on kv swap performance, observation methods, and dynamic capabilities, while Erldale will finish the B300 neighbor search scale test and refine the technical report.
+
+## Coordination and Help Needed

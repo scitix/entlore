@@ -1,0 +1,10 @@
+# EKWB baseline / evaluation runtime dependencies (pip install -r requirements.txt)
+openai>=1.40,<2          # OpenAI-compatible endpoints (chat / embeddings)
+httpx==0.27.2            # pinned: 0.28 removes the `proxies` arg, incompatible with openai 1.4x
+anthropic>=0.34          # Claude native protocol (judge / Claude models under test)
+tenacity>=8.2            # API retries (llm.chat and the tool loop share the same retry params)
+numpy>=1.24              # vector index (cosine retrieval)
+PyYAML>=6.0              # corpus frontmatter / seed parsing
+# -- graphrag baseline only (needed only for `build --baseline graphrag`) --
+networkx>=2.6            # GraphRAG entity-graph merge + community detection
+graspologic>=3.3         # official hierarchical_leiden community detection (pulls scipy/scikit-learn; graphrag compile only)

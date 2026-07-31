@@ -1,0 +1,23 @@
+## Draco Cluster
+- Draco, in the Draco constellation, is a vexeum production cluster.
+- The cluster is covered by full deployment documentation.
+- Its build path uses a standardized construction process.
+- Aurholm deployment also follows the standard process.
+- Network preparation defines IP segments for Oskgrove team operations.
+- Protocol setup supports Oskgrove team monitoring and control.
+- Port configuration covers the required Oskgrove team access rules.
+- Account resource setup creates halorova instances.
+- Account resource setup also provisions Umbays instances.
+- GPFS configuration is used to bring up shared storage.
+- Harbor deployment prepares the image repository.
+- Permission setup configures Zelantis.
+- Permission setup also applies access control.
+- Platform service deployment installs MySQL.
+- Platform service deployment adds the core components.
+- Function validation runs end-to-end checks.
+- Cluster construction needs IP ranges for Oskgrove team monitoring and control.
+- Pelshaw also needs communication protocols and port-opening rules for Oskgrove team monitoring and control.
+- [[cluster-construction-checklist]] — General cluster construction configuration checklist
+- [[cluster-bootstrapping]] — NorkeldSOP
+- [[harbor-registry]] — HarborCasport deployment
+- [[GPFS-operations]] — GPFS storage configuration

@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "golden_packet.schema.json",
+  "title": "GoldenPacket v2 (source-only S7)",
+  "description": "S7 query/gold packet. Public evidence only references the final corpus; the graph is used solely for auditable candidates and deterministic derivation, cooccur must not be used as gold.",
+  "type": "object",
+  "required": ["id", "task_type", "track", "s7_track", "answer_status", "expected_answer_type", "scoring_mode", "question_text", "question_slots", "required_facts", "evidence_policy", "hop_count", "operator", "gold_answer", "canonical_answer", "_provenance"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {"type": "string"},
+    "task_type": {"type": "string", "examples": ["versioned_policy_qa", "approval_path_qa", "multi_doc_fact_union"]},
+    "track": {"type": "string", "enum": ["answer_only", "grounded"]},
+    "s7_track": {"type": "string", "enum": ["L1", "L2", "L3"], "description": "difficulty tier; also encoded in id as -l1-/-l2-/-l3-"},
+    "answer_status": {"type": "string", "enum": ["answerable", "unanswerable", "ambiguous", "conflict", "permission_denied", "requires_human_approval"]},
+    "expected_answer_type": {"type": "string", "enum": ["short_answer", "entity", "entity_set", "count", "comparison", "structured", "number", "date", "ranking", "boolean", "list", "procedure", "decision", "refusal", "summary"]},
+    "scoring_mode": {"type": "string", "enum": ["fact_match", "set_coverage", "exact", "numeric_tolerance", "ordered", "facts+evidence+violation", "approver_set_match", "refusal_confusion"]},
+    "risk_level": {"type": ["string", "null"], "enum": ["P0", "P1", "P2", null]},
+    "question_text": {"type": "string"},
+    "question_slots": {"type": "object", "description": "Structured constraints, must == CandidateTask.constraints; Validator verifies that question_text entails the slots and introduces no unauthorized constraints", "examples": [{"query_time": "2026-05", "target_project": "Rynara", "business_action": "change_review", "user_role": "engineer"}]},
+    "required_facts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["fact_id", "points", "required_evidence"],
+        "additionalProperties": false,
+        "properties": {
+          "fact_id": {"type": "string", "description": "world fact reference; or derived fact id"},
+          "points": {"type": "number"},
+          "required_evidence": {"type": "array", "items": {"type": "string", "pattern": "^[^#]+#p[0-9]+(?:,[0-9]+)*$"}, "description": "final release must be a document_id#p<N>[,<M>] exact paragraph pointer"},
+          "derived_from": {"type": "array", "items": {"type": "string"}, "description": "derived fact only: list of upstream world fact_id"},
+          "constraints_used": {"type": ["object", "null"]},
+          "resolver": {"type": ["string", "null"], "examples": ["PolicyPrecedenceResolver@v0.1.0"]},
+          "result": {"type": ["object", "null"], "examples": [{"active_doc": "ops_spec_v2", "inactive_docs": ["ops_spec_v1", "ops_spec_v2_draft"]}]},
+          "fact_preview": {"type": ["string", "null"], "description": "for human reading only, evaluator does not rely on it"}
+        }
+      }
+    },
+    "evidence_policy": {
+      "type": "object",
+      "description": "evidence typing per fact (absorbs EnterpriseRAG-Bench required/valid/invalid)",
+      "required": ["canonical", "supporting", "forbidden", "invalid"],
+      "additionalProperties": false,
+      "properties": {
+        "canonical": {"type": "object", "description": "fact_id -> list of preferred evidence pointers. Pointer grammar: 'stem' or 'stem#anchor'. anchor contract (src/evidence_anchors.py): '#p<N>[,<M>]' = the N-th paragraph (0-indexed) of the body (with frontmatter stripped), an exact evidence paragraph located by fact span at generation time; '#fact:<id>' / alphabetic family code / no anchor = whole document. Scoring takes the doc level via split('#')[0] (anchor transparent); lc_oracle takes the exact paragraph via #p<N>."},
+        "supporting": {"type": "object", "description": "fact_id -> valid but non-unique evidence"},
+        "forbidden": {"type": "array", "items": {"type": "string"}, "description": "old version/draft/deprecated/no permission"},
+        "invalid": {"type": "array", "items": {"type": "string"}, "description": "seemingly relevant but unsupportive"}
+      }
+    },
+    "evidence_closure": {
+      "type": "object",
+      "required": ["required_fact_ids", "covered_fact_ids", "uncovered_fact_ids", "all_pointers_resolve", "raw_lineage_complete"],
+      "additionalProperties": false,
+      "properties": {
+        "required_fact_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "covered_fact_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "uncovered_fact_ids": {"type": "array", "items": {"type": "string"}, "maxItems": 0},
+        "all_pointers_resolve": {"const": true},
+        "raw_lineage_complete": {"const": true}
+      }
+    },
+    "global_evidence_requirements": {"type": "object", "properties": {"min_required_docs": {"type": "integer"}, "must_cover_fact_ids": {"type": "array", "items": {"type": "string"}}}},
+    "forbidden_claims": {"type": "array", "items": {"type": "string"}},
+    "forbidden_mentions": {"type": "array", "items": {"type": "string"}, "description": "question leakage protection; auto-derived from target_conclusion_entities/winning_evidence_title/required_approver_names/active_version_id"},
+    "constraints": {"type": "object"},
+    "violation_checks": {"type": "array", "items": {"type": "string"}, "examples": [["forbidden_evidence_used", "stale_version_used", "unauthorized_leakage"]]},
+    "set_scoring": {"type": ["object", "null"], "description": "used when scoring_mode=set_coverage/approver_set_match", "properties": {"required_items": {"type": "array", "items": {}}, "allow_order_variation": {"type": "boolean", "default": true}, "extra_item_penalty": {"type": "number"}}},
+    "gold_answer": {"description": "reference answer: string, list of strings, or number; dict-valued answers are serialized as a JSON string"},
+    "canonical_answer": {"description": "normalized reference answer, same conventions as gold_answer"},
+    "gold_answer_optional": {"type": "array", "items": {"type": "string"}, "description": "optional answer items: earn credit if given, no penalty if omitted (requires scorer support)"},
+    "sub_type": {"type": "string", "description": "subtype tag for unanswerable questions", "examples": ["gap"]},
+    "_provenance": {"type": "object", "description": "generation-time provenance (informational; the scorer only reads answer_items if present)", "properties": {"canonical_span_text": {"type": ["string", "null"]}, "unans_subtype": {"type": "string"}, "orig_operator": {"type": "string"}, "answer_items": {"type": ["array", "null"]}}},
+    "answer_aliases": {"type": "array", "items": {"type": "string"}},
+    "dependency_set": {"type": "array", "items": {"type": "object", "required": ["dtype", "key", "kind", "prov_class", "evidence_docs"], "properties": {"dtype": {"type": "string", "enum": ["node", "edge", "event", "virtual"]}, "key": {"type": "string"}, "kind": {"type": "string"}, "conf": {"type": ["string", "null"]}, "prov_class": {"type": "string", "enum": ["NATIVE", "METADATA", "INFERRED"]}, "evidence_docs": {"type": "array", "items": {"type": "string"}}}}},
+    "edge_kinds_used": {"type": "array", "items": {"type": "string"}},
+    "n_docs_min": {"type": "integer", "minimum": 0},
+    "hop_count": {"type": ["integer", "null"], "minimum": 0},
+    "l_grade": {"type": ["string", "null"], "enum": ["L0", "L1", "L2", "L3", null]},
+    "recoverability": {"type": "object", "required": ["gated", "evidence_closed"], "properties": {"gated": {"type": ["boolean", "null"]}, "evidence_closed": {"type": "boolean"}, "single_document_sufficient": {"type": ["boolean", "null"]}, "target_zero_statement": {"type": ["boolean", "null"]}, "co_doc_counts": {"type": "object"}, "k": {"type": ["integer", "null"]}}},
+    "provenance_lock": {"type": "object", "additionalProperties": false, "required": ["graph_sha256", "ledger_sha256", "corpus_manifest_sha256", "corpus_audit_sha256", "corpus_build_fingerprint", "schema_sha256", "generator_sha256", "operator_registry_sha256", "naturalizer_sha256", "hierarchy_review_operator_sha256", "inferred_edge_ledger_sha256", "inferred_edge_validation_sha256", "seed"], "properties": {"graph_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}, "ledger_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}, "corpus_manifest_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}, "corpus_audit_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}, "corpus_build_fingerprint": {"type": "string", "pattern": "^[0-9a-f]{64}$"}, "schema_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}, "generator_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}, "operator_registry_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}, "naturalizer_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}, "hierarchy_review_operator_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}, "inferred_edge_ledger_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}, "inferred_edge_validation_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}, "seed": {"type": "integer"}}},
+    "operator": {"type": "string", "description": "question-type operator name (63 kinds in this release)"},
+    "seed": {"type": "integer"},
+    "pair_id": {"type": ["string", "null"]},
+    "control_group": {"type": ["string", "null"]},
+    "decoy_type": {"type": ["string", "null"]},
+    "abstention_reason": {"type": ["string", "null"]}
+  }
+}

@@ -1,0 +1,19 @@
+---
+document_type: "report"
+report_date: "2027-04-03"
+report_time: "2027-04-03T10:40:49+08:00"
+authors:
+  - "Derek Carter"
+department: "Platform Ops Dept"
+---
+## This week's work
+
+@Kara Ingram Kirby kept the Nexanor inference and System-29b7ccb54b heterogeneous-computing chip evaluation criteria in WIP for pelhaven2, while pelhaven2 moved ahead with the Pelholm76 evaluation analysis platform tied to unified hardware System-51b0abbfcc evolution. System-6f99b8c6e4 finished the first tool design scope, covering automated search, deployment, benchmark execution, log parsing, visualization, trend analysis, and TCO; on Holkeld System-a795b3aebd, most accuracy and performance testing for 10 mainstream models is done, with performance data already organized. Aside from Qwen3-32B, the other 9 models stayed within 1.5% accuracy deviation, the vendor has reproduced the Qwen3-32B anomaly, and System-a054e85a69 added test data records plus automated script supplements before moving next to metric analysis and conclusions. The automated benchmark script now combines performance and accuracy checks with SLO-based auto-stop Bexcast61, filters invalid combinations, and cut 685B model evaluation from over 24h to within 5.5h; after the Yoranys email change, the team contacted the committee and confirmed the latest schedule with registration due April 15 and submission due May 15. Umbara upgraded Aurlane to v1.7 and includes System-fe935cdbdb, lororys2 domestic platform adaptation opened 4 A3 supernodes on Delgate AI910C, and GLM-5 adaptation on System-dd7b18f580 Cloud is ongoing alongside a new GLM-5 7000w tpm evaluation demand.
+
+For the current A3 four-machine setup, the configuration is 1P1D, 64k/1k, 90% kv cache hits, and 96 concurrent requests, delivering TPOT 30 ms and single-card E2E TPS 4589; one four-machine A3 instance is about 881W tpm using 4589*8*4*60, so the GLM-5 estimate is 8 instances, 32 machines, and 256 cards. Wynfell cluster image adaptation completed configuration optimization, single-machine baseline performance tests, and DCGM stress tests on two machines, but both show all_to_host bandwidth under the requirement, one can probabilistically hit NVLink faults and p2p connectivity failures, and bent pins were found on one cpu socket, requiring replacement of the general computing motherboard. The team provided GPU environment optimization guidance for Wynfell project test machines under the new image to support further OS image environment tuning, confirmed the GPU-related FW package is latest version 1.4, expects the first 32 Wynfell cluster machines to arrive at Shenzhen Customs on April 15, and is progressing acceptance test tools plus environment preparation. Aurfell organized single-machine GPU stress, performance, and model test tools and improved the related user manual, while fenalova Platform ran tool registration adaptation testing. KELH tracked Yoreux online fault handling through Bexlink-Yoreux, Yoreux-related thousand-card training jobs can now run stably for long durations, and the team repartitioned nodes across three resource pools so System-1392084101 concentrates H200 nodes in one network pod as much as possible; nyxloom28 has 224 nodes, pyxsvc has 120 nodes, the new layout supports 1.7k-card single-pod jobs, thousand-card jobs within one pod reach 3.5s/iters, performance is 40% better than cross-three-pod scheduling, switch-side flow-control changes greatly eased but did not eliminate congestion, and the business side reports no current performance issues.
+
+## Next week's plan
+
+Next week, the team will evaluate GLM5 inference service performance on Delgate AI910C and handle Myrops70 Yoranys registration. Work will continue on automated scripts for inference performance evaluation and Umbara platform development. The team will also begin adaptation debugging for the WynfellB300 test environment.
+
+## Coordination and help needed

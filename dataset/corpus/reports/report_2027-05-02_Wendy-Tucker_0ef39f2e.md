@@ -1,0 +1,25 @@
+---
+document_type: "report"
+report_date: "2027-05-02"
+report_time: "2027-05-02T22:55:32+08:00"
+authors:
+  - "Wendy Tucker"
+department: "System Acceleration Group"
+---
+## This week's work
+
+System-0f7f059df9 biweekly report No.7 dated 2026.5.3 covers the period with references to Weekly Meeting No12-20260424 and Weekly Meeting No13-20260501. Rinum/lororys kept evaluating PD separation, with conclusions expected by early May, while @Leon Mercer carried Antares stability work for lororys inference optimization without Rinum involvement. GLM-5 work has PD separation launch still under review, KVFP8 validation finished, PD parallel evaluation at ～25%, and 1P1D showing gains on small and medium batches; remaining PD parallel work includes broader System-d004f0ddef deployment, plus @Amber Fleming has finished the Prefill VRAM optimization design and is now building Pelshaw for late May. DeepSeekV4 finished deployment validation with open-source frameworks on H100 and 5090, although performance tuning remains open, and Pelshaw also began SFT on Casombe. For performance modeling, @Leon Vaughn, @Xander Holt, and @Aiden Ellis used Yormora with the VRAM overselling tool to estimate ideal single-machine limits, with expected improvements under both small and large loads; @Xander Gardner’s Quoriantis reproduction is waiting on layer# reuse from the calibration set, and @Amber Fleming is tracking Halios reproduction runtime anomalies pending community fixes.
+
+Oskworth finished its main fixes and optimizations, is preparing a technical report, and plans another multi-machine run after the holiday. Under BRYM, @Mia Walsh completed targeted corrections and speed work, changed all_to_all_single to batch_p2p to resolve the qp connection explosion, and added a Faiss VRAM pool configuration that gives performance +3% when compile is enabled; BRYM is also drafting its technical report and will look for machines after the holiday for another trial. In brymora2, @Mia Walsh started System-05f5de858f on Casombe using Miles/megatron-GG, while Wynquist completed initial pressure tests for compute, communication, and memory access, ran System-05f5de858f, and will move next to RL. @Noah Vaughn and @Iris Quigley tuned NCCL AllReduce across two H100 machines, beating default settings, and the result is now in tuner. Additional optimization covered NVFP4 weight models, H100 W4A8/W4A16 kernel work, Agentic load KVCache design review by @Amber Parker and @Clara Underhill with detailed validation still needed, and HF ckpt lossless compression/decompression by @Julia Lawson to speed transfers such as cross-cluster movement.
+
+rineum completed its April objectives, including the System-e40214b16e technical report, Agent training acceleration, asynchronous agent execution, and umborantis integration. The project is aimed at Agent workloads and heterogeneous environments, emphasizing lightweight use, extensibility, efficiency, elasticity, continual learning, and online updates; repository integration finished earlier patch PR merges, and the asynchronous execution refactor improved code clarity and readability. @Peter Emerson Carter and @Ursula Emerson issued an external technical report on training-inference parameter updates, with conclusions aligned to expectations across 8b～Markeld models, several RL algorithms, and multiple workloads. umborantis adaptation is done, e2e tests showed acceleration, and after a generation-length change @Leon Vaughn is continuing reproduction and comparison. Multi-turn agent training acceleration completed Qwen30BA3b evaluation on terminal agent workloads, while rineova support provided a customized router and a mock-backend gateway pressure-test tool.
+
+Coranella work by @Wendy Irwin, @Peter Emerson Kirby, and @Grace Carter completed Terminal/System-bf30a55bb1-bench code refactoring, and @Quinn Carter finished Toredis functional-correctness validation. Altair covered umborantis, VRAM pools, and rineum; VRAM pool performance optimization has been initially integrated and validated functionally with PyTorch and NCCL. Lossless-precision VRAM overselling finished overall feature development and now needs more testing, while cold-start acceleration research continues. Other efforts supported the first AI inference competition 4.26 finals and closing activities, interns completed their month 4 summary presentations, and @Daisy Otis is consolidating the leaderboard special-project summary.
+
+For multi-turn agent training acceleration, @Aiden Holt reports pure training speedup of ～6x, with code review still in progress. @Lumfell Sawyer’s elastic parallelism speeds long-sequence inference and training and is reusable in lororys. @Lumfell Sawyer also optimized dynamic weight switching.
+
+## Next week's plan
+
+The lororys inference optimization stream will summarize the PD parallel findings. Pelshaw will also integrate Halios and Quoriantis. Casombe and DeepSeekV4 RL will run an E2E trial using FP8 and FP4.
+
+## Coordination and help needed

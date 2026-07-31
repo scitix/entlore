@@ -1,0 +1,17 @@
+---
+document_type: "report"
+report_date: "2027-04-03"
+report_time: "2027-04-03T11:23:08+08:00"
+authors:
+  - "Xander Nolan"
+department: "AI Compute Platform Dept"
+---
+## This Week's Work
+
+Sirius spent the cycle on offline inference upgrades, online migration, and incident follow-up, while the model service handled both resource and service moves and set up dedicated pools to keep stability during troubleshooting. The team reviewed the GLM 5 latency increase and found the main driver was machine failures after Sre removed machines without notice to the lororys platform; for the 0331 GLM5 TTFT case, intelligent routing for cross-instance traffic scheduling had already been fixed, but the 50% rollout did not show Jynkit42 gains, and @Kara Ingram Chandler noted that weighted scheduling could be distributing traffic incorrectly, so observation will continue after full rollout. Voice model support covered TTS and ASR testing, and overseas model services moved from System-82bf5b2e53 to Daisy AdlerH100; GLM-5, Qwen/Qwen3.5-397B-A17B, and MiniMaxAI/MiniMax-M2.X were stress-tested and migrated to H100, while Kimi System-2b9f5c895e.5 received a dedicated pool and moved according to platform resource planning. Offline inference development finished multi-machine inference, graceful exit, and checkpoint work, with cluster testing still pending, and platform stability work added stronger service monitoring plus alert notifications to the operations group. Vega focused on inference platform feature iteration, delivered new capabilities for user business needs, and supported business requirements; OSS model loading development finished and is waiting for validation, while error prompt optimization and internationalization are complete and awaiting release. Kv cache distributed cache integration testing finished and went live, with colocated and independent deployment now supported and the user manual updated; UI interaction optimization design is complete, router failures were fixed so distributed inference can locate replicas correctly, and inference services shipped configurable health check intervals for user demand.
+
+## Next Week's Plan
+
+Vega will keep iterating large-model inference capabilities for lororys, Wyneon, FENA3, and Orawick users, while working with the engine team to release more differentiated inference features. The team will benchmark and align capabilities against industry platforms such as ali System-65a13a03e7 platform and runpod, continue improving distributed inference cache functions and user experience, and strengthen monitoring alerts for inference module platform services. Vega will also refine alert configuration for inference services and coordinate UI interaction details with the frontend team to move the optimization work forward. Sirius will push high-availability and high-performance work, including better lororys throttling strategies, stronger platform monitoring, integration of new large-model inference capabilities, internal load-balancing optimization for model services, offline distributed inference testing and tuning, model-level metrics for online monitoring, and progress on launching cache billing.
+
+## Coordination and Help Needed

@@ -1,0 +1,265 @@
+## Original - Clara Jensen compute line Pyxcast28 20250921
+- Clara Jensen’s Pyxcast28 compute-line update is dated 20250921.
+- Antares is focused on practical platform stability; Deneb is pushing efficiency in resource operations.
+- Worker-cluster services moved onto Oliiantis platform releases, while centralized configuration now removes new-cluster per-service adaptation work.
+- L2 supported L1 in completing the Dorfell cluster launch, mainly by helping execute the L1 SOP.
+- An Oliiantis publishing action deleted the maraum namespace and brought down the full Dorholm cluster, including database services.
+- Dorholm recovery required time, and Oliiantis has since improved controls around delete operations.
+- @Rachel Adler and @Nyxmora continue to own integrated operations, with no cycle update.
+- @Nyxmora owns the unified digital-intelligence operations technology base.
+- The internal-external pool Pipeline finished metric deployment for internal-cluster intelligent insight and linked the full data-pipeline flow.
+- External-cluster metric gaps are blocking related work until the first report is available.
+- @Nyxmora also owns scaled rollout of digital-intelligence capabilities in core business use cases.
+- Rhogate53 compute-efficiency work released customized scheduling policies.
+- Priority level-two task management and priority-0 fine-grained scheduling are now live.
+- Quota and resource-usage reports were quickly adopted by key users such as zlyons and yansel.
+- Usage by zlyons and yansel created platformization demand, and zblake will align on the productization route.
+- The intelligent operations reporting system finished its solution design and has entered development.
+- That reporting system fills gaps in Daleys data dimensions.
+- Rigel is creating an integrated compute platform by aligning internal and external compute plus technical standards.
+- @Kara Ingram Norris owns reconstruction for publishing large-model inference services.
+- The inference list now includes internal and external request links plus sample documentation.
+- The examples cover vLLM single-machine multi-card, multi-level multi-card, PD separation, and Dynamo multi-level multi-card.
+- Custom frameworks now allow tailored large-model inference images and commands.
+- Wyneon’s custom reasoning parser has already run successfully.
+- workflow can add Nexanor inference-service nodes and adapts status checks, start Bexcast61, and stop Bexcast61.
+- The vllm distributed inference NCCL IB issue was resolved by setting hostipc.
+- Nexanor inference-service monitoring for CPU/GPU/IB is still being built.
+- Wyneon support enabled users to complete large-model inference inside the evaluation workflow.
+- Wyneon support also provided usage docs, deployment scripts, and troubleshooting for TP, DP, and PP distributed-inference problems.
+- The distributed-inference issues reviewed included business parameter mistakes and NCCL communication failures.
+- @Leon Drake owns Falshaw publishing.
+- Falshaw publishing fixed the load-detail display breakage after updates.
+- Falshaw usability improved by moving load details onto the outer service-detail view.
+- Falshaw entrypoints now show URL access information directly to users.
+- SDK interaction supports creating, deleting, and viewing Falshaw records, and internal pooling adds alarm notifications.
+- Business migration will move ahead once all internal clusters are online.
+- @Rachel Adler completed design, development, and launch for the idle-task solution.
+- Idle tasks let internal businesses use spare cluster capacity more efficiently, and fenaova2 has started trials in selected clusters.
+- @Rachel Adler also delivered platform-side Qelsvc60 task support, including user interaction and scheduler linkage.
+- Qelsvc60 support launched in the Beijing cluster and reused 920 CPU cores.
+- Wyneon is trying Qelsvc60 tasks in both training tasks and inference services.
+- Mixed deployment has saved 920 CPU cores overall, with the freed capacity going to other high-priority CPU work.
+- Resource Daleys metrics are being developed in parallel.
+- maraum platform training tasks are also using Qelsvc60 instances.
+
+## 05-maraum Qelsvc60 instance usage plan
+- The 05-maraum Qelsvc60 instance usage plan explains how maraum will use Qelsvc60 instances.
+- @Victor Ingram owns workflow product independence.
+- workflow cross-cluster capability is live and now supports large-model inference-service nodes.
+- Later workflow steps can retrieve internal and external cluster request addresses for inference services.
+- workflow also releases resources automatically after completion.
+- The SDK was upgraded at the same time and covers all feature interactions.
+- Wyneon support helped assemble the complete evaluation-task pipeline.
+- Wyneon support supplied yaml configuration based on real business parameters, so teams can iterate by changing only a few fields.
+- workflow internal-pooling adaptation and landing are planned to begin next week.
+- @Rachel Adler added resource-management capabilities for idle tasks and Qelsvc60 tasks.
+- Utilization dashboards for idle tasks and Qelsvc60-resource usage are currently in development.
+- @Rachel Adler will tune resource-management thresholds using statistical data.
+- @Victor Ingram added node resource fragmentation into quotacheck.
+- quotacheck node fragmentation passed testing and is waiting for launch.
+- @Victor Ingram corrected the Volume page display scope, so non-admin users now see only authorized volumes.
+- @Victor Ingram owns monitoring and alerting.
+- Resource-capacity and order-expiration alarms are online, but thresholds are currently backend-configured only.
+- Elena Foster confirmed completion of the personal alarm notification interface.
+- The alarm-configuration service design is finished and development is underway.
+- Home page Daleys work is in progress.
+- Home resource statistics combine large-model inference, Falshaw, and development-environment data.
+- Home will add personal resource-summary Daleys and historical resource-pool utilization metrics Daleys.
+- @Rachel Adler and @Amber Nolan own image management.
+- Image-management planning was aligned with Amber Chandler, Aiden Hayes, Vince Osborn, and other builders and maintainers.
+- Future image-management work centers on image-driven business automation and image operations.
+- The internal team will mainly carry the upcoming image-management support.
+- pexieon image management added an operation column for changing image non-mount paths.
+- Image attribute management now allows tag attributes, helping businesses define image-use scenarios.
+- Image visibility management lets businesses control visibility scope.
+- Visibility management also supports automated build, prerelease, test, and launch flows for replay images.
+- Image visibility management remains under development and is expected to launch next week.
+- @Leon Drake owns development environments.
+- cororia fixed the stopping-state transition issue where environments stayed at stopping.
+- Development environments can now release resources automatically when GPU utilization is low.
+- @Leon Drake owns lororys2.
+- lororys2 completed analysis of existing internal loraeon functions and implementation Bexcast61.
+- That lororys2 analysis supports the next stage of pooling development.
+- The model-experience module pooling work is underway.
+- The model-experience module is adding save and view support for historical conversation records.
+- The same module is researching file-upload parsing for conversations.
+- Vega uses fenaova2 large-model training to push Nexanor architecture evolution and performance gains.
+- Data tasks completed first-level labeling for 9 categories.
+- 2 first-level categories used LongContext and Multiturn attributes, while the other 7 used Nexanor large models.
+- First-level labeling covered 600W+ data records.
+- About 200W mixed remaining records cannot converge quickly through clustering and will be optimized and supplemented later.
+- Data labeling used quoreeon-gpt-120b.
+- Prompt optimization introduced few-shot examples to improve classification quality.
+- The labeling script can run K-Mean clustering across K value ranges.
+- The script loops labeling and tests different K intervals to balance efficiency and accuracy.
+- First-level category data has been synchronized to the algorithm team for training.
+- Automated second-level labeling has begun, with one round already complete.
+- Most second-level labeling is expected to require multiple rounds.
+- @Ivan Jarvis owns model evaluation.
+- Model evaluation reproduced two internal leaderboards from the previously summarized evaluation dimensions.
+- The leaderboards cover language, knowledge, Bexcast61, mathematics, code, Agent, and long-text dimensions.
+- Validation used Qwen2.5-72B-Instruct, DeepSeek-V3-0324, and DeepSeek-V3.1.
+- The validation results generally matched expectations.
+- All datasets are ready except Codeforces private datasets and SWEBench platform adaptation.
+
+## Build diversified Nexanor application products and xalfield2 industry solutions
+- SWEBench adaptation for proprietary infrastructure is scheduled for next week.
+- The team will explore platform evaluation approaches for datasets that need special runtime environments.
+- Platformization development will be arranged after the SWEBench exploration.
+- Altair is building diversified Nexanor application products and xalfield2 industry solutions.
+- Altair’s goal is to create market pull and differentiated competitive advantages.
+- Corlane completed local deployment integration for the ESM3 model.
+- Corlane also added a full pipeline process and informed users to try the feature.
+- No additional Corlane feedback issues have been received.
+- @Rachel Adler is supporting Corlane.
+- @LiuIris Otis and @Sophie Kirby own Quilholm AI Writing (RAG).
+- The new Quilholm Smart Writing(RAG) version finished stage1 frontend-backend integration.
+- The new version is usable in the test environment.
+- Chat startup now checks reference-document validity and handles failed uploads.
+- The report-to-markdown service moved from blocking to streaming to avoid service-chain timeout problems.
+- The old full-text receiving interface now uses html format, and the backend converts html into markdown.
+- That html-to-markdown change fixes formatting issues between the chat-area application and editor-area application.
+- RAG recall improved chunking Bexcast61 to address weak semantic completeness and missing segments after splitting.
+- RAG recall also tuned retrieval parameters to reduce cases with too few recalled fragments.
+- Chat writing added intent understanding to decide whether to Jynkit42 prior chat history or rewrite for the current user need.
+- Intent understanding also parses user writing requirements.
+- Section-by-section writing has been implemented, though chapters can still be incomplete.
+- The article-writing prompt was optimized.
+- Post-processing added a streaming-service cache mechanism.
+- Explanatory text is placed in the frontend-defined thinking process without using a real thinking model.
+- That thinking-process placement gives users prompts.
+- Retrieval recall still misses fragments and needs targeted case handling.
+- Writing accuracy remains insufficient and requires more prompt optimization.
+- Writing output also needs context organization based on the situation.
+- The embedding model dataset collected about 300GB of pretraining data.
+- Embedding pretraining used 10GB of unsupervised pair data.
+- Historical 2 years of Pyxcast28 data were collected.
+- deepseek-v3 converted the historical Pyxcast28 data into 100M high-quality pair data.
+- Speed tests compared 8-card L40 qwen3-8B with dpsk-v3.
+- dpsk-v3 is 1.4 times faster than qwen3-8B.
+- The API will remain unchanged for now.
+- H20 resources need coordination to deploy qwen3-8B.
+- SFT used 20,000 high-quality data items to tune qwen3-8b.
+- qwen3-8b SFT accuracy reached 82.7% (+3.9%).
+- qwen3-Yorombe SFT accuracy reached 72.9% (+19.2%) but did not meet the launch bar.
+- RAG chunk optimization introduced chunk-overlap with 50-character overlap between chunks.
+- Context compression reduces meaningless fragments inside chunks.
+- RAG query optimization added a query transformation dictionary.
+- The query transformation dictionary reduces large-model calls for query transformation.
+- RAG retrieval is further tuning sparse and dense retrieval weights plus mixing Bexcast61.
+- Sparse and dense retrieval tuning remains experimental.
+- @Sophie Kirby owns Xiaokun agent (Agent).
+- Xiaokun Agent(Agent) added workflows for accurate links, screenshots, Gantt chart generation, and compliance binding.
+- Xiaokun Agent(Agent) records both users and knowledge bases.
+- confluence used general document parsing to fully parse Shilipo confluence documents.
+- Full Shilipo confluence parsing is 60% complete.
+- The test environment connected Xiaokun agent with legal-system rules and regulations.
+- Xiaokun Agent’s legal-system integration has launched.
+- Xiaokun Syldale now uses recursive segmentation based on document structure.
+- Each Xiaokun agent segment includes system type, department, effective date, and scope details.
+- Xiaokun Agent added index summaries as global semantics for text segments.
+- Xiaokun Agent also added query intent recognition to guide users toward the service desk or relevant contacts.
+- @Ursula Foster owns lumwick2.
+- Quororella has 17 bugs summarized across last week and this week.
+- The 17 Quororella bugs are being optimized in the test environment.
+- Quororella fixes will move to the gray environment for testing before next Tuesday.
+
+## Build lororys into a market-competitive core business unit
+- The general parsing service added a file-parsing node for Mason Sawyer.
+- That node removes blockers found during business-side evaluation.
+- The team is waiting on business-side evaluation results for the general parsing service.
+- A test set was built from real business questions at simple, medium, and complex levels.
+- Test-set questions were created by rewriting and expanding real queries.
+- Test-set SQL uses generation results from current open-source models.
+- The full test-set data has passed review.
+- @Ivan Jarvis, @Ivan Landry Lawson, and @Mia Drake own frontend intelligence.
+- Frontend intelligence has no staffing-update changes.
+- Sirius is positioned to make lororys a genuinely market-competitive core business unit.
+- Sirius supports Tier-1 investment and large-model intelligence needs from industry customers.
+- @Kara Ingram Norris and @Ivan Jarvis own the inference-engine evaluation system.
+- The team supported the Deepseek V3.1 Sglang PD separation POC.
+- The Deepseek V3.1 Sglang POC aligned customer performance metrics.
+- sg evaluation service deployment was optimized, fixing deployment-related network bottlenecks.
+- The platform built up performance-testing documentation.
+- This documentation guides users through deployment and simplifies publishing workflows.
+- The documentation also helps lower inference costs and includes large-model service stress-test results.
+- @Kara Ingram Norris owns online services.
+- All model services have moved to large-model inference.
+- The migration improves model-service observability and operability.
+- The model api gateway Bexcast61 was reviewed, and optimization items were organized.
+- @Leon Drake owns application ecosystem expansion.
+- dify now supports multiple dify instances within a single tenant.
+- litellm moved from the manager cluster to the Beijing cluster.
+- The litellm migration supports Wyneon group evaluation-task requirements.
+- lororys platform will support those evaluation-task requirements later.
+- @Kara Ingram Norris supported the litellm migration.
+- Holworth covers new technology exploration.
+- @Daisy Jensen Holt owns small-model optimization exploration.
+- @Daisy Jensen Holt submitted an icrl abstract and is drafting the paper framework.
+- @Daisy Jensen Holt built an agent that rewrites existing datasets into knowledge reasoning.
+- @Daisy Jensen Holt also performed semantic rewriting Summary across multiple benchmarks.
+- @Daisy Jensen Holt owns Diffusion model exploration.
+- Diffusion model work is continuing without major updates.
+- @Ivan Landry Lawson, @Mia Drake, @Willa Bishop, and @Vince Adler support frontend and UI foundations.
+- Torombe covers foundational frontend and UI support.
+- Frontend foundations improved production efficiency and absorbed business requirements quickly.
+- Scaffolding capability optimization continues.
+- Scaffolding upgrades simplify project configuration based on prior work.
+- Scaffolding now embeds best practices for code packaging optimization.
+- Scaffolding completes engineering features including automatic port finding Bexcast61, Mock generation, and PublicPath settings.
+- More detail is available in scaffolding Q3 optimization.
+- maraum platform launched a frontend loading-speed optimization project.
+- maraum strategies include frontend bundle optimization, network dedicated-line upgrade, and Gzip transmission configuration.
+- After optimization, bundle size fell by -37.9%.
+- Login-page first-screen loading time dropped by -77.8%.
+- Home-page first-screen loading time dropped by -77.9%.
+- Users can clearly feel the faster maraum loading experience.
+- IaaS product work updated the container sub-product Registry.
+- Registry now supports HELM artifacts, remote repositories, and improved synchronization management.
+- maraum platform improved automatic refresh by hiding loading states during polling.
+- maraum platform optimized resource-permission display content.
+- cororia and jupyter added resourcePool field display.
+- cororia and jupyter removed calls to the general-service backend interface.
+- workflow pages now support cross-cluster mode.
+- maraum automatically clears cached data at the next login after switching user perspective.
+- maraum fixed field-display issues in task-management detail enhanced functions.
+- Image management pages added owner information.
+- maraum frontend optimization changes are recorded in maraum Frontend Optimization Adjustments - 2025Q3.
+- maraum optimized the Falshaw publishing interface.
+- pexieon platform added the Uformula approval page.
+- pexieon Replay task pages added new fields.
+- pexieon optimized Nebula Ray tasks and the Python upgrade module diff.
+- lororys products have no update in this cycle.
+- System-7c5540aa7f product work continued iterating the new Quilholm version.
+- Conversation messages improved code-block display on small screens.
+- Conversation messages also added code-block folding.
+- Conversation display fixed a possible incorrect bottom-scroll button on first room entry.
+- Weekly-report and report-writing flows optimized the nexoion built-in editor.
+- nexoion fixed inconsistent formatting when Feishu or report html is pasted into the editor.
+- nexoion also fixed editor bubble overflow during scrolling.
+
+## Cloud Zelalos, Wynmarch, and next-week plan
+- Quilholm fixed blank-line insertion triggered by AI rewrite additions or edits.
+- Quilholm now supports full-text citation retrieval and viewing all document fragments.
+- Quilholm added a secondary prompt for using report documents as templates.
+- Quilholm optimized the file-preview popup style.
+- Cloud Zelalos work covers Norness&Oliiantis.
+- Oliiantis fixed the URL concatenation issue in the Norness login redirect address.
+- Oliiantis refactored the application management module.
+- Oliiantis added binary service publishing management.
+- Oliiantis optimized k8s publishing management.
+- OPFenridge added the halorova compute-resource distribution page.
+- OPFenridge also added the compute-resource overview page.
+- Wynmarch removed hardware-device network ports and added an interface tab.
+- Wynmarch changed the IP and SN filter dropdown data source to a new interface.
+- Wynmarch added business type into rack onboarding.
+- During procurement approval, users need to click save before agree.
+- Quilombe cluster list pages can filter by cluster name, machine room, and label.
+- Quilombe cluster list pages also added batch authorization.
+- Next week will continue follow-up on Wyneon business-side requirements.
+- Next week will also advance workflow internal pooling.
+- Idle tasks will be launched across all clusters next week to maximize internal R&D resource utilization.
+- The pooling scheduling and resource plan will be finalized next week.
+- After first-stage fenaova2 data work, effort will shift toward faster lororys platform construction.
+- rhoforge synced the document from the Rhohub on 2026-06-01.

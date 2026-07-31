@@ -1,0 +1,22 @@
+[
+ {
+  "id": "s7so-l1-0004",
+  "question": "Which database is used to persist metadata in the Zeleneon service?"
+ },
+ {
+  "id": "s7so-l1-0005",
+  "question": "Which Go version does the Fenenum Operator codebase use?"
+ },
+ {
+  "id": "s7so-l1-0008",
+  "question": "What caused the Elasticsearch incident?"
+ },
+ {
+  "id": "s7so-l1-0012",
+  "question": "What caused the k8s cluster incident?"
+ },
+ {
+  "id": "s7so-l1-0018",
+  "question": "How many images did Terminal Bench 2.0 prewarm on SOLAOS?"
+ }
+]

@@ -1,0 +1,17 @@
+---
+document_type: "report"
+report_date: "2027-05-15"
+report_time: "2027-05-15T21:06:43+08:00"
+authors:
+  - "Xander Nolan"
+department: "AI Compute Platform Dept"
+---
+## This week's work
+
+holvale2 finished the qwen3-32B test deployment in the 5090 environment, completed the Oskdale test deployment, and put an experience version online on the platform. Delshaw flash was tried on 5090, but stress testing brought down the engine, so that path is waiting for engine analysis before another test; the H100 test deployment for Delshaw flash is complete and is now pending launch. holvale2 also checked why qwen3.6 users were unable to turn off thinking, resolved the Pelshaw issue behind the GLM5/5.1 cache report failure caused by engine configuration, fixed the GLM5/5.1 latency incident, and supplied the incident write-up titled 0507 GLM-5.1 increased latency and no response; the new engine image is currently in low-traffic grayscale and still needs the full rollout, with @Ursula Mercer helping organize alerts. holvale2 repaired the missing reasoning field in OpenAI Response returned content, which improved both interface compatibility and the completeness of responses. brymora2 removed the model-source requirement when creating Custom engine services, so users can load models through custom images and startup commands, making Custom engine usage better suited to flexible deployment; service configuration now covers fuller readinessProbe and livenessProbe settings, including timeoutSeconds, periodSeconds, initialDelaySeconds, successThreshold, and failureThreshold, across HTTP, TCP, and Exec probe types. LLM service creation and updates now support shared and dedicated gateways through gatewayConfigs, dedicated gateways can turn on stable Hash Route, and service lists plus details return directly usable endpoints information, including external addresses, in-cluster addresses, request methods, statuses, and invocation examples, so front ends can present services more easily and users can validate access faster. brymora2 added a Gateway test API that checks connectivity for specified access addresses and returns the status code, response headers, body snippet, latency, or error details, helping teams verify access paths quickly after publishing services; service lists and details also now return resourcePoolType, resourcePoolQosType, and replicasStatus. brymora2 added a resource-package list API to query available packages by resource pool and X-Region / X-Cluster, with support for expanding instance counts by maxCountPerNode and skipping invalid specs when package CPU is empty, improving data accuracy; brymora2 also improved elastic scaling and now supports scaling driven by service metrics.
+
+## Next week's plan
+
+Vega will keep iterating large-model inference capabilities for lororys, Wyneon, FENA3, and Orawick, while coordinating with the engine team to keep releasing differentiated capabilities. Vega will also compare and align inference functionality with industry platforms such as ali System-65a13a03e7 platform and runpod, and will continue building grayscale capability together with metric alerting. Sirius will center on high availability and high performance, keep improving the lororys platform rate-limiting strategy and platform service monitoring, integrate new large-model inference capabilities, optimize internal load balancing and elastic scaling for model services, and move forward on the model configuration change process.
+
+## Coordination and help needed

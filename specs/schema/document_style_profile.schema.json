@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "document_style_profile.schema.json",
+  "title": "DocumentStyleProfile",
+  "description": "Style profile that DocumentPlanner samples for each document; DocumentRealizer generates per-prompt/per-layout accordingly, preventing the truth-first pipeline from writing all documents to the same template. Real enterprise knowledge-base documents naturally differ in length/structure/tone/density.",
+  "type": "object",
+  "required": ["doc_type", "length_bucket", "style", "layout", "fact_density", "noise_level"],
+  "additionalProperties": false,
+  "properties": {
+    "doc_type": {"type": "string", "enum": ["policy", "sop", "approval_matrix", "faq", "notice", "meeting_note", "email", "draft", "deprecated", "background"]},
+    "length_bucket": {"type": "string", "enum": ["short", "medium", "long"], "description": "see document_length_profile"},
+    "style": {"type": "string", "enum": ["formal_policy", "operational_notice", "faq_colloquial", "meeting_note", "email_announcement", "system_help", "approval_table"]},
+    "layout": {"type": "string", "description": "the same doc_type should have multiple layouts", "examples": ["numbered_sections_with_exceptions", "supplement_revision", "dept_detail_rules", "qa_pairs", "checklist_table", "exception_handling"]},
+    "fact_density": {"type": "string", "enum": ["low", "medium", "high"], "description": "high for approval matrix, low for meeting minutes"},
+    "noise_level": {"type": "string", "enum": ["low", "medium", "high"]},
+    "table_ratio": {"type": "number", "minimum": 0, "maximum": 1, "default": 0},
+    "contains_summary": {"type": "boolean", "default": false},
+    "contains_footnote": {"type": "boolean", "default": false}
+  },
+  "$defs": {
+    "document_length_profile_v0_1": {
+      "description": "v0.1 pragmatic values (Chinese characters); approval_matrix/table types are additionally controlled by table row count",
+      "buckets": {"short": {"range": [200, 800], "share": 0.30}, "medium": {"range": [800, 1800], "share": 0.50}, "long": {"range": [1800, 4000], "share": 0.20}},
+      "facts_per_doc": [3, 8],
+      "spans_per_fact": [1, 3]
+    },
+    "homogeneity_thresholds_v0_1": {
+      "top_opening_sentence_repetition_rate": {"warn_above": 0.15},
+      "duplicate_title_pattern_rate": {"warn_above": 0.20},
+      "near_duplicate_doc_rate": {"warn_above": 0.10},
+      "avg_pairwise_embedding_similarity": {"warn_above": 0.55}
+    }
+  }
+}

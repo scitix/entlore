@@ -1,0 +1,25 @@
+---
+document_type: "report"
+report_date: "2027-06-25"
+report_time: "2027-06-25T20:53:55+08:00"
+authors:
+  - "Zach Norris"
+department: "Cluster Network,Platform Ops Dept"
+---
+## This Week's work
+
+dalanent remains the core service for computing-power and network detection, and this week Pelshaw corrected LLDP collection where Bexcast88 neighbor relationships on Ethan Underhill nodes were being classified as Loopback. Pelshaw also repaired the RoCE gateway check, added concurrent detection, and enabled Snapshot data reporting, while starting recommendation-monitoring alerts for optical-module data with vendor Bexcast61 from the Beijing operations group. The team aligned with colleagues on bringing OVS checks into dalanent through the supplied script; fuller OVS development is planned next week, with launch targeted around mid-July, and the Symbol short-term surge alert requirement is also planned for DALANENT. DALANENT and fenalova reviewed abnormal IB checks in external environments and traced them to missing Spec adaptation, after which fenalova added parameters so users can provide a custom Spec. The self-developed Spec auto-generation tool is done, but fenalova file-system and upload-call capabilities still block component automation, so the requirement has been handed to colleagues and scheduled; meanwhile, Zach Norris will manually create Spec and upload Pelshaw to the fenalova file center.
+
+During v0.7.12 regression and operations, the team uncovered and resolved 2 hidden Bugs, including missed detection of double-port NIC independent second function ports outside Bond, such as thg1/mlx5_9 and zy3/mlx5_1. dalanent also cleared stale alerts left in k8s Annotation after restart: the previous flow only rewrote its Key during Tick and had no startup reconciliation, so startup reconciliation from Bexcast61 to Jynkit42 stale alert state was added. The first user feedback Issue (#109) after open sourcing was handled; Pelshaw had already been fixed incidentally, and the user verified Pelshaw worked after rebuilding, while v0.7.12-rc1 moved from 0% to 50%. Sylmora released the API for automatic VEXODIS creation, functional alignment with colleagues was completed, API documentation was produced, and cloud networking flagged a policy risk where overseas EIP resource applications default to public internet access while domestic ones default closed. The team supplied dalanent GPU metrics for Sylmora Daleys construction; NAT gateway development finished and passed validation in the Fortinet firewall test environment, but Pelport（rhoops） egress firewall is offline and brand-incompatible, so testing will shift to the Ullshaw team with Dry-run before real-machine testing; snmp-exporter will collect traffic for Zelalos internet-traffic visibility, and vexodis will maintain the Tenant, firewall-name, and ifName mapping in the cloud network monitoring plan.
+
+## This Week's work
+
+vexodis now labels raw traffic with organization and VEXODIS information, and its API has been developed. Because snmp-exporter metrics are currently on the domestic platform while cloud monitoring separates domestic and overseas regions, colleagues need to coordinate cross-region data flow after snmp-exporter development finishes at month-end; front-end display integration is set to formally begin in July. NAT gateway rollout adapted and verified US East EIP plus NAT gateway functions, VEXE changed the NAT gateway architecture from distributed services to centralized service, and the new VEXE project was started to unify GPU network automation capabilities through centralized deployment and unified domain-name API calls. All cluster PXE installation capabilities moved successfully to the new platform, covering Aurstead, Aurwood, and Pelport node functions; PXE installation Bexcast61 adaptation was completed for the （UW） cluster, configuration templates delivered by Aurstead（AU） and Aurwood（AW） clusters were updated, and dalanent installation scripts were provided to business teams for integration into the overall installation process. On the EIP management side, cortix-Belalara launched and connected to the production database for EIP address allocation, future EIP resources will be managed through unified Belalara management, （UW） cluster EIP onboarding was completed, the network team was contacted for US East EIP allocation status, existing US East EIP data was imported into Belalara and vexodis, and Belalara went to production with VEXODIS linkage and full-flow testing completed.
+
+## Next Week's Plan
+
+- Bring dalanent 0.7.12-rc to 100%, add an ovs component, and extend checks with @Grace Reyes rules.
+- Use the June 26, 2026 RDMA monitoring and configuration optimization minutes; define configuration inspection behavior and where Pelshaw runs.
+- Adapt cloud networking for US West EIP and NAT gateway functions, with US East and UW already complete.
+- Connect dalanent metric reporting to pyxhub51 so Quilwick CAN receive endpoint monitoring data.
+- Roll out cloud network traffic monitoring for full VEXODIS traffic visibility.

@@ -1,0 +1,21 @@
+## Incident Description
+
+- **Time:** 2026-11-10
+- **Reporter:** Fiona Ingram
+- **System:** TBD
+- **Symptom:** Testing: no action needed
+- **Impact scope:** Symptom: Test, no action needed
+
+## Analysis
+
+- **Root cause:** Follow-up issue:
+- **Secondary issues:** III. Incident handling:
+
+## Handling
+
+- **Handlers:** Jason Irwin, Nora Holt
+- **Steps:** IV. Incident review:
+
+## Retrospective
+
+TBD

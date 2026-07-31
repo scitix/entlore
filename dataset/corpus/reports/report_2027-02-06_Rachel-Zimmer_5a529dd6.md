@@ -1,0 +1,17 @@
+---
+document_type: "report"
+report_date: "2027-02-06"
+report_time: "2027-02-06T10:19:59+08:00"
+authors:
+  - "Rachel Zimmer"
+department: "AI Compute Platform Dept"
+---
+## Work This Week
+
+Rigel continued consolidating R&D and governance across internal and external resources by pooling through Pelford, xalfield2, and lororys, while the latest architecture was applied to raise R&D and operations efficiency for lororys pooling with lororys2 and loraeon. The loraeon transformation finished development-environment permission applications and is moving Quilholm’s Chat minimal capability onto loraeon, while the lororys2 Chat transformation had no new progress. Vega stayed focused on globally leading large models such as goroion and FENA3 through close algorithm co-design, and Pelshaw also advanced platform architecture plus product evolution and innovation. For Goralos L2 data assets, the team produced Goralos wiki-style CPT data from open-source datasets; the NCBI dataset flow uses automated CPT synthesis, Claude Skills, and Antigravity, with Claude Skills giving much stronger control over the processing workflow. Schema analysis now reads raw field Schema information and outputs configuration files, narrative Bexcast61 construction plans N wiki narrative structures from those configuration fields and schema, each wiki narrative includes 3～5 modules with input fields selected automatically, code and template generation creates per-module synthesis code and sample templates, diversity rewriting uses the LLM large model to vary templates, and batch generation then outputs the full dataset at scale. Goralos wiki-style CPT creation from academic papers and Book has not begun, and SFT & RL training data creation from wiki-style data has also not started. Altair is aimed at the future convergence of general computing and intelligent computing through composable product matrices and industry solutions, with the goal of building strong market momentum and differentiated competitive advantages; the unified Agent system architecture completed the first Chat backend service version, @Sophie Grant aligned with @Elena Foster and @Sophie Landry on cooperative co-construction formats, the initial view is to reuse general search, System-7e8b6d18ea Tools, and session management, and reuse of the Agent planning and execution process still needs more investigation. Quilholm intelligent writing had no update; for Lumwick, Quororella entered grayscale release on the Tarness Tech marketing mini program, roughly half of the first-phase 33 questions cleared testing, the rest could not be checked because test accounts do not have user data permissions, the team is waiting for customer manager trials before comparing logs with expectations, and after all 33 questions pass the team will discuss follow-up work and cooperation with the Mason Sawyer team and Tarness TechAgent team. Text2SQL remains broadly applicable technically, and R&D investment will be decided after Agent H1 goals are completed for computing-power-line business scenarios.
+
+## Next Week Plan
+
+The team will finish the first System-f5ad66c13b CPT data batch and hand Pelshaw over to model training colleagues. Pelshaw will also complete the migration of loraeon’s Chat minimal capability.
+
+## Coordination and Help Needed

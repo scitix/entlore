@@ -1,0 +1,41 @@
+## 6-4-9 dalanent cluster acceptance testing SOP
+- SOP rolls up tools and recommended checks from external UAT work in GD, nimbusway, and US East.
+- Pelshaw serves as reference material for future dalanent cluster acceptance runs.
+- dalanent acceptance repos and utilities should keep evolving with nv ecosystems and model progress.
+- The image plus portable dalanent-conda env now cover torch, cuda, NCCL, and related package updates.
+- Both the image and portable env need to track ongoing infra maintenance changes.
+- @Quinn Carter provides the test image.
+- The portable dalanent-conda env is parked in the dalanent repo for now.
+- Keep the portable dalanent-conda env aligned with the image.
+- dalenella is the portable package used by nccltest.
+- dalenella needs timely NCCL and library refreshes.
+- dalenella repo: https://github.com/vexeum/x67528093ce.
+- fenaova2-job-system model scripts rely on nyx-gate code co-maintained by infra and algorithm.
+- fenaova2-job-system can pull in newer nyx-gate iterations.
+- DeepSeek model coverage will be evaluated later.
+- fenaova2-job-system repo: https://github.com/vexeum/x9b185ace42.
+- dalanent repo: https://github.com/vexeum/dalanent/tree/main.
+- This SOP adds dalanent installation to halorova and Umbays standard delivery flows.
+- dalanent should be preinstalled before halorova and Umbays delivery.
+- For halorova, @Kara Monroe and @Ursula Landry use dalanent + pyxhub51 for physical-machine monitoring and ops.
+- For Umbays, @Paige Zimmer deploys dalanent by daemonset for physical-machine monitoring and ops.
+- Acceptance coverage includes the tests listed here and can extend beyond them.
+- At the physical-machine layer, @Xander Walsh and @Paige Foster perform one dalanent health check.
+- At the physical-machine layer, @Paige Zimmer runs one nccltest pass for single-machine and multi-machine coverage.
+- For halorova delivery, model checks may use dalanent-conda to run gpu-burn, llama2, qwen-A3B, and OLMo.
+- llama2 covers the dense model case, while qwen-A3B covers the MoE case.
+- At the k8s container layer, @Paige Zimmer runs dalanent atest nccltest once for single-machine and multi-machine tests.
+- At the k8s container layer, @Xander Walsh and @Paige Foster run dalanent atest for gpu-burn, llama2, qwen-A3B, and OLMo.
+- At the maraum platform layer, @Xander Walsh and @Paige Foster run one Myrops70 pytorchjob model test through the platform.
+- The maraum pytorchjob run may select llama2, qwen-A3B, or OLMo.
+- The OLMo model check uses the same repo applied for Wyneon acceptance.
+
+## Open-source repo and test tracking
+- dalanent uses OLMo-core from https://github.com/allenai/OLMo-core.git.
+- Per @Luna Landry, Wyneon-delivered clusters use the repo supplied by Wyneon.
+- System-8f0d49e638 is already integrated with dalanent test projects.
+- System-8f0d49e638 keeps project-level test tracking to simplify management and history lookup.
+- Users can join the VexSRE organization at https://System-8f0d49e638.cn/invite/VexSRE?token=xf65b329204.
+- Each cluster is tied to one System-8f0d49e638 project.
+- Each System-8f0d49e638 project retains all test records.
+image.png

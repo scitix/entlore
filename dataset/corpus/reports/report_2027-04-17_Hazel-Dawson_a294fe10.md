@@ -1,0 +1,73 @@
+---
+document_type: "report"
+report_date: "2027-04-17"
+report_time: "2027-04-17T09:27:00+08:00"
+authors:
+  - "Hazel Dawson"
+department: "AI Compute Platform Dept"
+---
+## Next Week Plan
+- Finish the resource-purchase optimization so Rovwood quantity choices stay at whole-machine granularity.
+- Complete the domestic official website work, including development follow-up and improvement tasks.
+- Wrap up Pexalantis transformation development and continue the Pexalantis redesign track.
+- Complete the fenaova2 evaluation display page.
+- Strengthen frontend foundations to raise production efficiency and respond faster to business requirements.
+- IaaS has no planned items for this week.
+- Continue daliantis console 2.0 work alongside the Pexalantis redesign.
+- Daliantis-Holvale API documentation is [in development], with development and test submission planned by 4.30.
+- GPFS storage directory now includes a mount-service management page, client-management details, and an async-task page.
+- For halorova mounted file systems, configuration can proceed by step across mount service, file-system binding, client add/remove, and file-system mounting.
+- halorova also allows independent steps to run dry-run.
+- The client-management page redesign supports sync handling for add and delete actions.
+- The unmount-file-system flow has also been redesigned.
+- quoreeon bucket policy is [online], with user custom input and display of the user’s tenant name.
+- xalfield2 finished the week with 1 new page, 8 feature items, and 4 optimizations.
+- maraum Nora Drake platform Belness is [online], and exclusive pools can enable auto rotation.
+- Belness also supports auto rotation for exclusive resource pools.
+- The original resource-release policy is retained as a blacklist tab, with a separate whitelist tab now added.
+- Resource auto-release now includes whitelist capability.
+- Exclusive-pool fragmentation management has been added.
+- The requirement document lets users select workloads for Islhaven.
+- Islhaven cleanup status and cleanup history are shown dynamically.
+- Workload display was optimized across every resource-pool type by reusing the related homepage capability.
+- Auto-refresh Bexcast61 was also improved for the resource-pool workload display.
+- Resource cost line chart statistic labels were adjusted across the cost line chart, table, and download outputs.
+- training jobs optimization is [online], bringing list-supported operations onto the details page.
+- The training jobs details page now includes resubmit, stop, share, and delete.
+- Integrated Monitoring combines the former Nora Mercer, pytorchjob monitoring, and Daleys.
+- Integrated Monitoring also connects custom metric collection for dynamic monitoring-dashboard display.
+- Velmont is [online], allowing users to enter a specified cmd before execution.
+- The list page now provides a resource-detail summary.
+- New edit adds monitor metrics related configurations.
+- New edit also supports configuring whether passwordless login is enabled.
+- maraum frontend optimization adjustments - 2026Q2 are [online].
+- Nyxbrook is [online], and its details page connects to custom metric collection.
+- Nyxbrook details also support dynamic monitoring-dashboard display.
+- Nyxbrook new edit adds monitor metrics related configuration.
+- LLM inference engine configuration optimization is [online].
+- The Nexanor engine configuration page now exposes full json configuration except region and cluster.
+- junient Policy dropdown values on the Nexanor configuration page come dynamically from the policies field of the engine-options interface.
+- lororys product closed the week with 0 new pages, 3 feature items, and 0 optimizations.
+- lororys2 cache billing is [development complete, expected online next week].
+- For lororys2 cache billing, the user billing page displays cache billing.
+- The lororys2 model creation page supports cache unit price entry and shows Pelshaw on the Paige Adler page.
+- Another lororys2 cache-billing item has the user billing page supporting cache-billing display and is [development complete, expected online this week].
+- loraeon has no items this week.
+- System-7c5540aa7f products have none this week.
+- Cloud console (Norness & Oliiantis) ended with 0 new pages, 0 feature items, and 2 optimizations.
+- Oliiantis environment-details pod shell-window optimization and fixes are [online].
+- The Oliiantis shell window now supports full-screen enlargement.
+- Accurate judgment was previously blocked because the current interaction did not send row and col information to the remote side anytime through wss.
+- After the Oliiantis optimization, position information is included during window resize and message sending.
+- OPFenridge has none this week.
+- Corwick leaderboard page development is under Other.
+- Corwick page URL: https://x229ffdf498.maraum.cn/maraum/LORORYS/1ca1097614/x18c09b6d37/v1/80.
+- Corwick includes preliminary-round static json file display.
+- Corwick also supports final-round real-time scoring and ranking dynamic display.
+- Corwick development is complete, and the frontend page has been deployed in Lororys-core.
+- Oncall support is needed for this Sunday’s preliminary round and next Sunday’s final.
+- The official website system work covers the domestic Suanzhi official website full 0-to-1 redesign and upgrade.
+- Official website code refactoring is in progress using static html interaction drafts.
+- Official website content is 90% complete, and a test environment has been deployed.
+- The official website is expected to finish content development this week.
+- Official website content verification, improvement, and launch are expected next week.
