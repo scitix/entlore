@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="figures/teaser.png" width="92%" alt="Query-shaped construction versus EntLORE">
+  <img src="figures/teaser.png" width="80%" alt="Query-shaped construction versus EntLORE">
 </p>
 
 <h1 align="center">🏛️ EntLORE</h1>
@@ -67,7 +67,7 @@ configurations** (8 answer models × 7 knowledge-access conditions).
 ## 🏗️ How EntLORE is built
 
 <p align="center">
-  <img src="figures/pipeline.png" width="98%" alt="The EntLORE construction pipeline">
+  <img src="figures/pipeline.png" width="80%" alt="The EntLORE construction pipeline">
 </p>
 
 Construction runs as a **deterministic pipeline**, not manual labelling:
@@ -122,13 +122,13 @@ Columns: **CB** closed-book · **Ag** agentic retrieval · **Wiki** LLM Wiki · 
 **Ω** Oracle ceiling (*n*=216 on L3).
 
 <p align="center">
-  <img src="figures/results_tables.png" width="100%" alt="Per-model accuracy across access conditions, split by Overall / L1 / L2 / L3">
+  <img src="figures/results_tables.png" width="90%" alt="Per-model accuracy across access conditions, split by Overall / L1 / L2 / L3">
 </p>
 
 *No single condition owns a level — structural access (GraphRAG / LLM Wiki) leads L2/L3, lexical BM25 is strongest on some L1 — and open-weight models take most of the bold cells.*
 
 <p align="center">
-  <img src="figures/radar_open_vs_closed.png" width="60%" alt="Open-weight vs proprietary capability radar across six access conditions">
+  <img src="figures/radar_open_vs_closed.png" width="55%" alt="Open-weight vs proprietary capability radar across six access conditions">
 </p>
 <p align="center">
   <sub>Overall (tier-weighted) accuracy of a representative <b>open-weight</b> model (GLM-5.2) vs a
