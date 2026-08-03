@@ -37,6 +37,9 @@ __pycache__/
 .venv/
 .ipynb_checkpoints/
 
+# --- local figure authoring (the rendered PNGs under figures/ are what we publish) ---
+scripts/make_results_tables.py
+
 # What IS published (kept explicitly for clarity):
 #   dataset/corpus/  dataset/questions.json  dataset/golden_packets.jsonl
 #   dataset/SCHEMA.md  dataset/smoke.json

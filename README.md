@@ -104,8 +104,9 @@ with `@register("name")` (see `src/baselines/`).
 ## 📊 Main results
 
 Answer accuracy (**%**) across all 8 answer models and 7 knowledge-access conditions, split into four
-views: **Overall** (tier-weighted over L1 469 / L2 204 / L3 234) and per level. **Bold** = best
-*deployable* condition per model (closed-book **CB** and Oracle **Ω** excluded from the comparison).
+views: **Overall** (tier-weighted over L1 469 / L2 204 / L3 234) and per level. Read **column-wise**:
+the highlighted cell is the **best model under that access condition**. The Mean row is an aggregate
+and is never marked; the all-zero closed-book column on L2 carries no signal and is left unmarked.
 Columns: **CB** closed-book · **Ag** agentic retrieval · **Wiki** LLM Wiki · **GRAG** GraphRAG ·
 **Ω** Oracle ceiling (*n*=216 on L3).
 
@@ -113,7 +114,7 @@ Columns: **CB** closed-book · **Ag** agentic retrieval · **Wiki** LLM Wiki · 
   <img src="figures/results_tables.png" width="90%" alt="Per-model accuracy across access conditions, split by Overall / L1 / L2 / L3">
 </div>
 
-*No single condition owns a level — structural access (GraphRAG / LLM Wiki) leads L2/L3, lexical BM25 is strongest on some L1 — and open-weight models take most of the bold cells.*
+*Open-weight models take 12 of the 20 deployable-condition columns — including **GraphRAG at every level** (GLM-5.2 on Overall/L1/L3, DS-V4-Flash on L2). On L3 the proprietary models lead every column except GraphRAG: where documents stop stating the relation, the winner changes with the substrate, not with the model tier.*
 
 <div align="center">
   <img src="figures/radar_open_vs_closed.png" width="55%" alt="Open-weight vs proprietary capability radar across six access conditions">
