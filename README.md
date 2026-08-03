@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="figures/teaser.png" width="80%" alt="Query-shaped construction versus EntLORE">
+  <img src="figures/teaser.png" alt="Query-shaped construction versus EntLORE">
 </div>
 
 <h1 align="center">🏛️ EntLORE</h1>
