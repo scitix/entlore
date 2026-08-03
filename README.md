@@ -8,9 +8,6 @@
 <div align="center">
   <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-blue.svg">
   <img alt="Python 3.10+" src="https://img.shields.io/badge/Python-3.10%2B-3776AB.svg">
-  <img alt="Documents" src="https://img.shields.io/badge/Corpus-2%2C341%20docs-success.svg">
-  <img alt="Questions" src="https://img.shields.io/badge/Questions-907-success.svg">
-  <img alt="Models × Conditions" src="https://img.shields.io/badge/Matrix-8%20models%20%C3%97%207%20conditions-8A2BE2.svg">
   <a href="https://arxiv.org/abs/XXXX.XXXXX"><img alt="arXiv" src="https://img.shields.io/badge/arXiv-XXXX.XXXXX-b31b1b.svg"></a>
 </div>
 
