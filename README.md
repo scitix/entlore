@@ -21,7 +21,7 @@
 
 <div align="center">
   Akrin Zheng<sup>*</sup> &nbsp; Alexander Wu<sup>*</sup> &nbsp; Alaia Liu<sup>*†</sup> &nbsp;—&nbsp; <b>ScitiX.ai</b><br>
-  <sub><sup>*</sup> Equal contribution &nbsp;·&nbsp; <sup>†</sup> Corresponding author: <a href="mailto:alaia.liu@scitix.ai">alaia.liu@scitix.ai</a></sub>
+  <sub><sup>*</sup> Equal contribution &nbsp;·&nbsp; <sup>†</sup> Corresponding author: <a href="mailto:alaia@scitix.ai">alaia@scitix.ai</a></sub>
 </div>
 
 <div align="center">
