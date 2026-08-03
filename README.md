@@ -6,7 +6,7 @@
 <h3 align="center">A Graph-Grounded Benchmark for Latent Organizational Reasoning<br>in Enterprise Question Answering</h3>
 
 <div align="center">
-  <img alt="License: MIT" src="https://img.shields.io/badge/Code-MIT-blue.svg">
+  <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-blue.svg">
   <img alt="Python 3.10+" src="https://img.shields.io/badge/Python-3.10%2B-3776AB.svg">
   <img alt="Documents" src="https://img.shields.io/badge/Corpus-2%2C341%20docs-success.svg">
   <img alt="Questions" src="https://img.shields.io/badge/Questions-907-success.svg">
