@@ -8,7 +8,7 @@
 <div align="center">
   <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-blue.svg">
   <img alt="Python 3.10+" src="https://img.shields.io/badge/Python-3.10%2B-3776AB.svg">
-  <a href="https://arxiv.org/abs/XXXX.XXXXX"><img alt="arXiv" src="https://img.shields.io/badge/arXiv-XXXX.XXXXX-b31b1b.svg"></a>
+  <a href="https://arxiv.org/abs/2608.10679"><img alt="arXiv" src="https://img.shields.io/badge/arXiv-2608.10679-b31b1b.svg"></a>
 </div>
 
 <div align="center">
@@ -17,7 +17,7 @@
 </div>
 
 <div align="center">
-  📄 <b>Paper:</b> <a href="paper/EntLORE.pdf">PDF</a> &nbsp;·&nbsp; <a href="https://arxiv.org/abs/XXXX.XXXXX">arXiv:XXXX.XXXXX</a> &nbsp;·&nbsp; 📊 <b>Data &amp; code:</b> this repository
+  📄 <b>Paper:</b> <a href="paper/EntLORE.pdf">PDF</a> &nbsp;·&nbsp; <a href="https://arxiv.org/abs/2608.10679">arXiv:2608.10679</a> &nbsp;·&nbsp; 📊 <b>Data &amp; code:</b> this repository
 </div>
 
 > **TL;DR** — Enterprise answers often depend on *organizational relations* that no single document
@@ -191,15 +191,16 @@ If you use EntLORE, please cite:
 
 ```bibtex
 @article{entlore2026,
-  title   = {{EntLORE}: A Graph-Grounded Benchmark for Latent Organizational
-             Reasoning in Enterprise Question Answering},
-  author  = {Zheng, Akrin and Wu, Alexander and Liu, Alaia},
-  journal = {arXiv preprint arXiv:XXXX.XXXXX},
-  year    = {2026}
+  title         = {{EntLORE}: A Graph-Grounded Benchmark for Latent Organizational
+                   Reasoning in Enterprise Question Answering},
+  author        = {Zheng, Akrin and Wu, Alexander and Liu, Alaia},
+  journal       = {arXiv preprint arXiv:2608.10679},
+  year          = {2026},
+  eprint        = {2608.10679},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.IR}
 }
 ```
-
-<sub>The arXiv identifier and paper link will be filled in once the preprint is posted.</sub>
 
 ## 📜 License & data statement
 
