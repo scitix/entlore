@@ -9,6 +9,7 @@
   <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-blue.svg">
   <img alt="Python 3.10+" src="https://img.shields.io/badge/Python-3.10%2B-3776AB.svg">
   <a href="https://arxiv.org/abs/2608.10679"><img alt="arXiv" src="https://img.shields.io/badge/arXiv-2608.10679-b31b1b.svg"></a>
+  <a href="https://huggingface.co/papers/2608.10679"><img alt="Hugging Face" src="https://img.shields.io/badge/🤗%20Paper-2608.10679-FFD21E.svg"></a>
 </div>
 
 <div align="center">
@@ -17,7 +18,7 @@
 </div>
 
 <div align="center">
-  📄 <b>Paper:</b> <a href="paper/EntLORE.pdf">PDF</a> &nbsp;·&nbsp; <a href="https://arxiv.org/abs/2608.10679">arXiv:2608.10679</a> &nbsp;·&nbsp; 📊 <b>Data &amp; code:</b> this repository
+  📄 <a href="https://arxiv.org/abs/2608.10679">Paper</a> &nbsp;·&nbsp; 🤗 <a href="https://huggingface.co/papers/2608.10679">Hugging Face</a> &nbsp;·&nbsp; 📊 Data &amp; code
 </div>
 
 > **TL;DR** — Enterprise answers often depend on *organizational relations* that no single document
@@ -26,7 +27,7 @@
 > derived relations** from evaluated systems. Across **8 models × 7 knowledge-access conditions**,
 > how the released world is *organized* matters more than how much retrieval *machinery* is applied
 > to it — and even perfect evidence leaves latent-relation questions unanswered.
-> Full construction methodology is in the [paper](paper/EntLORE.pdf).
+> Full construction methodology is in the [paper](https://arxiv.org/abs/2608.10679).
 
 ---
 
