@@ -48,3 +48,8 @@ paper/
 #   dataset/SCHEMA.md  dataset/smoke.json
 #   src/  scripts/  third_party/  specs/  docs/
 #   README.md  LICENSE  NOTICE  requirements.txt  .env.example
+
+# --- HuggingFace dataset staging + archives (built locally, uploaded manually) ---
+.hf_upload/
+EntLORE-hf-dataset.tar.gz
+EntLORE-hf-dataset.zip

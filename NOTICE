@@ -1,5 +1,5 @@
 EntLORE: A Graph-Grounded Benchmark for Latent Organizational Reasoning in Enterprise Question Answering
-Copyright (c) 2026 ScitiX.ai. Licensed under the MIT License (see LICENSE).
+Copyright (c) 2026 ScitiX.ai. Licensed under the Apache-2.0 License (see LICENSE).
 
 This product includes vendored / derived work:
 
@@ -15,7 +15,7 @@ This product includes vendored / derived work:
   into a conformant OKF v0.1 bundle. Modifications are disclosed in third_party/okf/PROVENANCE.md.
   See third_party/okf/LICENSE.md.
 
-Dataset (dataset/): fully synthetic. Generated from a structure-grounded knowledge graph;
+Dataset (dataset/): released under CC BY-NC-SA 4.0. Fully synthetic. Generated from a structure-grounded knowledge graph;
 entity and person names are synthetic or anonymized pseudonyms. No real enterprise document
 content or real personal names are included. Only structural/style DISTRIBUTIONS (statistics)
 were learned from real corpora — never verbatim content. A hard-PII scrub pass and a

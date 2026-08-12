@@ -6,10 +6,10 @@
 <h3 align="center">A Graph-Grounded Benchmark for Latent Organizational Reasoning<br>in Enterprise Question Answering</h3>
 
 <div align="center">
-  <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-blue.svg">
+  <img alt="License: Apache 2.0" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg">
   <img alt="Python 3.10+" src="https://img.shields.io/badge/Python-3.10%2B-3776AB.svg">
   <a href="https://arxiv.org/abs/2608.10679"><img alt="arXiv" src="https://img.shields.io/badge/arXiv-2608.10679-b31b1b.svg"></a>
-  <a href="https://huggingface.co/papers/2608.10679"><img alt="Hugging Face" src="https://img.shields.io/badge/🤗%20Paper-2608.10679-FFD21E.svg"></a>
+  <a href="https://huggingface.co/papers/2608.10679"><img alt="Hugging Face Paper" src="https://img.shields.io/badge/Hugging%20Face-EntLORE-FFD21E.svg"></a>
 </div>
 
 <div align="center">
@@ -205,10 +205,11 @@ If you use EntLORE, please cite:
 
 ## 📜 License & data statement
 
-Code is released under the **MIT License** (see [`LICENSE`](LICENSE)). The corpus is **fully
-synthetic and anonymized** (English): an audited real enterprise world is reconstructed into a
-fictional organization, with persons, projects, aliases, and dates mapped through a shared identity
-map and private metadata never verbalized into the documents. See [`NOTICE`](NOTICE) for the full
-data statement and the licenses of vendored components (`third_party/`).
+Code is released under the **Apache-2.0 License** (see [`LICENSE`](LICENSE)); the dataset
+(`dataset/`) is released under **CC BY-NC-SA 4.0**. The corpus is **fully synthetic and anonymized**
+(English): an audited real enterprise world is reconstructed into a fictional organization, with
+persons, projects, aliases, and dates mapped through a shared identity map and private metadata
+never verbalized into the documents. See [`NOTICE`](NOTICE) for the full data statement and the
+licenses of vendored components (`third_party/`).
 
 <div align="center"><sub>Made with 🧠 &amp; 📈 by <b>ScitiX.ai</b></sub></div>
